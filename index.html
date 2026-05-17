@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Estratégico · Seguros Unimed · Mai 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul:       #003087;
+  --azul-med:   #005EB8;
+  --azul-light: #E8F0FB;
+  --azul-line:  #C8D8F0;
+  --verde:      #00843D;
+  --verde-light:#E6F4EC;
+  --amber:      #F59E0B;
+  --amber-light:#FEF3C7;
+  --red:        #DC2626;
+  --red-light:  #FEE2E2;
+  --purple:     #7C3AED;
+  --purple-light:#EDE9FE;
+  --bg:         #F4F6FA;
+  --white:      #FFFFFF;
+  --gray1:      #F8FAFC;
+  --gray2:      #EEF2F7;
+  --gray3:      #CBD5E1;
+  --text:       #0F172A;
+  --text2:      #475569;
+  --text3:      #94A3B8;
+  --border:     #E2E8F0;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:14px; }
+
+/* ── HEADER ── */
+.header {
+  background: var(--azul);
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,48,135,.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.brand { display:flex; align-items:center; gap:14px; }
+.brand-logo {
+  background:var(--white); border-radius:8px;
+  width:36px; height:36px;
+  display:flex; align-items:center; justify-content:center;
+}
+.brand-logo svg { width:22px; height:22px; }
+.brand-text strong { color:#fff; font-size:16px; font-weight:700; display:block; letter-spacing:-.2px; }
+.brand-text span { color:rgba(255,255,255,.65); font-size:10px; font-family:'DM Mono',monospace; letter-spacing:.5px; }
+.header-right { display:flex; align-items:center; gap:10px; }
+.pill-live { font-family:'DM Mono',monospace; font-size:10px; padding:3px 10px; border-radius:20px; background:rgba(0,132,61,.25); color:#6EE7B7; border:1px solid rgba(110,231,183,.3); }
+.btn-pdf { background:var(--white); color:var(--azul); border:none; border-radius:7px; padding:7px 16px; font-family:'Inter',sans-serif; font-size:12px; font-weight:700; cursor:pointer; }
+.btn-pdf:hover { opacity:.88; }
+
+/* ── PDF / PRINT ── */
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #F4F6FA !important; font-size: 11px; }
+  .header { position: relative !important; background: #003087 !important; box-shadow: none; }
+  .section-grid { display: none !important; }
+  .btn-pdf { display: none !important; }
+  .pill-live { display: none !important; }
+  .acc-panel {
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    page-break-inside: avoid;
+  }
+  .acc-inner { padding: 20px 30px; }
+  .panel-divider { border-top: 2px solid #E2E8F0; margin: 0; }
+  .ncard { page-break-inside: avoid; border: 1px solid #E2E8F0 !important; }
+  .comp-block { page-break-inside: avoid; }
+  .agenda-item { page-break-inside: avoid; }
+  .termometro { grid-template-columns: repeat(3,1fr) !important; }
+  footer { position: relative !important; }
+  h2, .slabel { page-break-after: avoid; }
+  .impl-box { background: #E8F0FB !important; border-left: 4px solid #005EB8 !important; }
+  .opp-card { background: #E6F4EC !important; border-left: 4px solid #00843D !important; }
+  .ncard { background: #fff !important; }
+  .comp-block { background: #fff !important; }
+  .agenda-item { background: #fff !important; }
+}
+
+/* ── SECTION GRID (cards de navegação) ── */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 73px;
+  z-index: 90;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.sec-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 8px;
+  cursor: pointer;
+  border-right: 1px solid var(--border);
+  background: var(--white);
+  transition: background .15s;
+  border-bottom: 3px solid transparent;
+  user-select: none;
+}
+.sec-card:last-child { border-right: none; }
+.sec-card:hover { background: var(--gray1); }
+.sec-card.open {
+  background: var(--azul-light);
+  border-bottom-color: var(--azul-med);
+}
+.sec-card.open .sec-icon { background: var(--azul-med); color: #fff; }
+.sec-card.open .sec-label { color: var(--azul); }
+.sec-card.open .sec-arrow { transform: rotate(180deg); color: var(--azul-med); }
+
+.sec-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--gray2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  transition: background .15s;
+}
+.sec-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text2);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .2px;
+}
+.sec-arrow {
+  font-size: 10px;
+  color: var(--text3);
+  transition: transform .25s, color .15s;
+}
+
+/* ── ACCORDION PANELS ── */
+.acc-panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .4s cubic-bezier(.4,0,.2,1);
+  background: var(--bg);
+}
+.acc-panel.open {
+  max-height: 9999px;
+}
+
+.acc-inner {
+  padding: 32px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── SECTION LABEL ── */
+.slabel {
+  font-size: 10px; font-weight:700; color:var(--azul-med);
+  text-transform:uppercase; letter-spacing:1.5px;
+  margin-bottom:14px;
+  display:flex; align-items:center; gap:10px;
+}
+.slabel::after { content:''; flex:1; height:1px; background:var(--border); }
+.sec-block { margin-bottom:28px; }
+
+/* ── NEWS FEED ── */
+.nfeed { display:flex; flex-direction:column; gap:10px; }
+.ncard {
+  background:var(--white); border:1px solid var(--border); border-radius:10px;
+  padding:14px 16px; display:flex; gap:13px; align-items:flex-start;
+  transition:box-shadow .15s, border-color .15s;
+}
+.ncard:hover { box-shadow:0 2px 8px rgba(0,48,135,.07); border-color:var(--azul-line); }
+.ntag {
+  font-size:9px; font-weight:700; font-family:'DM Mono',monospace;
+  letter-spacing:.5px; padding:3px 9px; border-radius:20px;
+  flex-shrink:0; margin-top:1px; white-space:nowrap;
+}
+.ntag.hot   { background:var(--red-light);    color:var(--red);      border:1px solid #FCA5A5; }
+.ntag.new   { background:var(--verde-light);  color:var(--verde);    border:1px solid #86EFAC; }
+.ntag.reg   { background:var(--azul-light);   color:var(--azul-med); border:1px solid var(--azul-line); }
+.ntag.opp   { background:var(--purple-light); color:var(--purple);   border:1px solid #C4B5FD; }
+.ntag.wtf   { background:var(--amber-light);  color:#B45309;         border:1px solid #FCD34D; }
+.ncontent { flex:1; }
+.nhead { font-size:13px; font-weight:600; color:var(--text); margin-bottom:4px; line-height:1.4; }
+.nhead a { color:var(--text); text-decoration:none; }
+.nhead a:hover { color:var(--azul-med); text-decoration:underline; }
+.ntxt { font-size:12px; color:var(--text2); line-height:1.6; margin-bottom:5px; }
+.ntxt strong { color:var(--text); font-weight:600; }
+.nmeta { display:flex; align-items:center; gap:8px; font-size:10px; color:var(--text3); font-family:'DM Mono',monospace; }
+.nmeta a { color:var(--azul-med); text-decoration:none; font-weight:500; }
+.nmeta a:hover { text-decoration:underline; }
+.nmeta-dot { width:3px; height:3px; border-radius:50%; background:var(--gray3); }
+
+/* ── IMPL BOX ── */
+.impl-box {
+  background:var(--azul-light); border:1px solid var(--azul-line);
+  border-left:4px solid var(--azul-med); border-radius:0 10px 10px 0;
+  padding:14px 18px; margin-top:8px;
+}
+.impl-title { font-size:10px; font-weight:700; color:var(--azul-med); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; }
+.impl-txt { font-size:12px; color:var(--text2); line-height:1.65; }
+.impl-txt strong { color:var(--azul); font-weight:600; }
+
+/* ── OPP CARD ── */
+.opp-card {
+  background:var(--verde-light); border:1px solid #86EFAC;
+  border-left:4px solid var(--verde); border-radius:0 10px 10px 0;
+  padding:12px 16px; margin-top:10px;
+}
+.opp-label { font-size:10px; font-weight:700; color:var(--verde); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; }
+.opp-txt { font-size:12px; color:#166534; line-height:1.6; }
+
+/* ── ALERT BAR ── */
+.alert-bar {
+  border-radius:10px; padding:12px 16px;
+  display:flex; gap:12px; align-items:flex-start;
+  margin-bottom:16px; font-size:12px; line-height:1.6;
+}
+.alert-bar.bl { background:var(--azul-light); border:1px solid var(--azul-line); color:var(--azul); }
+.alert-ico { font-size:16px; flex-shrink:0; }
+
+/* ── CONCORRENTE BLOCK ── */
+.comp-block { background:var(--white); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:12px; }
+.comp-header { background:var(--gray1); border-bottom:1px solid var(--border); padding:11px 16px; display:flex; align-items:center; gap:10px; }
+.comp-rank { font-family:'DM Mono',monospace; font-size:10px; background:var(--azul); color:white; padding:2px 8px; border-radius:20px; font-weight:500; }
+.comp-name { font-size:13px; font-weight:700; color:var(--text); flex:1; }
+.comp-type { font-size:10px; color:var(--text3); font-family:'DM Mono',monospace; padding:2px 9px; border-radius:20px; background:var(--gray2); border:1px solid var(--border); }
+.comp-body { padding:12px 16px; }
+
+/* ── DIVIDER ── */
+.panel-divider { height:1px; background:var(--border); margin:0; }
+
+/* ── FOOTER ── */
+footer { border-top:1px solid var(--border); background:var(--white); padding:14px 40px; display:flex; justify-content:space-between; align-items:center; margin-top:0; }
+footer p { font-size:10px; color:var(--text3); font-family:'DM Mono',monospace; }
+footer .su { color:var(--azul-med); font-weight:700; }
+
+/* ── TERMÔMETRO ── */
+.termometro { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px; }
+.termo-card { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:16px 18px; display:flex; align-items:flex-start; gap:13px; }
+.termo-indicator { width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; }
+.termo-indicator.ok { background:var(--verde-light); }
+.termo-indicator.att { background:var(--amber-light); }
+.termo-indicator.bad { background:var(--red-light); }
+.termo-label { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1px; font-family:'DM Mono',monospace; margin-bottom:4px; }
+.termo-label.ok { color:var(--verde); }
+.termo-label.att { color:#B45309; }
+.termo-label.bad { color:var(--red); }
+.termo-status { font-size:13px; font-weight:700; color:var(--text); margin-bottom:4px; }
+.termo-reason { font-size:11px; color:var(--text2); line-height:1.5; }
+
+/* ── VOZES ── */
+.vozes { display:flex; flex-direction:column; gap:10px; }
+.voz-card { background:var(--white); border:1px solid var(--border); border-left:4px solid var(--azul-med); border-radius:0 10px 10px 0; padding:14px 16px; transition:box-shadow .15s; }
+.voz-card:hover { box-shadow:0 2px 8px rgba(0,48,135,.07); }
+.voz-quote { font-size:13px; color:var(--text); line-height:1.55; font-style:italic; margin-bottom:8px; }
+.voz-quote::before { content:'\201C'; color:var(--azul-med); font-size:18px; font-style:normal; margin-right:2px; }
+.voz-quote::after  { content:'\201D'; color:var(--azul-med); font-size:18px; font-style:normal; margin-left:2px; }
+.voz-meta { display:flex; align-items:center; gap:8px; }
+.voz-avatar { width:30px; height:30px; border-radius:50%; background:var(--azul-light); border:1px solid var(--azul-line); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--azul-med); flex-shrink:0; font-family:'DM Mono',monospace; }
+.voz-name { font-size:12px; font-weight:700; color:var(--text); }
+.voz-role { font-size:10px; color:var(--text3); font-family:'DM Mono',monospace; }
+.voz-ctx { margin-left:auto; font-size:9px; color:var(--text3); font-family:'DM Mono',monospace; background:var(--gray2); padding:2px 8px; border-radius:20px; border:1px solid var(--border); white-space:nowrap; }
+
+/* ── AGENDA ── */
+.agenda { display:flex; flex-direction:column; gap:10px; }
+.agenda-item { background:var(--white); border:1px solid var(--border); border-radius:10px; padding:14px 16px; display:flex; gap:14px; align-items:flex-start; transition:box-shadow .15s; }
+.agenda-item:hover { box-shadow:0 2px 8px rgba(0,48,135,.07); }
+.agenda-num { width:28px; height:28px; border-radius:8px; background:var(--azul); color:#fff; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'DM Mono',monospace; }
+.agenda-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:4px; }
+.agenda-txt { font-size:12px; color:var(--text2); line-height:1.6; }
+.agenda-txt strong { color:var(--text); font-weight:600; }
+.agenda-tags { display:flex; gap:5px; flex-wrap:wrap; margin-top:7px; }
+.agenda-tag { font-size:9px; font-family:'DM Mono',monospace; padding:2px 8px; border-radius:20px; background:var(--azul-light); color:var(--azul-med); border:1px solid var(--azul-line); }
+.agenda-tag.urgente { background:var(--red-light); color:var(--red); border-color:#FCA5A5; }
+.agenda-tag.medio   { background:var(--amber-light); color:#B45309; border-color:#FCD34D; }
+.agenda-tag.longo   { background:var(--verde-light); color:var(--verde); border-color:#86EFAC; }
+
+@media print {
+  .header { position:relative !important; }
+  .section-grid { position:relative !important; }
+  .acc-panel { max-height:9999px !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="brand">
+    <div class="brand-logo">
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="8" height="8" rx="1.5" fill="#003087"/>
+        <rect x="13" y="3" width="8" height="8" rx="1.5" fill="#005EB8"/>
+        <rect x="3" y="13" width="8" height="8" rx="1.5" fill="#005EB8"/>
+        <rect x="13" y="13" width="8" height="8" rx="1.5" fill="#003087"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <strong>Radar Estratégico</strong>
+      <span>GERÊNCIA DE ESTRATÉGIA · SEGUROS UNIMED · EDIÇÃO 14/MAI/2026</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="pill-live">● Atualizado Mai/2026</span>
+    <button class="btn-pdf" onclick="exportarPDF()">⬇ Exportar PDF</button>
+  </div>
+</div>
+
+<!-- NAVIGATION GRID -->
+<div class="section-grid">
+  <div class="sec-card open" onclick="toggle('geral')" id="card-geral">
+    <div class="sec-icon">📋</div>
+    <div class="sec-label">Notícias da Semana</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('saude')" id="card-saude">
+    <div class="sec-icon">🏥</div>
+    <div class="sec-label">Saúde</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('odonto')" id="card-odonto">
+    <div class="sec-icon">🦷</div>
+    <div class="sec-label">Odonto</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('vida')" id="card-vida">
+    <div class="sec-icon">💚</div>
+    <div class="sec-label">Vida</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('previdencia')" id="card-previdencia">
+    <div class="sec-icon">🏦</div>
+    <div class="sec-label">Previdência</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('elementares')" id="card-elementares">
+    <div class="sec-icon">🏗️</div>
+    <div class="sec-label">Ramos Elementares</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('concorrentes')" id="card-concorrentes">
+    <div class="sec-icon">⚔️</div>
+    <div class="sec-label">Concorrentes</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+  <div class="sec-card" onclick="toggle('agenda')" id="card-agenda">
+    <div class="sec-icon">🎯</div>
+    <div class="sec-label">Agenda Estratégica</div>
+    <div class="sec-arrow">▾</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     NOTÍCIAS DA SEMANA
+══════════════════════════════════════ -->
+<div class="acc-panel open" id="panel-geral">
+<div class="acc-inner">
+
+  <div class="alert-bar bl">
+    <span class="alert-ico">📡</span>
+    <span>Edição da semana de <strong>14 de maio de 2026</strong> · Curadoria estratégica do mercado segurador · Fontes: SUSEP, CNseg, Fenaprevi, ANS, Revista Apólice, Gazeta Mercantil, CQCS e Brazil Economy.</span>
+  </div>
+
+  <!-- TERMÔMETRO DA SEMANA -->
+  <div class="sec-block">
+    <div class="slabel">Termômetro da Semana</div>
+    <div class="termometro">
+      <div class="termo-card">
+        <div class="termo-indicator att">⚖️</div>
+        <div>
+          <div class="termo-label att">Ambiente Regulatório</div>
+          <div class="termo-status">Atenção</div>
+          <div class="termo-reason">LC 213 e Nova Lei de Seguros em regulamentação ativa na SUSEP. ~20 novas normas previstas para 2026 — janela de oportunidade e risco simultâneos para cooperativas.</div>
+        </div>
+      </div>
+      <div class="termo-card">
+        <div class="termo-indicator ok">📈</div>
+        <div>
+          <div class="termo-label ok">Clima Competitivo</div>
+          <div class="termo-status">Favorável</div>
+          <div class="termo-reason">Vida acelerou +11,6% no 1T26, Auto cresce e Elementares são "oceano azul". Concorrentes crescem mas sem movimentos disruptivos imediatos contra a SU.</div>
+        </div>
+      </div>
+      <div class="termo-card">
+        <div class="termo-indicator att">🧭</div>
+        <div>
+          <div class="termo-label att">Sentimento do Setor</div>
+          <div class="termo-status">Cauteloso</div>
+          <div class="termo-reason">IOF sobre VGBL comprime previdência. Selic acima de 12% pressiona demanda. Setor cresce, mas lideranças pedem cautela e monitoram agenda tributária de perto.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-block">
+    <div class="slabel">Destaques da Semana</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag hot">URGENTE</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">SUSEP: setor supera R$100 bi no 1T26 com Vida como maior expansão do mercado</a></div>
+          <div class="ntxt">Receitas totais de <strong>R$106,18 bilhões</strong> no primeiro trimestre de 2026. Seguro de Vida liderou com alta de <strong>+11,63% nominal</strong> e +6,58% real. Indenizações pagas somaram R$62,70 bilhões. <strong>153 seguradoras</strong> operando em março/2026.</div>
+          <div class="nmeta"><span>SUSEP</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag hot">ATENÇÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/" target="_blank">Previdência Aberta recua 8% no 1T26: IOF sobre VGBL comprime captações</a></div>
+          <div class="ntxt">Prêmios e contribuições totalizaram <strong>R$41,3 bilhões</strong>, queda de R$3,6 bi vs 1T25. Fenaprevi estima que IOF desincentivou <strong>R$50 bilhões</strong> em captações em 6 meses. Recursos migram para LCI/LCA isentos. Ativos de previdência superam <strong>R$1,8 trilhão</strong>.</div>
+          <div class="nmeta"><span>Fenaprevi</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag reg">REGULAÇÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Enconseg 2026: setor debate Auto, Saúde, Vida e "Oceano de oportunidades em Ramos Elementares"</a></div>
+          <div class="ntxt">Evento do Sincor-RJ reuniu líderes do setor. Roberto Santos (CNseg): <em>"O consumidor não compara mais companhias, mas experiências."</em> IA e automação dominaram as discussões transversais. Ramos Elementares foram destacados como <strong>maior oportunidade subexplorada</strong> do setor.</div>
+          <div class="nmeta"><span>Sincor-RJ</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026 — hoje</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag new">INSURTECH</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/" target="_blank">SUSEP avança com Loovi no sandbox do Auto Popular — 70% da frota sem seguro</a></div>
+          <div class="ntxt">LTI Seguros (Grupo Loovi) avança na licença definitiva. Apenas <strong>30% da frota brasileira</strong> possui seguro auto. Modelo digital com IA e contratação em minutos mira classe média baixa. Sinaliza pressão competitiva crescente no segmento via canal digital.</div>
+          <div class="nmeta"><span>SUSEP</span><span class="nmeta-dot"></span><a href="https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/" target="_blank">Brazil Economy</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag reg">REGULAÇÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">SUSEP 2026: ~20 novas normas previstas — LC 213 em foco para cooperativas de seguros</a></div>
+          <div class="ntxt">Plano de Regulação 2026 (Resolução 72/2025) com 5 eixos prioritários. A <strong>LC 213/2025</strong> amplia o escopo de atuação de cooperativas de seguros — impacto direto no modelo da Seguros Unimed. Também em pauta: Open Insurance, Vida Universal e Seguro Catástrofe.</div>
+          <div class="nmeta"><span>CNseg</span><span class="nmeta-dot"></span><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">CQCS</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag new">DESTAQUE SU</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/" target="_blank">Unimed Odonto atinge 1,3 mi de beneficiários — NPS nº 1 Brasil pelo 4º ano consecutivo</a></div>
+          <div class="ntxt">Marco histórico em março/2026. CAGR de <strong>18% ao ano</strong> — três vezes a média do setor. Crescimento de 318% em 8 anos vs 68% do mercado. IDSS 2025: nota 0,8791 acima da média setorial de 0,7930. Pontuação máxima em Qualidade e Sustentabilidade.</div>
+          <div class="nmeta"><span>Seguros Unimed</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mar/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag wtf">ATENÇÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://gazetamercantil.com/planos-de-saude-coletivos-reajuste-ans-2026" target="_blank">Reajuste coletivos de saúde: 9,9% em 2026 — menor em 5 anos, mas ainda 2,6× o IPCA</a></div>
+          <div class="ntxt">ANS registra reajuste médio de <strong>9,9% nos planos coletivos</strong> nos dois primeiros meses de 2026. <strong>53 milhões de vínculos</strong> ativos em março/26, alta de 906 mil em 12 meses. Teto ANS para individuais sobe para <strong>7,5%</strong> a partir de maio/2026.</div>
+          <div class="nmeta"><span>ANS</span><span class="nmeta-dot"></span><a href="https://gazetamercantil.com/planos-de-saude-coletivos-reajuste-ans-2026" target="_blank">Gazeta Mercantil</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag opp">OPORTUNIDADE</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://www.sonhoseguro.com.br/2026/05/setor-de-seguros-supera-r-100-bilhoes-no-trimestre-mas-crescimento-segue-concentrado-em-linhas-de-protecao/" target="_blank">Auto cresce +6,13% no 1T26 com Vida consolidando maior expansão do setor supervisionado</a></div>
+          <div class="ntxt">Seguro Auto arrecadou <strong>R$15,08 bilhões no trimestre</strong>, impulsionado por híbridos, elétricos e peças mais caras. Seguro de Vida segue como <strong>linha de maior expansão</strong> em 2026, confirmando tendência de crescimento acima dos demais ramos do mercado.</div>
+          <div class="nmeta"><span>SUSEP</span><span class="nmeta-dot"></span><a href="https://www.sonhoseguro.com.br/2026/05/setor-de-seguros-supera-r-100-bilhoes-no-trimestre-mas-crescimento-segue-concentrado-em-linhas-de-protecao/" target="_blank">Sonho Seguro</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VOZES DO MERCADO -->
+  <div class="sec-block">
+    <div class="slabel">Vozes do Mercado — O que os líderes disseram esta semana</div>
+    <div class="vozes">
+
+      <div class="voz-card">
+        <div class="voz-quote">O consumidor não compara mais companhias, mas experiências. Quem não entender isso vai perder mercado independentemente do portfólio.</div>
+        <div class="voz-meta">
+          <div class="voz-avatar">RS</div>
+          <div class="voz-info">
+            <div class="voz-name">Roberto Santos</div>
+            <div class="voz-role">Presidente · CNseg</div>
+          </div>
+          <div class="voz-ctx">Enconseg 2026 · Mai/2026</div>
+        </div>
+      </div>
+
+      <div class="voz-card">
+        <div class="voz-quote">O IOF sobre o VGBL é um instrumento de classe média. Noventa e sete por cento das pessoas têm reserva de menos de um milhão de reais. Estamos prejudicando quem mais precisa de planejamento de longo prazo.</div>
+        <div class="voz-meta">
+          <div class="voz-avatar">RS</div>
+          <div class="voz-info">
+            <div class="voz-name">Roberto Santos</div>
+            <div class="voz-role">Presidente · CNseg</div>
+          </div>
+          <div class="voz-ctx">Entrevista CNseg · Abr/2026</div>
+        </div>
+      </div>
+
+      <div class="voz-card">
+        <div class="voz-quote">O crescimento do setor está mais ligado à percepção de risco do que ao ciclo econômico. Em ambiente de juros altos, empresas e famílias ficam mais expostas — e demandam mais proteção.</div>
+        <div class="voz-meta">
+          <div class="voz-avatar">ND</div>
+          <div class="voz-info">
+            <div class="voz-name">Ney Dias</div>
+            <div class="voz-role">Presidente · Bradesco Seguros / FenSeg</div>
+          </div>
+          <div class="voz-ctx">Enconseg 2026 · Mai/2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicações para a Seguros Unimed — Semana 14/Mai</div>
+    <div class="impl-txt">O 1T26 confirma que <strong>Vida é o ramo de maior aceleração do setor</strong> — exatamente onde a SU tem a maior lacuna estratégica (14ª posição). A <strong>LC 213/2025</strong> é a movimentação regulatória mais relevante: amplia o que uma cooperativa pode fazer em seguros — monitorar a regulamentação infralegal em construção é tarefa imediata. A aprovação da Loovi no sandbox reforça que o canal digital no Auto está se consolidando. Em Previdência, o problema é tributário e exige posicionamento de lobby junto à CNseg, mais do que ação comercial.</div>
+  </div>
+
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     SAÚDE
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-saude">
+<div class="acc-inner">
+  <div class="sec-block">
+    <div class="slabel">Notícias Estratégicas · Saúde Suplementar</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag wtf">CUSTO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://gazetamercantil.com/planos-de-saude-coletivos-reajuste-ans-2026" target="_blank">Reajuste coletivos 9,9% em 2026: menor em 5 anos, mas 2,6× acima do IPCA</a></div>
+          <div class="ntxt">ANS registra reajuste médio de <strong>9,9% nos planos coletivos</strong> (jan-fev/26) — menor nível desde 2021. <strong>84% dos 53 milhões de vínculos</strong> estão em coletivos. Teto ANS para individuais sobe para <strong>7,5%</strong> a partir de maio/2026 (era 6,06%). Mercer Marsh projeta entre 8% e 11% para carteiras corporativas em 2026.</div>
+          <div class="nmeta"><span>ANS</span><span class="nmeta-dot"></span><a href="https://gazetamercantil.com/planos-de-saude-coletivos-reajuste-ans-2026" target="_blank">Gazeta Mercantil</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag hot">PRESSÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://diariodocomercio.com.br/economia/planos-de-saude-coletivos-devem-ter-aumento-entre-8-e-11-em-2026/" target="_blank">Sinistralidade do setor em 81,7% em 2025 — pressão estrutural de medicamentos permanece</a></div>
+          <div class="ntxt">FenaSaúde: setor teve receita de <strong>R$391,6 bilhões e lucro de R$24,4 bilhões</strong> em 2025. <strong>3 maiores operadoras</strong> respondem por 49% do resultado — concentração crescente. Preço de medicamentos apontado como principal fator desestabilizador. Sinistralidade caiu de 86,2% (2023) para 78,4% (2025).</div>
+          <div class="nmeta"><span>FenaSaúde</span><span class="nmeta-dot"></span><a href="https://diariodocomercio.com.br/economia/planos-de-saude-coletivos-devem-ter-aumento-entre-8-e-11-em-2026/" target="_blank">Diário do Comércio</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag reg">ANS</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://mundorh.com.br/reajuste-dos-planos-de-saude-em-2026-o-alerta-para-rhs-que-nao-podem-mais-aceitar-aumento-sem-questionar/" target="_blank">Pool de Risco PME: reajuste cai de 22,64% para 15,62% no ciclo 2025–2026</a></div>
+          <div class="ntxt">RN 565 regula contratos com menos de 30 beneficiários. Reajuste do ciclo <strong>mai/25–abr/26 foi de 15,62%</strong>, contra 22,64% no ciclo anterior. Queda relevante, mas ainda pressionada. Pool de Riscos dilui variações entre grupos pequenos e dá previsibilidade às PMEs contratantes.</div>
+          <div class="nmeta"><span>ANS · RN 565</span><span class="nmeta-dot"></span><a href="https://mundorh.com.br/reajuste-dos-planos-de-saude-em-2026-o-alerta-para-rhs-que-nao-podem-mais-aceitar-aumento-sem-questionar/" target="_blank">Mundo RH</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag reg">LC 213</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">LC 213/2025 amplia escopo de cooperativas de seguros — pauta Prioridade 1 da SUSEP</a></div>
+          <div class="ntxt">LC 213 permite <strong>atuação mais abrangente de cooperativas de seguros</strong>, mantendo restrições apenas para regimes financeiros específicos. Cria também o modelo de proteção patrimonial mutualista com administradoras sob supervisão SUSEP. Revisão de normativos de riscos de pessoas em construção.</div>
+          <div class="nmeta"><span>SUSEP · CNseg</span><span class="nmeta-dot"></span><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">CQCS</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicação para a Seguros Unimed · Saúde</div>
+    <div class="impl-txt">A desaceleração dos reajustes coletivos enfraquece o argumento de recomposição de margens — especialmente após a Reforma Tributária reduzir a carga do setor. A <strong>LC 213</strong> é a movimentação regulatória mais relevante para a SU: amplia o que uma cooperativa pode fazer em seguros. A nota máxima ANS/SUSEP por 6 anos consecutivos é o ativo de relacionamento mais forte frente a uma ANS cada vez mais exigente.</div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-label">🚀 Oportunidade Estratégica</div>
+    <div class="opp-txt">Base de <strong>53 milhões de vínculos</strong> ainda crescendo e forte fora das capitais. A capilaridade cooperativa em cidades médias é o diferencial que Hapvida e SulAmérica não conseguem replicar com a mesma naturalidade.</div>
+  </div>
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     ODONTO
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-odonto">
+<div class="acc-inner">
+  <div class="sec-block">
+    <div class="slabel">Notícias Estratégicas · Odontologia</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag new">MARCO SU</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/" target="_blank">Unimed Odonto atinge 1,3 mi de beneficiários com crescimento de 318% em 8 anos</a></div>
+          <div class="ntxt">Marco confirmado em março/2026. CAGR de <strong>18% ao ano</strong> — três vezes a média do setor de 6%. Quarto ano consecutivo como <strong>melhor NPS do Brasil</strong> em odonto pelo Experience Awards. IDSS 2025: 0,8791 acima da média de 0,7930, com pontuação máxima em Qualidade e Sustentabilidade.</div>
+          <div class="nmeta"><span>Seguros Unimed</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mar/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag opp">EXPANSÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://conexao.segurosunimed.com.br/com-309-milhoes-de-beneficiarios-no-brasil-mercado-de-planos-odontologicos-e-oportunidade-para-o-sistema-unimed/" target="_blank">136 das 341 Unimeds já distribuem Unimed Odonto — 205 ainda sem parceria</a></div>
+          <div class="ntxt">Das 341 cooperativas Unimed do Brasil, <strong>136 já são parceiras comerciais</strong> da Unimed Odonto. As outras <strong>205 cooperativas</strong> representam o maior vetor de crescimento orgânico disponível — canal já existente, produto validado, relação institucional estabelecida.</div>
+          <div class="nmeta"><span>Seguros Unimed</span><span class="nmeta-dot"></span><a href="https://conexao.segurosunimed.com.br/com-309-milhoes-de-beneficiarios-no-brasil-mercado-de-planos-odontologicos-e-oportunidade-para-o-sistema-unimed/" target="_blank">Conexão SU</a></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag hot">CONCORRÊNCIA</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/" target="_blank">OdontoPrev lidera com +8 mi de beneficiários — gap de 6× em relação à Unimed Odonto</a></div>
+          <div class="ntxt">OdontoPrev (Grupo Bradesco) opera com <strong>mais de 8 milhões de beneficiários</strong> e controla Bradesco Dental, Prívian e BB Dental. Maior rede credenciada do Brasil em todos os estados. Hapvida em 2º com 3,69 mi no Norte e Nordeste. Unimed Odonto na <strong>7ª posição com 1,3 mi</strong>.</div>
+          <div class="nmeta"><span>ANS Mar/2025</span><span class="nmeta-dot"></span><a href="https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/" target="_blank">BenefíciosRH</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicação para a Seguros Unimed · Odonto</div>
+    <div class="impl-txt">Odonto é o segmento onde a SU tem a <strong>posição competitiva mais diferenciada</strong>: NPS nº 1, CAGR 3× a média e sinergia cooperativa exclusiva. O gap de escala para a OdontoPrev é real, mas os modelos de crescimento são distintos. Ativar as <strong>205 Unimeds restantes</strong> como parceiras é a alavanca de maior ROI disponível.</div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-label">🚀 Oportunidade Estratégica</div>
+    <div class="opp-txt">Bundling <strong>Saúde + Odonto</strong> via cooperativas médicas é proposta de valor única no mercado. Cross-sell para a base de saúde existente é o caminho de crescimento com menor CAC do portfólio.</div>
+  </div>
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     VIDA
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-vida">
+<div class="acc-inner">
+  <div class="sec-block">
+    <div class="slabel">Notícias Estratégicas · Seguro de Vida</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag new">ACELERAÇÃO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Vida cresce +11,63% nominal no 1T26 — maior expansão entre todos os ramos supervisionados</a></div>
+          <div class="ntxt">Boletim SUSEP de março/2026: Seguro de Vida com <strong>maior crescimento nominal e real</strong> (+6,58% real) entre todos os ramos no 1T26. Crescimento contínuo desde 2021 reflete maior consciência de proteção financeira. Seguros de Pessoas (excl. previdência) crescem <strong>+6,8%</strong> no bimestre.</div>
+          <div class="nmeta"><span>SUSEP</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag opp">NOVO PRODUTO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://www.segs.com.br/seguros/440895-susep-orienta-mercado-segurador-com-novo-plano-de-regulacao-para-2026" target="_blank">Vida Universal entra na agenda regulatória da SUSEP para 2026</a></div>
+          <div class="ntxt">Produto flexível que combina <strong>acumulação e proteção num mesmo contrato</strong> — previsto no Plano de Regulação SUSEP 2026. Permite ajuste de contribuição e cobertura ao longo do tempo. Potencial de atrair cliente que busca alternativa ao VGBL pressionado pelo IOF.</div>
+          <div class="nmeta"><span>SUSEP Res. 72/2025</span><span class="nmeta-dot"></span><a href="https://www.segs.com.br/seguros/440895-susep-orienta-mercado-segurador-com-novo-plano-de-regulacao-para-2026" target="_blank">SEGS</a><span class="nmeta-dot"></span><span>Fev/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag reg">LC 213</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">LC 213/2025 exige revisão dos normativos de riscos de pessoas — Vida sob nova regulação</a></div>
+          <div class="ntxt">LC 213 introduz mudanças nos <strong>seguros de pessoas</strong>, incluindo Vida. Revisão de normativos é agenda <strong>Prioridade 1</strong> da SUSEP em 2026. Pode demandar redesenho de produtos e revisão de cláusulas. Exige monitoramento próximo da regulamentação infralegal em construção.</div>
+          <div class="nmeta"><span>SUSEP · CNseg</span><span class="nmeta-dot"></span><a href="https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/" target="_blank">CQCS</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicação para a Seguros Unimed · Vida</div>
+    <div class="impl-txt">Vida é o ramo de maior crescimento do setor e aquele onde a SU tem a <strong>maior lacuna estratégica</strong>. A regulação abrindo o Vida Universal cria uma janela de oportunidade clara. O canal natural para crescer é o <strong>ecossistema cooperativo</strong> — o mesmo que impulsionou o Odonto.</div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-label">🚀 Oportunidade Estratégica</div>
+    <div class="opp-txt">O <strong>Universal Life</strong> pode posicionar a SU como referência em proteção financeira de longo prazo. Bundling <strong>Saúde + Vida + Odonto</strong> via cooperativas é proposta sem equivalente no mercado brasileiro.</div>
+  </div>
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     PREVIDÊNCIA
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-previdencia">
+<div class="acc-inner">
+  <div class="sec-block">
+    <div class="slabel">Notícias Estratégicas · Previdência Privada Aberta</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag hot">CRISE</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/" target="_blank">Previdência Aberta recua 8% no 1T26 — captações comprimidas, ativos superam R$1,8 tri</a></div>
+          <div class="ntxt">Prêmios e contribuições: <strong>R$41,3 bilhões no 1T26</strong>, queda de R$3,6 bi vs 1T25. Resgates também caíram, gerando captação líquida positiva de <strong>R$6,31 bi</strong> no trimestre. Ativos cresceram 13% a/a para <strong>R$1,8 trilhão</strong>. Fenaprevi: IOF desincentivou R$50 bi em captações em 6 meses.</div>
+          <div class="nmeta"><span>Fenaprevi</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag hot">IOF</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://viva.com.br/dinheiro/arrecadacao-de-planos-de-previdencia-deve-cair-44-em-2026-segundo-cnseg.html" target="_blank">IOF VGBL: fisco arrecadou R$106 mi mas desincentivou R$7,5 bi de IR de longo prazo</a></div>
+          <div class="ntxt">CNseg classifica a tributação como <strong>"injusta e inadequada"</strong>. IOF de 5% sobre aportes acima de <strong>R$600 mil/CPF consolidado</strong> em 2026. Presidente da CNseg: <em>"Esse é um instrumento de classe média"</em> — 97% das pessoas têm reserva de menos de R$1 milhão. CNseg propõe tributação do setor <strong>apenas pelo IOF</strong>.</div>
+          <div class="nmeta"><span>CNseg</span><span class="nmeta-dot"></span><a href="https://viva.com.br/dinheiro/arrecadacao-de-planos-de-previdencia-deve-cair-44-em-2026-segundo-cnseg.html" target="_blank">Viva.com.br</a><span class="nmeta-dot"></span><span>Abr/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag opp">ALTERNATIVA</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://fenaprevi.org.br/noticias/mudanca-no-iof-leva-a-menor-arrecadacao-do-setor-segurador-em-2025" target="_blank">SUSEP avalia uso de reservas de previdência como garantia de crédito</a></div>
+          <div class="ntxt">CNseg avalia positivamente proposta de usar <strong>reservas de previdência e capitalização como garantia de crédito</strong>. Pode criar nova utilidade e argumento de venda sem depender de captação de novos aportes. Abre frente de reposicionamento do PGBL como instrumento financeiro além da aposentadoria.</div>
+          <div class="nmeta"><span>CNseg</span><span class="nmeta-dot"></span><a href="https://fenaprevi.org.br/noticias/mudanca-no-iof-leva-a-menor-arrecadacao-do-setor-segurador-em-2025" target="_blank">Fenaprevi</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicação para a Seguros Unimed · Previdência</div>
+    <div class="impl-txt">O problema é tributário, não comercial. Estratégia em três frentes: (1) <strong>proteger a carteira existente</strong> via PGBL e retenção, (2) <strong>reposicionar o discurso</strong> para previdência como garantia de crédito e planejamento sucessório, (3) <strong>apoiar o lobby da CNseg</strong> junto ao governo para revisão do IOF — qualquer reversão tributária é oportunidade de recuperação rápida.</div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-label">🚀 Oportunidade Estratégica</div>
+    <div class="opp-txt">O <strong>PGBL</strong> não foi impactado da mesma forma pelo IOF. Migração de discurso de VGBL para PGBL pode preservar carteira e atrair perfil qualificado com menor atrito comercial.</div>
+  </div>
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     RAMOS ELEMENTARES
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-elementares">
+<div class="acc-inner">
+  <div class="sec-block">
+    <div class="slabel">Notícias Estratégicas · Ramos Elementares</div>
+    <div class="nfeed">
+
+      <div class="ncard">
+        <span class="ntag opp">OCEANO AZUL</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Enconseg 2026 dedica sala ao "Oceano de oportunidades em Ramos Elementares"</a></div>
+          <div class="ntxt">Evento do Sincor-RJ (mai/2026) destacou Ramos Elementares como maior oportunidade subexplorada do setor. Mensagem central: mercado <strong>subpenetrado</strong> com digitalização abrindo novos canais. Risco cibernético ganhou sessão dedicada com Tokio Marine como referência.</div>
+          <div class="nmeta"><span>Sincor-RJ</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026 — hoje</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag new">AUTO</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/" target="_blank">70% da frota brasileira sem seguro — SUSEP avança com insurtech no Auto Popular</a></div>
+          <div class="ntxt">Apenas <strong>30% da frota</strong> possui seguro auto. Aprovação da Loovi no sandbox SUSEP sinaliza abertura para modelos digitais simplificados. <strong>Híbridos e elétricos</strong> impulsionam o segmento premium — peças mais caras elevam sinistralidade e valor médio de apólice.</div>
+          <div class="nmeta"><span>SUSEP</span><span class="nmeta-dot"></span><a href="https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/" target="_blank">Brazil Economy</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag new">HABITACIONAL</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://www.agger.com.br/blog/mercado-de-seguros-tendencias/" target="_blank">Seguro Residencial em alta: eventos climáticos e digitalização impulsionam demanda em 2026</a></div>
+          <div class="ntxt">Forte expansão em 2025, continuando em 2026. Catástrofes climáticas no Sul/Sudeste em 2024–25 elevaram consciência de risco. Digitalização permite contratação modular 100% online. Seguro Habitacional é o ramo elementar com <strong>maior crescimento projetado</strong>, apoiado pela expansão do crédito imobiliário e MCMV.</div>
+          <div class="nmeta"><span>CNseg · Agger</span><span class="nmeta-dot"></span><a href="https://www.agger.com.br/blog/mercado-de-seguros-tendencias/" target="_blank">Agger</a><span class="nmeta-dot"></span><span>Dez/2025</span></div>
+        </div>
+      </div>
+
+      <div class="ncard">
+        <span class="ntag opp">GARANTIA</span>
+        <div class="ncontent">
+          <div class="nhead"><a href="https://sousegura.org/cnseg-preve-expansao-de-8-do-mercado-em-2026/" target="_blank">Seguro Garantia: PAC, Nova Lei de Seguros e Reforma Tributária como vetores de crescimento</a></div>
+          <div class="ntxt">Entre os maiores crescimentos projetados para 2026. Vetores: investimentos do <strong>PAC</strong>, expectativa de liquidação do estoque de processos do CARF ampliando Garantia Judicial, Nova Lei de Seguros e Reforma Tributária. Forte demanda por obras públicas e concessões.</div>
+          <div class="nmeta"><span>CNseg</span><span class="nmeta-dot"></span><a href="https://sousegura.org/cnseg-preve-expansao-de-8-do-mercado-em-2026/" target="_blank">Sou Segura</a><span class="nmeta-dot"></span><span>Dez/2025</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="impl-box">
+    <div class="impl-title">⚡ Implicação para a Seguros Unimed · Ramos Elementares</div>
+    <div class="impl-txt">A SU ainda está em formação nos Elementares, mas tem o ativo mais valioso: <strong>6,6 milhões de segurados em saúde como base de cross-sell</strong>. RC Profissional Médica é o produto com maior vantagem competitiva estrutural — posição Top 3 no IRB sustentada pelo ecossistema médico cooperativo.</div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-label">🚀 Oportunidade Estratégica</div>
+    <div class="opp-txt"><strong>Garantia Judicial</strong> e <strong>Seguro Paramétrico Climático</strong> como apostas de crescimento orgânico para 2026–2027. Residencial via bundling digital com a base saúde é o caminho de menor resistência comercial.</div>
+  </div>
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<!-- ══════════════════════════════════════
+     CONCORRENTES
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-concorrentes">
+<div class="acc-inner">
+
+  <div class="alert-bar bl">
+    <span class="alert-ico">🔭</span>
+    <span>Monitoramento das <strong>10 principais seguradoras do Brasil</strong> — novos produtos, aquisições, movimentos estratégicos e expansões. Seguros Unimed na <strong>8ª posição</strong>.</span>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">1ª</span>
+      <span class="comp-name">Bradesco Seguros / Bradesco Saúde</span>
+      <span class="comp-type">Bancassurance · Grupo Bradesco</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag hot">ESCALA</span>
+          <div class="ncontent">
+            <div class="nhead"><a href="https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/" target="_blank">OdontoPrev lidera odonto com +8 mi de beneficiários e múltiplas marcas no mercado</a></div>
+            <div class="ntxt">Bradesco Dental, Prívian, Prontodente e joint-venture BB Dental. <strong>Maior rede credenciada do Brasil</strong> em todos os estados. Estratégia de consolidação por aquisições — OdontoSystem (2017) e Mogidonto (2020) incorporadas. Capital aberto na B3 (ODPV3).</div>
+            <div class="nmeta"><span>ANS</span><span class="nmeta-dot"></span><a href="https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/" target="_blank">BenefíciosRH</a></div>
+          </div>
+        </div>
+        <div class="ncard">
+          <span class="ntag reg">VOZ</span>
+          <div class="ncontent">
+            <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Ney Dias (Bradesco Seguros / FenSeg) lidera discussões regulatórias no Enconseg 2026</a></div>
+            <div class="ntxt">Presidente da FenSeg e da Bradesco Seguros presente no principal evento do setor. Bradesco Seguros mantém posição de <strong>maior grupo segurador da América Latina</strong>, com influência dominante na formação da agenda SUSEP e CNseg.</div>
+            <div class="nmeta"><span>Sincor-RJ</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">2ª</span>
+      <span class="comp-name">SulAmérica Seguros</span>
+      <span class="comp-type">Grupo Generali · Capital Aberto</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag new">RESULTADO</span>
+          <div class="ncontent">
+            <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">SulAmérica encerra 1T26 com receita líquida de R$8,7 bilhões — alta de 7,9%</a></div>
+            <div class="ntxt">Crescimento de <strong>7,9% na receita líquida</strong> no 1T26 vs 1T25. Integração ao Grupo Generali (2022) seguindo gerando sinergias. Forte em Saúde e Vida corporativo — <strong>concorrente direta da SU no B2B</strong>, especialmente em médias e grandes empresas.</div>
+            <div class="nmeta"><span>SulAmérica</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">3ª</span>
+      <span class="comp-name">Porto Seguro</span>
+      <span class="comp-type">Capital Aberto · B3: PSSA3</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag new">RESULTADO</span>
+          <div class="ncontent">
+            <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Porto inicia 2026 com crescimento de dois dígitos no lucro líquido recorrente</a></div>
+            <div class="ntxt">Trajetória de resultados consistentes no início de 2026 com <strong>dois dígitos no lucro recorrente</strong>. Líder histórica em Auto — beneficiada pelo crescimento de +7,1% do segmento. <strong>Porto Saúde</strong> com 763 mil beneficiários concorre diretamente com a SU em São Paulo e praças premium.</div>
+            <div class="nmeta"><span>Porto Seguro</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">4ª</span>
+      <span class="comp-name">Hapvida / NotreDame Intermédica</span>
+      <span class="comp-type">Grupo Viveo · B3: HAPV3</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag hot">ESTRATÉGIA</span>
+          <div class="ncontent">
+            <div class="nhead">Hapvida mantém modelo verticalizado com hospitais próprios — vantagem de custo estrutural</div>
+            <div class="ntxt">Maior grupo de saúde do Brasil por beneficiários. Hospitais, clínicas e laboratórios próprios garantem custo estruturalmente inferior. <strong>Líder no Norte e Nordeste</strong> com 3,69 mi de beneficiários no odonto. Crescimento por aquisições gerou endividamento — <strong>monitorar deleveraging em 2026</strong>.</div>
+            <div class="nmeta"><span>Hapvida · ANS</span><span class="nmeta-dot"></span><span>Mar/2025</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">5ª</span>
+      <span class="comp-name">Icatu Seguros</span>
+      <span class="comp-type">Capital Fechado · Vida e Previdência</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag opp">POSIÇÃO</span>
+          <div class="ncontent">
+            <div class="nhead">Icatu: referência nacional em Vida e Previdência com modelo independente de bancassurance</div>
+            <div class="ntxt">Principal seguradora independente do Brasil em Vida e Previdência distribuídos por corretores. Forte em <strong>planejamento sucessório e proteção patrimonial</strong> para alta renda. Modelo sem banco próprio é diferencial em distribuição via corretores independentes.</div>
+            <div class="nmeta"><span>Icatu Seguros · SUSEP 2025</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">6ª</span>
+      <span class="comp-name">Amil Saúde</span>
+      <span class="comp-type">Grupo Seripieri · Capital Fechado desde 2024</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag wtf">MONITORAR</span>
+          <div class="ncontent">
+            <div class="nhead">Amil sob novo controle de Seripieri desde 2024 — reposicionamento estratégico em curso</div>
+            <div class="ntxt">José Seripieri assumiu controle da Amil em 2024 após saída do Grupo UnitedHealth. <strong>4ª maior operadora de saúde</strong> do Brasil. Reposicionamento com foco em PME e grandes empresas. Mudança de controle traz incerteza sobre estratégia — <strong>monitorar movimentos de produto e distribuição ao longo de 2026</strong>.</div>
+            <div class="nmeta"><span>Amil · 2024–2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">7ª</span>
+      <span class="comp-name">Caixa Seguridade</span>
+      <span class="comp-type">Bancassurance · B3: CXSE3</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag reg">AÇÃO</span>
+          <div class="ncontent">
+            <div class="nhead"><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Caixa Seguridade ativa plano emergencial para segurados impactados por chuvas</a></div>
+            <div class="ntxt">Plano emergencial ativado para apoiar segurados impactados por eventos climáticos. Forte em Habitacional — beneficiária direta da expansão do MCMV e do crédito imobiliário. Distribuição exclusiva via <strong>rede da Caixa Econômica Federal</strong>, maior banco público em crédito imobiliário do país.</div>
+            <div class="nmeta"><span>Caixa Seguridade</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block" style="border-color:#005EB8; box-shadow:0 0 0 2px rgba(0,94,184,.12);">
+    <div class="comp-header" style="background:var(--azul-light); border-bottom-color:var(--azul-line);">
+      <span class="comp-rank" style="background:var(--verde);">8ª ★</span>
+      <span class="comp-name" style="color:var(--azul);">Seguros Unimed</span>
+      <span class="comp-type" style="color:var(--azul-med); border-color:var(--azul-line);">Cooperativa · NÓS</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard" style="border-color:var(--azul-line); background:var(--azul-light);">
+          <span class="ntag new">NÓS</span>
+          <div class="ncontent">
+            <div class="nhead">Unimed Odonto 1,3 mi · NPS nº 1 Brasil · nota máxima ANS/SUSEP pelo 6º ano · 3ª melhor seguradora BR</div>
+            <div class="ntxt">Marco histórico em março/2026. CAGR de 18% ao ano no odonto. <strong>6,6 milhões de segurados</strong> em saúde com presença em 92% do território. 2ª cooperativa seguradora da América Latina. Época Negócios 360° 2025: 3ª melhor seguradora do Brasil.</div>
+            <div class="nmeta"><span>Seguros Unimed · Mar/2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">9ª</span>
+      <span class="comp-name">BB Seguros / Brasilseg</span>
+      <span class="comp-type">Bancassurance · Banco do Brasil</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag wtf">CONTEXTO</span>
+          <div class="ncontent">
+            <div class="nhead">BB Seguros forte em Rural e Agronegócio — segmento pressionado por inadimplência e PSR incerto</div>
+            <div class="ntxt">Principal competidor no segmento Rural — que projeta retração em 2026 por inadimplência elevada e incertezas sobre o Programa de Subvenção ao Prêmio. Distribui via rede do Banco do Brasil. Participa da <strong>Brasildental</strong> (joint-venture com OdontoPrev) no odonto.</div>
+            <div class="nmeta"><span>BB Seguros · IRB · 2025–2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-header">
+      <span class="comp-rank">10ª</span>
+      <span class="comp-name">Zurich Santander</span>
+      <span class="comp-type">Bancassurance · Grupo Zurich</span>
+    </div>
+    <div class="comp-body">
+      <div class="nfeed">
+        <div class="ncard">
+          <span class="ntag opp">POSIÇÃO</span>
+          <div class="ncontent">
+            <div class="nhead">Zurich Santander consolida atuação em produtos corporativos e bancassurance internacional</div>
+            <div class="ntxt">Forte em <strong>seguros corporativos</strong> distribuídos via rede Santander. Suporte da Zurich Insurance Group garante capacidade técnica em riscos complexos. Atuação em Vida, Auto e Corporativo. <strong>Menor sobreposição direta</strong> com o portfólio atual da Seguros Unimed.</div>
+            <div class="nmeta"><span>Zurich · Santander · SUSEP 2025</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="impl-box" style="margin-top:16px;">
+    <div class="impl-title">⚡ Leitura Competitiva da Semana</div>
+    <div class="impl-txt">O movimento mais relevante é o resultado da <strong>SulAmérica (+7,9% no 1T26)</strong> e da <strong>Porto (dois dígitos no lucro)</strong>, confirmando que os grandes players crescem mesmo em ambiente macro desafiador. A <strong>Amil sob novo controle</strong> é o concorrente a monitorar com mais atenção em 2026: mudanças de estratégia comercial podem afetar a dinâmica competitiva em Saúde. A <strong>Loovi no sandbox SUSEP</strong> sinaliza que insurtechs digitais vão pressionar o Auto de baixo para cima nos próximos 18 meses.</div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     AGENDA ESTRATÉGICA
+══════════════════════════════════════ -->
+<div class="acc-panel" id="panel-agenda">
+<div class="acc-inner">
+
+  <div class="alert-bar bl">
+    <span class="alert-ico">🎯</span>
+    <span>Síntese consolidada da semana traduzida em <strong>movimentos acionáveis</strong> para a Seguros Unimed. Prioridade definida com base nas notícias, regulação e dinâmica competitiva desta edição.</span>
+  </div>
+
+  <div class="sec-block">
+    <div class="slabel">O que a semana pede da Seguros Unimed</div>
+    <div class="agenda">
+
+      <div class="agenda-item">
+        <div class="agenda-num">1</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Mapear impactos da LC 213/2025 no modelo cooperativo antes que a SUSEP finalize a regulamentação</div>
+          <div class="agenda-txt">A Lei Complementar 213 amplia o escopo de atuação de cooperativas de seguros e está sendo regulamentada agora — Prioridade 1 da agenda SUSEP 2026. <strong>Quem influenciar a regulamentação infralegal define as regras do jogo para os próximos anos.</strong> A SU precisa ter posição técnica formada e articulada junto à CNseg antes da norma ser publicada.</div>
+          <div class="agenda-tags">
+            <span class="agenda-tag urgente">Urgente</span>
+            <span class="agenda-tag">Regulação</span>
+            <span class="agenda-tag">Cooperativismo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-num">2</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Definir postura estratégica em Vida: crescimento ativo ou manutenção de carteira?</div>
+          <div class="agenda-txt">Vida cresce +11,6% no 1T26 com sinistralidade excelente — e a SU está na 14ª posição. <strong>Este é o ramo com maior gap entre oportunidade de mercado e posição da companhia.</strong> A decisão sobre avançar agressivamente (inclusive com Universal Life) ou consolidar a base atual precisa estar na agenda da diretoria nas próximas semanas.</div>
+          <div class="agenda-tags">
+            <span class="agenda-tag urgente">Urgente</span>
+            <span class="agenda-tag">Vida</span>
+            <span class="agenda-tag">Produto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-num">3</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Monitorar reposicionamento da Amil sob Seripieri — risco de mudança na dinâmica competitiva em Saúde</div>
+          <div class="agenda-txt">A Amil com novo controle desde 2024 ainda está definindo sua estratégia para 2026. <strong>Mudanças de posicionamento em preço ou distribuição podem pressionar a SU em segmentos onde hoje há estabilidade competitiva.</strong> Recomenda-se acompanhamento próximo de movimentos de produto e comunicação da Amil no mercado corporativo.</div>
+          <div class="agenda-tags">
+            <span class="agenda-tag medio">Médio prazo</span>
+            <span class="agenda-tag">Saúde</span>
+            <span class="agenda-tag">Competitivo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-num">4</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Acelerar parceria com as 205 Unimeds ainda não integradas ao Unimed Odonto</div>
+          <div class="agenda-txt">Com NPS nº 1 e CAGR de 18% ao ano, o Odonto é o produto mais validado do portfólio. <strong>Das 341 cooperativas Unimed, 205 ainda não distribuem o produto — cada uma ativada é crescimento orgânico sem custo de aquisição de novo canal.</strong> Este é o movimento de maior ROI disponível no curtíssimo prazo.</div>
+          <div class="agenda-tags">
+            <span class="agenda-tag urgente">Urgente</span>
+            <span class="agenda-tag">Odonto</span>
+            <span class="agenda-tag">Crescimento</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-num">5</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Posicionar Previdência como instrumento de garantia de crédito — não apenas aposentadoria</div>
+          <div class="agenda-txt">Com o VGBL comprimido pelo IOF, o discurso tradicional de previdência perdeu força. A CNseg está avaliando uso de reservas como garantia de crédito — <strong>novo argumento de venda que não depende de reversão tributária e pode reativar interesse de clientes que pararam de aportar.</strong> Internamente: rever o script comercial de previdência antes da próxima campanha.</div>
+          <div class="agenda-tags">
+            <span class="agenda-tag medio">Médio prazo</span>
+            <span class="agenda-tag">Previdência</span>
+            <span class="agenda-tag">Discurso Comercial</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="panel-divider"></div>
+
+<footer>
+  <p>Fontes: SUSEP · CNseg · Fenaprevi · ANS · FenaSaúde · Revista Apólice · Gazeta Mercantil · CQCS · Brazil Economy · Sonho Seguro · Sou Segura</p>
+  <p><span class="su">Gerência de Estratégia · Seguros Unimed</span> · Radar Estratégico MVP · 14/Mai/2026</p>
+</footer>
+
+<script>
+function toggle(id) {
+  const panel = document.getElementById('panel-' + id);
+  const card  = document.getElementById('card-'  + id);
+  const isOpen = panel.classList.contains('open');
+
+  // fecha todos
+  document.querySelectorAll('.acc-panel').forEach(p => p.classList.remove('open'));
+  document.querySelectorAll('.sec-card').forEach(c => c.classList.remove('open'));
+
+  // abre o clicado se estava fechado
+  if (!isOpen) {
+    panel.classList.add('open');
+    card.classList.add('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function exportarPDF() {
+  // Abre todos os painéis antes de imprimir
+  document.querySelectorAll('.acc-panel').forEach(p => p.classList.add('open'));
+  document.querySelectorAll('.sec-card').forEach(c => c.classList.add('open'));
+
+  // Pequeno delay para o DOM renderizar, depois imprime
+  setTimeout(function() {
+    window.print();
+    // Após imprimir, restaura o estado original (só geral aberto)
+    setTimeout(function() {
+      document.querySelectorAll('.acc-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.sec-card').forEach(c => c.classList.remove('open'));
+      document.getElementById('panel-geral').classList.add('open');
+      document.getElementById('card-geral').classList.add('open');
+    }, 1000);
+  }, 300);
+}
+</script>
+</body>
+</html>
