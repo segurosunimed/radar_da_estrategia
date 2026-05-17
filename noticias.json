@@ -1,26 +1,27 @@
 {
   "edicoes": [{
-  "id": "2026-05-17",
-  "titulo": "Edição 17/Mai/2026",
-  "data": "17 de maio de 2026",
+  {
+  "id": "2026-05-14",
+  "titulo": "Edição 14/Mai/2026",
+  "data": "14 de maio de 2026",
   "termometro": {
     "regulatorio": {
       "status": "att",
       "emoji": "⚖️",
-      "titulo": "Agenda Pesada",
-      "texto": "LC 213 e Lei 15.040/2024 em regulamentação simultânea na SUSEP — janela crítica para cooperativas influenciarem as normas infralegais antes da publicação."
+      "titulo": "Janela Crítica",
+      "texto": "LC 213 e Lei 15.040/2024 em regulamentação simultânea na SUSEP — a agenda regulatória mais densa dos últimos 10 anos. Quem influenciar as normas infralegais agora define as regras para os próximos 5 anos."
     },
     "competitivo": {
-      "status": "ok",
+      "status": "att",
       "emoji": "📊",
-      "titulo": "Dinâmico",
-      "texto": "Hapvida surpreende o mercado com melhora de sinistralidade no 1T26. SulAmérica lidera ganho de beneficiários. Concorrência em Saúde se acirra no Sudeste."
+      "titulo": "Alerta Hapvida",
+      "texto": "Hapvida surpreende com melhora de 330 bps na sinistralidade no 1T26 — o maior concorrente em custo está se reestruturando e pode voltar ao modo ofensivo no 2S26. SulAmérica lidera ganho de beneficiários."
     },
     "sentimento": {
       "status": "att",
       "emoji": "🧭",
       "titulo": "Cauteloso",
-      "texto": "Setor projeta crescimento de 5,7% em 2026, mas concentrado em proteção — acumulação segue comprimida pelo IOF. Mercado de portabilidade em previdência acirrado."
+      "texto": "IOF sobre VGBL comprime previdência e acirra portabilidade. Setor projeta R$ 808 bi em 2026, mas crescimento concentrado em proteção. Vida e Auto lideram; acumulação estagnada."
     }
   },
   "secoes": {
@@ -29,69 +30,98 @@
         {
           "tag": "hot",
           "tag_label": "URGENTE",
-          "titulo": "Setor segurador projeta R$ 808 bi em 2026 com crescimento concentrado em proteção — acumulação perde fôlego",
-          "url": "https://monitormercantil.com.br/setor-de-seguros-vislumbra-crescimento-de-57-este-ano/",
-          "texto": "CNseg revisou projeção de arrecadação para <strong>R$ 808 bilhões</strong> em 2026 (+5,7% nominal), após início de ano mais fraco que o previsto. Crescimento puxado por saúde, auto e habitacional. Previdência (acumulação) segue comprimida pelo IOF. <strong>Setor já representa ~5,8% do PIB</strong>.",
-          "fonte": "CNseg",
-          "fonte_url": "https://monitormercantil.com.br/setor-de-seguros-vislumbra-crescimento-de-57-este-ano/",
-          "fonte_label": "Monitor Mercantil",
+          "titulo": "SUSEP: setor supera R$100 bi no 1T26 com Vida como maior expansão do mercado",
+          "url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "texto": "Receitas totais de <strong>R$106,18 bilhões</strong> no 1T26. Seguro de Vida liderou com alta de <strong>+11,63% nominal</strong> e +6,58% real. Indenizações pagas somaram R$62,70 bilhões. <strong>153 seguradoras</strong> operando em março/2026.",
+          "fonte": "SUSEP",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "fonte_label": "Revista Apólice",
           "data": "Mai/2026"
         },
         {
           "tag": "hot",
           "tag_label": "DESTAQUE",
-          "titulo": "Hapvida (1T26): melhora de 330 bps na sinistralidade surpreende mercado — CEO reforça agenda de simplificação",
+          "titulo": "Hapvida (1T26): melhora de 330 bps na sinistralidade surpreende mercado — CEO reforça agenda de simplificação e desinvestimento",
           "url": "https://braziljournal.com/hapvida-surpreende-e-deve-pressionar-shorts/",
-          "texto": "Após dois trimestres desastrosos, Hapvida entregou <strong>melhora sequencial relevante</strong> na sinistralidade no 1T26 — superando expectativas do sellside. CEO Lucas Adib reforçou <strong>venda de ativos não estratégicos e revisão geográfica</strong>. Ações subiram acima de 9% na sessão pós-resultado. Judicialização ainda pressiona custos.",
+          "texto": "Após dois trimestres desastrosos, Hapvida entregou melhora sequencial relevante: <strong>sinistralidade cash em 72,2%</strong>, EBITDA ajustado de R$ 803 mi (+42% tri-a-tri). CEO Lucas Adib reforçou <strong>venda de ativos não estratégicos e revisão geográfica</strong>. Ações subiram acima de 9%. Judicialização ainda pressiona custos.",
           "fonte": "Brazil Journal · Hapvida",
           "fonte_url": "https://braziljournal.com/hapvida-surpreende-e-deve-pressionar-shorts/",
           "fonte_label": "Brazil Journal",
           "data": "Mai/2026"
         },
         {
+          "tag": "hot",
+          "tag_label": "ATENÇÃO",
+          "titulo": "Previdência Aberta recua 8% no 1T26: IOF sobre VGBL comprime captações e acirra guerra de portabilidade",
+          "url": "https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/",
+          "texto": "Prêmios e contribuições totalizaram <strong>R$41,3 bilhões</strong>, queda de R$3,6 bi vs 1T25. IOF de 5% sobre aportes VGBL acima de R$ 600 mil/ano secou captação nova — <strong>VGBL representa ~90% do setor</strong>. Mercado migrou para competição por portabilidade de R$1,8 tri em ativos.",
+          "fonte": "Fenaprevi",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/",
+          "fonte_label": "Revista Apólice",
+          "data": "Mai/2026"
+        },
+        {
           "tag": "reg",
           "tag_label": "REGULAÇÃO",
-          "titulo": "SUSEP: regulamentação simultânea da Lei 15.040/2024 e LC 213/2025 é a pauta regulatória mais densa dos últimos 10 anos",
+          "titulo": "SUSEP 2026: regulamentação simultânea da LC 213 e Lei 15.040 é a pauta mais densa dos últimos 10 anos para o setor",
           "url": "https://www.sonhoseguro.com.br/2026/05/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/",
-          "texto": "CNseg alerta para o risco de lacunas na implementação: a <strong>Lei 15.040/2024 tem eficácia plena imediata</strong>, enquanto a <strong>LC 213/2025 amplia o escopo das cooperativas de seguros</strong>. Processo de revisão de resoluções e circulares incompatíveis deve se estender ao longo de 2026.",
+          "texto": "CNseg alerta: <strong>Lei 15.040/2024 tem eficácia plena imediata</strong> e exige revisão de resoluções incompatíveis. <strong>LC 213/2025 amplia o escopo das cooperativas de seguros</strong>. Processo de regulamentação infralegal em construção agora — janela de influência aberta.",
           "fonte": "CNseg · Sonho Seguro",
           "fonte_url": "https://www.sonhoseguro.com.br/2026/05/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/",
           "fonte_label": "Sonho Seguro",
           "data": "Mai/2026"
         },
         {
-          "tag": "new",
-          "tag_label": "TENDÊNCIA",
-          "titulo": "Previdência entra em modo 'rouba-monte': portabilidade acirrada com IOF limitando novos aportes em VGBL",
-          "url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
-          "texto": "Com IOF de 5% sobre aportes VGBL acima de <strong>R$ 600 mil anuais</strong>, mercado migrou para competição por portabilidade de carteiras existentes. <strong>VGBL representa ~90% do setor</strong>. Estratégia vencedora em 2026: quem capturar portabilidade enquanto mantém novos aportes via PGBL.",
-          "fonte": "NeoFeed · SUSEP",
-          "fonte_url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
-          "fonte_label": "NeoFeed",
+          "tag": "reg",
+          "tag_label": "ENCONSEG",
+          "titulo": "Enconseg 2026: setor debate Auto, Saúde, Vida e aposta em Elementares como oceano azul",
+          "url": "https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/",
+          "texto": "Evento do Sincor-RJ reuniu líderes do setor. Roberto Santos (CNseg): <em>\"O consumidor não compara mais companhias, mas experiências.\"</em> IA e automação dominaram as discussões transversais. Elementares foi destacado como o maior segmento subexplorado.",
+          "fonte": "Sincor-RJ",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/",
+          "fonte_label": "Revista Apólice",
           "data": "Mai/2026"
         },
         {
-          "tag": "opp",
-          "tag_label": "INOVAÇÃO",
-          "titulo": "Insurtech Brasil 2026 acontece em 28/Mai em SP — maior encontro de inovação em seguros do país",
-          "url": "https://www.insurtech.com.br/seguros/setor-segurador-movimenta-r-683-bilhoes-no-primeiro-bimestre-de-2026-e-mantem-papel-central-na-protecao-financeira-no-pais/",
-          "texto": "Evento reúne seguradoras, insurtechs e investidores em São Paulo. Temas centrais: IA aplicada à subscrição, canais digitais, telemática e sandbox regulatório. Referência para benchmarks do hub <strong>Stormia</strong>.",
-          "fonte": "InsurTech Brasil",
-          "fonte_url": "https://www.insurtech.com.br/seguros/setor-segurador-movimenta-r-683-bilhoes-no-primeiro-bimestre-de-2026-e-mantem-papel-central-na-protecao-financeira-no-pais/",
-          "fonte_label": "InsurTech Brasil",
+          "tag": "new",
+          "tag_label": "INSURTECH",
+          "titulo": "SUSEP avança com Loovi no sandbox do Auto Popular — 70% da frota brasileira ainda sem seguro",
+          "url": "https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/",
+          "texto": "LTI Seguros (Grupo Loovi) avança na licença definitiva. Apenas <strong>30% da frota brasileira</strong> possui seguro auto. Modelo digital com IA e contratação em minutos mira classe média baixa — sinal claro de que o canal digital no Auto está se consolidando.",
+          "fonte": "SUSEP · Brazil Economy",
+          "fonte_url": "https://brazileconomy.com.br/empresas/2026/05/menos-marcal-mais-crescimento-susep-da-sinal-verde-a-loovi-e-insurtech-avanca-no-popular/",
+          "fonte_label": "Brazil Economy",
           "data": "Mai/2026"
+        },
+        {
+          "tag": "new",
+          "tag_label": "DESTAQUE SU",
+          "titulo": "Unimed Odonto atinge 1,3 mi de beneficiários — NPS nº 1 Brasil pelo 4º ano consecutivo",
+          "url": "https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/",
+          "texto": "Marco histórico em março/2026. CAGR de <strong>18% ao ano</strong> — três vezes a média do setor. Crescimento de 318% em 8 anos vs 68% do mercado. IDSS 2025: nota 0,8791 acima da média setorial.",
+          "fonte": "Seguros Unimed",
+          "fonte_url": "https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/",
+          "fonte_label": "Revista Apólice",
+          "data": "Mar/2026"
         }
       ],
       "vozes": [
         {
-          "quote": "Esse crescimento está muito mais ligado à percepção de risco do que ao ciclo econômico em si. Em ambientes de juros altos e maior restrição de crédito, empresas e pessoas físicas ficam mais expostas, e isso naturalmente aumenta a demanda por proteção.",
-          "avatar": "AF",
-          "nome": "Alberto Friggi",
-          "cargo": "Sócio-Fundador · Friggi & Secco",
-          "contexto": "Monitor Mercantil · Mai/2026"
+          "quote": "O consumidor não compara mais companhias, mas experiências. Quem não entender isso vai perder mercado independentemente do portfólio.",
+          "avatar": "RS",
+          "nome": "Roberto Santos",
+          "cargo": "Presidente · CNseg",
+          "contexto": "Enconseg 2026 · Mai/2026"
         },
         {
-          "quote": "A Lei nº 15.040/2024 possui eficácia plena desde a sua entrada em vigor, o que impõe à regulação infralegal um processo de adaptação e revisão das normas existentes, garantindo coerência com o novo marco legal e segurança jurídica nas relações contratuais.",
+          "quote": "O IOF sobre o VGBL é um instrumento de classe média. Noventa e sete por cento das pessoas têm reserva de menos de um milhão de reais. Estamos prejudicando quem mais precisa de planejamento de longo prazo.",
+          "avatar": "RS",
+          "nome": "Roberto Santos",
+          "cargo": "Presidente · CNseg",
+          "contexto": "Entrevista CNseg · Abr/2026"
+        },
+        {
+          "quote": "A Lei nº 15.040/2024 possui eficácia plena desde a sua entrada em vigor, o que impõe à regulação infralegal um processo de adaptação e revisão das normas existentes.",
           "avatar": "GC",
           "nome": "Glauce Carvalhal",
           "cargo": "Diretora Jurídica · CNseg",
@@ -102,19 +132,26 @@
           "avatar": "LA",
           "nome": "Lucas Adib",
           "cargo": "CEO · Hapvida",
-          "contexto": "Teleconferência de Resultados 1T26 · Mai/2026"
+          "contexto": "Teleconferência 1T26 · Mai/2026"
+        },
+        {
+          "quote": "O crescimento do setor está mais ligado à percepção de risco do que ao ciclo econômico. Em ambiente de juros altos, empresas e famílias ficam mais expostas — e demandam mais proteção.",
+          "avatar": "ND",
+          "nome": "Ney Dias",
+          "cargo": "Presidente · Bradesco Seguros / FenSeg",
+          "contexto": "Enconseg 2026 · Mai/2026"
         }
       ],
-      "implicacao": "A semana traz dois sinais simultâneos que exigem leituras distintas. No competitivo: a <strong>recuperação da Hapvida</strong> sinaliza que o principal concorrente em Saúde está se reestruturando — ameaça que volta a ficar de pé. No regulatório: a <strong>regulamentação simultânea da Lei 15.040 e LC 213</strong> é a maior janela de influência regulatória que uma cooperativa de seguros terá na próxima década. A SU precisa estar presente e ativa nesse processo — não apenas como observadora."
+      "implicacao": "A semana de 14/Mai consolida dois sinais que exigem leituras distintas. No regulatório: a <strong>janela de influência na LC 213 e Lei 15.040 está aberta agora</strong> — o que não for moldado nesse processo estará definido por anos. No competitivo: a <strong>recuperação da Hapvida</strong> encerra o período de calmaria no segmento de Saúde. O maior concorrente em custo está em reorganização ativa — a SU precisa avançar nos mercados onde ele ainda está recuando, especialmente interior e cidades médias."
     },
     "saude": {
       "noticias": [
         {
           "tag": "hot",
           "tag_label": "COMPETITIVO",
-          "titulo": "Hapvida 1T26: sinistralidade cai 330 bps, CEO vende ativos e reposiciona empresa — mercado respira",
+          "titulo": "Hapvida 1T26: sinistralidade cai 330 bps, CEO vende ativos e reposiciona empresa geograficamente",
           "url": "https://www.seudinheiro.com/2026/bolsa-dolar/hapvida-hpav3-da-um-trimestre-de-sossego-aos-investidores-com-balanco-melhor-que-o-esperado-acoes-saltam-hora-de-comprar-bdap/",
-          "texto": "Hapvida entrega 1T26 melhor que o esperado: <strong>sinistralidade cash em 72,2%</strong>, EBITDA ajustado de R$ 803 mi (+42% tri-a-tri), geração de caixa positiva. Empresa em reorganização com foco em <strong>desalavancagem e revisão geográfica</strong>. Judicialização ainda pressiona. SP continua perdendo beneficiários.",
+          "texto": "Após dois trimestres desastrosos, Hapvida entrega melhora sequencial expressiva: <strong>sinistralidade cash em 72,2%</strong>, EBITDA ajustado R$ 803 mi, geração de caixa positiva. CEO foca em simplificação e venda de ativos não estratégicos. <strong>São Paulo continua perdendo beneficiários</strong> — empresa recua no Sudeste para recuperar margens.",
           "fonte": "Seu Dinheiro · Brazil Journal",
           "fonte_url": "https://www.seudinheiro.com/2026/bolsa-dolar/hapvida-hpav3-da-um-trimestre-de-sossego-aos-investidores-com-balanco-melhor-que-o-esperado-acoes-saltam-hora-de-comprar-bdap/",
           "fonte_label": "Seu Dinheiro",
@@ -125,119 +162,174 @@
           "tag_label": "CUSTO",
           "titulo": "Reajuste coletivos entre 8% e 11% em 2026 — setor lucrativo enfrenta pressão política por moderação",
           "url": "https://diariodocomercio.com.br/economia/planos-de-saude-coletivos-devem-ter-aumento-entre-8-e-11-em-2026/",
-          "texto": "Sinistralidade do setor caiu para <strong>81,7% em 2025</strong> (menor nível desde 2020). Lucro de R$ 24,4 bi concentrado em 3 operadoras. ANS eleva teto individual para <strong>7,5% a partir de mai/26</strong>. Setor mais lucrativo, mas com regulação mais dura à frente — combinação que muda as regras do jogo.",
-          "fonte": "ANS · FenaSaúde · Diário do Comércio",
+          "texto": "Sinistralidade do setor caiu para <strong>81,7% em 2025</strong> (menor nível desde 2020). Lucro de R$ 24,4 bi concentrado em 3 operadoras — 49% do resultado total. ANS eleva teto individual para <strong>7,5% a partir de mai/26</strong>. Setor mais lucrativo cria pressão política por regulação mais dura.",
+          "fonte": "ANS · FenaSaúde",
           "fonte_url": "https://diariodocomercio.com.br/economia/planos-de-saude-coletivos-devem-ter-aumento-entre-8-e-11-em-2026/",
           "fonte_label": "Diário do Comércio",
           "data": "Mai/2026"
         },
         {
           "tag": "reg",
+          "tag_label": "LC 213",
+          "titulo": "LC 213/2025 amplia escopo de cooperativas de seguros — pauta Prioridade 1 da SUSEP",
+          "url": "https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/",
+          "texto": "LC 213 permite <strong>atuação mais abrangente de cooperativas de seguros</strong>. Revisão de normativos de riscos de pessoas em construção na SUSEP. Processo de regulamentação infralegal em curso — janela de influência aberta para cooperativas participarem ativamente.",
+          "fonte": "SUSEP · CNseg",
+          "fonte_url": "https://cqcs.com.br/noticia/cnseg-destaca-agenda-regulatoria-da-susep-para-2026-e-desafios-na-implementacao-de-novas-leis-do-setor/",
+          "fonte_label": "CQCS",
+          "data": "Mai/2026"
+        },
+        {
+          "tag": "reg",
           "tag_label": "FISCALIZAÇÃO",
-          "titulo": "ANS remodela modelo de fiscalização com penalidades até 100% maiores — escalonamento até 2028",
+          "titulo": "ANS remodela fiscalização com penalidades até 100% maiores — escalonamento progressivo até 2028",
           "url": "https://www.conjur.com.br/2026-jan-03/para-2026-um-novo-modelo-fiscalizacao-na-saude-suplementar/",
-          "texto": "Novo modelo ANS: <strong>+50% nas penalidades em 2026, +75% em 2027, +100% em 2028</strong>. Foco em regulação responsiva e orientadora. Dados da ANS identificam deterioração financeira de operadoras com <strong>2 a 4 trimestres de antecedência</strong> — regulação preditiva em construção.",
+          "texto": "Novo modelo ANS: <strong>+50% nas penalidades em 2026, +75% em 2027, +100% em 2028</strong>. Regulação responsiva com foco preventivo. Dados regulatórios da ANS já permitem identificar deterioração financeira de operadoras com <strong>2 a 4 trimestres de antecedência</strong>.",
           "fonte": "ANS · Conjur",
           "fonte_url": "https://www.conjur.com.br/2026-jan-03/para-2026-um-novo-modelo-fiscalizacao-na-saude-suplementar/",
           "fonte_label": "Conjur",
           "data": "Jan/2026"
         }
       ],
-      "implicacao": "A <strong>recuperação da Hapvida</strong> é o sinal mais relevante da semana para a SU em Saúde: o maior concorrente em custos está se reestruturando e pode voltar ao território ofensivo no 2S26, especialmente em SP. O novo modelo de fiscalização da ANS com penalidades crescentes favorece quem já tem nota máxima — vantagem competitiva da SU que precisa ser preservada e comunicada.",
-      "oportunidade": "O <strong>crescimento do segmento PME</strong> via planos coletivos flexíveis, combinado com a capilaridade cooperativa em cidades médias, é o vetor de crescimento mais defensável frente à reentrada da Hapvida no Sudeste."
+      "implicacao": "A <strong>recuperação da Hapvida</strong> encerra o período de menor pressão competitiva em Saúde. O maior concorrente em custo está reorganizado e pode voltar ao modo ofensivo no 2S26 — especialmente em SP. O novo modelo de fiscalização ANS com penalidades crescentes favorece quem já tem nota máxima: <strong>6 anos consecutivos da SU é ativo regulatório, não só reputacional</strong>.",
+      "oportunidade": "A Hapvida recua no Sudeste para recuperar margens. <strong>Cidades médias e interior</strong> — onde a SU já tem capilaridade cooperativa — são os territórios a avançar agora, enquanto o concorrente está ocupado com reestruturação interna."
     },
     "odonto": {
       "noticias": [
         {
           "tag": "new",
-          "tag_label": "POSIÇÃO SU",
-          "titulo": "Unimed Odonto: 1,3 mi de beneficiários, NPS nº 1 e 205 cooperativas ainda sem parceria — maior vetor de crescimento orgânico disponível",
+          "tag_label": "MARCO SU",
+          "titulo": "Unimed Odonto atinge 1,3 mi de beneficiários com crescimento de 318% em 8 anos",
           "url": "https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/",
-          "texto": "Com CAGR de <strong>18% ao ano</strong> e quarto ano consecutivo como melhor NPS do Brasil em odonto, a Unimed Odonto é o produto mais validado do portfólio. Das <strong>341 cooperativas Unimed, 205 ainda não são parceiras</strong> — cada uma ativada representa crescimento sem custo de aquisição de canal.",
-          "fonte": "Seguros Unimed · Revista Apólice",
+          "texto": "CAGR de <strong>18% ao ano</strong> — três vezes a média do setor. Quarto ano consecutivo como <strong>melhor NPS do Brasil</strong> em odonto. IDSS 2025: 0,8791 acima da média de 0,7930.",
+          "fonte": "Seguros Unimed",
           "fonte_url": "https://revistaapolice.com.br/2026/03/unimed-odonto-atinge-13-mi-de-beneficiarios/",
           "fonte_label": "Revista Apólice",
           "data": "Mar/2026"
         },
         {
           "tag": "opp",
+          "tag_label": "EXPANSÃO",
+          "titulo": "136 das 341 Unimeds já distribuem Unimed Odonto — 205 ainda sem parceria",
+          "url": "https://conexao.segurosunimed.com.br/com-309-milhoes-de-beneficiarios-no-brasil-mercado-de-planos-odontologicos-e-oportunidade-para-o-sistema-unimed/",
+          "texto": "Das 341 cooperativas Unimed, <strong>136 já são parceiras comerciais</strong>. As outras <strong>205 cooperativas</strong> representam o maior vetor de crescimento orgânico disponível sem custo de aquisição de canal.",
+          "fonte": "Seguros Unimed",
+          "fonte_url": "https://conexao.segurosunimed.com.br/com-309-milhoes-de-beneficiarios-no-brasil-mercado-de-planos-odontologicos-e-oportunidade-para-o-sistema-unimed/",
+          "fonte_label": "Conexão SU",
+          "data": "2026"
+        },
+        {
+          "tag": "opp",
           "tag_label": "MERCADO",
-          "titulo": "Odontologia suplementar: setor tem mais de 34,8 mi de beneficiários e cresce +1,6 mi em 12 meses",
-          "url": "https://www.infomoney.com.br/saude/sulamerica-e-amil-acirram-disputa-e-lideram-adicao-de-clientes-de-planos-em-maio/",
-          "texto": "ANS registra <strong>34,8 milhões de beneficiários</strong> em planos exclusivamente odontológicos. Crescimento de 1,6 mi em 12 meses — setor robusto e com espaço de expansão. OdontoPrev (Bradesco/BB) mantém escala com +8 mi de beneficiários e múltiplas marcas.",
-          "fonte": "ANS · InfoMoney",
-          "fonte_url": "https://www.infomoney.com.br/saude/sulamerica-e-amil-acirram-disputa-e-lideram-adicao-de-clientes-de-planos-em-maio/",
-          "fonte_label": "InfoMoney",
-          "data": "2025"
+          "titulo": "Odontologia suplementar: mais de 34,8 mi de beneficiários e +1,6 mi em 12 meses — OdontoPrev lidera com escala",
+          "url": "https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/",
+          "texto": "ANS registra <strong>34,8 milhões de beneficiários</strong> em odonto. OdontoPrev (Bradesco/BB) domina com +8 mi de beneficiários via Bradesco Dental, Prívian, Prontodente e BB Dental. Mercado cresce, mas <strong>a escala da SU em NPS é inatingível para a concorrência</strong>.",
+          "fonte": "ANS · BenefíciosRH",
+          "fonte_url": "https://www.beneficiosrh.com.br/maiores-operadoras-planos-odontologicos/",
+          "fonte_label": "BenefíciosRH",
+          "data": "Mai/2026"
         }
       ],
-      "implicacao": "Odonto é onde a SU tem a posição mais diferenciada do portfólio. O próximo salto de crescimento não depende de produto novo — depende de <strong>governança interna de ativação de cooperativas</strong>. Executivo que resolver a fricção com as 205 Unimeds pendentes terá o maior ROI de crescimento orgânico disponível na companhia.",
-      "oportunidade": "<strong>Bundling Saúde + Odonto</strong> com desconto e comunicação integrada via cooperativas médicas é proposta sem equivalente no mercado. O médico cooperado como vetor de venda tem credibilidade que nenhuma bancassurance consegue replicar."
+      "implicacao": "Odonto é o segmento onde a SU tem a <strong>posição competitiva mais diferenciada</strong>: NPS nº 1, CAGR 3× a média e sinergia cooperativa exclusiva. Ativar as <strong>205 Unimeds restantes</strong> é a alavanca de maior ROI disponível — e não depende de produto novo, canal novo ou investimento pesado.",
+      "oportunidade": "Bundling <strong>Saúde + Odonto</strong> via cooperativas médicas é proposta de valor sem equivalente no mercado. O médico cooperado como vetor de venda tem credibilidade que nenhuma bancassurance consegue replicar."
     },
     "vida": {
       "noticias": [
         {
           "tag": "new",
-          "tag_label": "LIDERANÇA",
-          "titulo": "Seguros de Pessoas lideram o 1º bimestre de 2026 com alta de 6,8% — maior expansão entre todos os segmentos",
-          "url": "https://www.insurtech.com.br/seguros/setor-segurador-movimenta-r-683-bilhoes-no-primeiro-bimestre-de-2026-e-mantem-papel-central-na-protecao-financeira-no-pais/",
-          "texto": "Seguros de Pessoas (inclui Vida) superaram <strong>R$ 13,1 bilhões</strong> em prêmios no 1º bimestre, com alta de 6,8%. CNseg associa ao movimento de busca por <strong>proteção de renda, planejamento familiar e segurança financeira</strong>. Vida é o ramo de maior crescimento real do setor pelo segundo trimestre consecutivo.",
-          "fonte": "CNseg · InsurTech Brasil",
-          "fonte_url": "https://www.insurtech.com.br/seguros/setor-segurador-movimenta-r-683-bilhoes-no-primeiro-bimestre-de-2026-e-mantem-papel-central-na-protecao-financeira-no-pais/",
-          "fonte_label": "InsurTech Brasil",
+          "tag_label": "ACELERAÇÃO",
+          "titulo": "Vida cresce +11,63% nominal no 1T26 — maior expansão entre todos os ramos pelo segundo trimestre seguido",
+          "url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "texto": "Boletim SUSEP de março/2026: Seguro de Vida com <strong>maior crescimento nominal e real</strong> (+6,58% real) entre todos os ramos. Seguros de Pessoas superaram <strong>R$ 13,1 bilhões</strong> no bimestre com alta de 6,8%. Crescimento contínuo desde 2021 — tendência estrutural, não pontual.",
+          "fonte": "SUSEP · CNseg",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "fonte_label": "Revista Apólice",
           "data": "Mai/2026"
         },
         {
           "tag": "opp",
           "tag_label": "NOVO PRODUTO",
-          "titulo": "Vida Universal na agenda SUSEP 2026 — produto flexível pode reposicionar o ramo como alternativa ao VGBL pressionado",
+          "titulo": "Vida Universal entra na agenda regulatória da SUSEP para 2026 — alternativa ao VGBL pressionado pelo IOF",
           "url": "https://www.segs.com.br/seguros/440895-susep-orienta-mercado-segurador-com-novo-plano-de-regulacao-para-2026",
-          "texto": "O Vida Universal combina <strong>acumulação e proteção em um único contrato</strong>, com ajuste de contribuição ao longo do tempo. Com VGBL sob pressão do IOF, o produto emerge como alternativa de planejamento financeiro com benefício de seguro. SUSEP incluiu sua regulamentação no Plano 2026.",
-          "fonte": "SUSEP · SEGS",
+          "texto": "Produto flexível que combina <strong>acumulação e proteção num mesmo contrato</strong>. Permite ajuste de contribuição e cobertura ao longo do tempo. Com VGBL sob pressão do IOF, o Vida Universal emerge como alternativa de planejamento financeiro com benefício de seguro.",
+          "fonte": "SUSEP Res. 72/2025",
           "fonte_url": "https://www.segs.com.br/seguros/440895-susep-orienta-mercado-segurador-com-novo-plano-de-regulacao-para-2026",
           "fonte_label": "SEGS",
           "data": "Fev/2026"
+        },
+        {
+          "tag": "wtf",
+          "tag_label": "GAP SU",
+          "titulo": "SU na 14ª posição em Vida enquanto ramo cresce mais que qualquer outro — decisão estratégica não pode esperar",
+          "url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "texto": "Vida é o ramo de maior crescimento real do setor (+6,58%) e a SU ocupa a <strong>14ª posição</strong>. O canal cooperativo que impulsionou o Odonto a 18% ao ano está disponível para o Vida — mas não está sendo ativado na mesma intensidade. <strong>Esse gap tem nome e tem prazo.</strong>",
+          "fonte": "SUSEP · Análise SU",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/susep-setor-arrecada-r-1061-bilhoes-ate-marco/",
+          "fonte_label": "Revista Apólice",
+          "data": "Mai/2026"
         }
       ],
-      "implicacao": "Vida cresce forte pelo segundo trimestre consecutivo e a SU está na 14ª posição. <strong>Este é o maior gap estratégico do portfólio</strong>: o ramo cresce mais do que qualquer outro e a companhia não tem posição relevante. A decisão de avançar com força ou manter posição defensiva precisa estar na agenda da diretoria no próximo ciclo de revisão estratégica.",
-      "oportunidade": "O <strong>canal cooperativo</strong> é exatamente o mesmo que fez o Odonto crescer 18% ao ano. A pergunta é: por que o Vida ainda não capturou o mesmo efeito? Responder isso define se é um problema de produto, canal, incentivo ou governança."
+      "implicacao": "Vida é o ramo de maior crescimento do setor e aquele onde a SU tem a <strong>maior lacuna estratégica</strong>. O canal natural para crescer é o <strong>ecossistema cooperativo</strong> — o mesmo que impulsionou o Odonto a 18% ao ano. A questão não é de mercado; é de decisão interna.",
+      "oportunidade": "O <strong>Universal Life</strong> regulamentado pela SUSEP em 2026 pode ser o produto para mudar o posicionamento da SU no ramo. Bundling <strong>Saúde + Vida + Odonto</strong> via cooperativas é proposta sem equivalente no mercado."
     },
     "previdencia": {
       "noticias": [
         {
           "tag": "hot",
           "tag_label": "CRISE",
-          "titulo": "Previdência em modo 'rouba-monte': IOF esgotou captação nova e mercado compete por portabilidade de R$ 1,8 tri em ativos",
-          "url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
-          "texto": "IOF de 5% sobre aportes VGBL acima de R$ 600 mil/ano secou o fluxo novo de grandes aportadores. <strong>BrasilPrev (R$ 454 bi em ativos), Itaú, BTG, Bradesco e Icatu</strong> disputam portabilidade. SulAmérica evita guerra de taxas — foco em qualidade de assessoria. Setor em consenso: sem reversão do IOF no curto prazo.",
-          "fonte": "NeoFeed · SUSEP",
-          "fonte_url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
-          "fonte_label": "NeoFeed",
-          "data": "Dez/2025"
+          "titulo": "Previdência em modo 'rouba-monte': IOF esgotou captação nova e mercado compete por portabilidade de R$1,8 tri",
+          "url": "https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/",
+          "texto": "Prêmios: <strong>R$41,3 bi no 1T26</strong>, queda de R$3,6 bi vs 1T25. Fenaprevi estima que IOF desincentivou <strong>R$50 bilhões</strong> em captações. BrasilPrev (R$ 454 bi), Itaú, BTG, Bradesco e Icatu disputam portabilidade. Setor em consenso: sem reversão do IOF no curto prazo.",
+          "fonte": "Fenaprevi · NeoFeed",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/previdencia-aberta-recua-8-no-primeiro-trimestre/",
+          "fonte_label": "Revista Apólice",
+          "data": "Mai/2026"
         },
         {
           "tag": "opp",
           "tag_label": "PGBL",
-          "titulo": "PGBL não foi afetado pelo IOF — produto pode ser reposicionado como instrumento de planejamento de longo prazo e sucessão",
+          "titulo": "PGBL não foi afetado pelo IOF — reposicionamento como instrumento de planejamento e garantia de crédito",
           "url": "https://cqcs.com.br/noticia/novo-decreto-atualiza-regra-de-iof-para-planos-vgbl/",
-          "texto": "<strong>PGBL isento do IOF</strong> sobre aportes. Permite dedução de até 12% da renda tributável e não sofre come-cotas. Para quem usa VGBL como blindagem fiscal, o PGBL emerge como alternativa legal e fiscalmente eficiente. Contexto de <strong>Selic elevada</strong> torna renda fixa nos FIEs atrativos.",
-          "fonte": "SUSEP · CQCS",
+          "texto": "<strong>PGBL isento do IOF</strong> sobre aportes. Permite dedução de até 12% da renda tributável e não sofre come-cotas. CNseg avalia positivamente proposta de usar <strong>reservas de previdência como garantia de crédito</strong> — reposicionamento do produto além da aposentadoria.",
+          "fonte": "SUSEP · CNseg · CQCS",
           "fonte_url": "https://cqcs.com.br/noticia/novo-decreto-atualiza-regra-de-iof-para-planos-vgbl/",
           "fonte_label": "CQCS",
           "data": "Jun/2025"
+        },
+        {
+          "tag": "opp",
+          "tag_label": "CANAL",
+          "titulo": "Médico cooperado como segmento-alvo em previdência: alta renda, necessidade real, acesso via rede própria",
+          "url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
+          "texto": "Com guerra de portabilidade dominada por BrasilPrev e bancassurance, a SU não tem escala para competir de frente. O canal diferenciado é o <strong>médico cooperado</strong> — perfil de alta renda, demanda real de planejamento sucessório e acesso exclusivo via rede Unimed. PGBL é o produto certo para esse público.",
+          "fonte": "NeoFeed · Análise SU",
+          "fonte_url": "https://neofeed.com.br/wealth-management/previdencia-privada-entra-em-modo-rouba-monte-apos-iof-no-vgbl/en/",
+          "fonte_label": "NeoFeed",
+          "data": "Dez/2025"
         }
       ],
-      "implicacao": "Previdência entrou em um novo jogo: <strong>sem dinheiro novo, o crescimento vem de portabilidade</strong>. A SU (21ª posição) não tem escala para competir de frente com BrasilPrev ou Itaú nesse campo. A aposta deve ser diferente — usar o canal cooperativo para captar PGBL de médicos e funcionários das Unimeds, que ainda não têm estratégia de previdência bem desenvolvida.",
-      "oportunidade": "Médicos cooperados são um segmento de alta renda com necessidade real de planejamento previdenciário e sucessório. <strong>PGBL via cooperativa médica</strong>, com assessoria financeira, é a oportunidade mais defensável da SU em Previdência nos próximos 24 meses."
+      "implicacao": "O problema é tributário, não comercial — e não vai ser resolvido no curto prazo. Estratégia em três frentes: (1) <strong>proteger carteira existente via PGBL</strong>, (2) <strong>reposicionar o discurso</strong> para previdência como garantia de crédito e instrumento sucessório, (3) <strong>focar no médico cooperado</strong> como nicho de alta renda com acesso exclusivo.",
+      "oportunidade": "PGBL via cooperativa médica, com assessoria financeira integrada, é a <strong>oportunidade mais defensável da SU em Previdência</strong> nos próximos 24 meses — sem precisar competir com BrasilPrev na guerra de portabilidade."
     },
     "elementares": {
       "noticias": [
         {
+          "tag": "opp",
+          "tag_label": "OCEANO AZUL",
+          "titulo": "Enconseg 2026 dedica sala ao Oceano de oportunidades em Ramos Elementares — mercado subpenetrado",
+          "url": "https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/",
+          "texto": "Evento destacou Ramos Elementares como maior oportunidade subexplorada do setor. Mensagem central: digitalização abrindo novos canais de distribuição e <strong>base não segurada ainda gigantesca</strong>.",
+          "fonte": "Sincor-RJ",
+          "fonte_url": "https://revistaapolice.com.br/2026/05/enconseg-2026-debate-desafios-e-futuro-do-mercado-segurador/",
+          "fonte_label": "Revista Apólice",
+          "data": "Mai/2026"
+        },
+        {
           "tag": "new",
           "tag_label": "AUTO",
-          "titulo": "Seguro Auto cresce 6,13% nominal no 1T26 — expansão da frota de elétricos e híbridos eleva custo de sinistro",
+          "titulo": "Seguro Auto cresce 6,13% nominal no 1T26 — elétricos e híbridos elevam custo de sinistro e pedem subscrição especializada",
           "url": "https://www.sonhoseguro.com.br/2026/05/setor-de-seguros-supera-r-100-bilhoes-no-trimestre-mas-crescimento-segue-concentrado-em-linhas-de-protecao/",
-          "texto": "Auto arrecadou <strong>R$ 15,08 bilhões</strong> no 1T26 (+6,13% nominal). Crescimento impulsionado pela expansão da frota e vendas de híbridos e elétricos — cujas peças são significativamente mais caras, pressionando o custo do sinistro. Subscrição de EV está se tornando diferencial técnico entre as seguradoras.",
+          "texto": "Auto arrecadou <strong>R$ 15,08 bilhões</strong> no 1T26 (+6,13%). Expansão de frota de elétricos e híbridos eleva custo de sinistro — peças significativamente mais caras. Subscrição de EV começa a se tornar diferencial técnico entre seguradoras. Loovi avança no sandbox do Auto Popular.",
           "fonte": "SUSEP · Sonho Seguro",
           "fonte_url": "https://www.sonhoseguro.com.br/2026/05/setor-de-seguros-supera-r-100-bilhoes-no-trimestre-mas-crescimento-segue-concentrado-em-linhas-de-protecao/",
           "fonte_label": "Sonho Seguro",
@@ -246,9 +338,9 @@
         {
           "tag": "opp",
           "tag_label": "GARANTIA",
-          "titulo": "Seguro Garantia entre os maiores crescimentos projetados de 2026 — PAC, Nova Lei de Licitações e infraestrutura como vetores",
+          "titulo": "Seguro Garantia: PAC, Nova Lei de Licitações e judicialização crescente como vetores de demanda para 2026",
           "url": "https://sousegura.org/cnseg-preve-expansao-de-8-do-mercado-em-2026/",
-          "texto": "Cláusula de retomada da Nova Lei de Licitações (obriga seguradora a concluir obras abandonadas) está sendo absorvida pelo mercado. Demanda crescente de obras públicas, concessões e PAC impulsiona Garantia. <strong>Seguro Garantia Judicial</strong> em expansão acelerada com judicialização crescente.",
+          "texto": "Entre os maiores crescimentos projetados para 2026. Cláusula de retomada da Nova Lei de Licitações gera demanda estrutural. <strong>Garantia Judicial</strong> em expansão acelerada com judicialização da saúde. Dois vetores com demanda crescente e presença natural da SU via base de saúde.",
           "fonte": "CNseg · Sou Segura",
           "fonte_url": "https://sousegura.org/cnseg-preve-expansao-de-8-do-mercado-em-2026/",
           "fonte_label": "Sou Segura",
@@ -256,46 +348,48 @@
         },
         {
           "tag": "hot",
-          "tag_label": "RISCO CLIMÁTICO",
-          "titulo": "Eventos climáticos acumulam R$ 184 bi em perdas no Brasil (2022–2024) — resseguro e subscrição de catástrofe sob pressão",
+          "tag_label": "RISCO",
+          "titulo": "Eventos climáticos: R$ 184 bi em perdas no Brasil entre 2022 e 2024 — seguro rural sob pressão, paramétrico em destaque",
           "url": "https://monitormercantil.com.br/setor-de-seguros-vislumbra-crescimento-de-57-este-ano/",
-          "texto": "CNseg documenta <strong>R$ 60 bi/ano em perdas climáticas médias</strong> no Brasil. Agronegócio é o mais afetado — PSR (subvenção rural) com orçamento incerto pressiona o seguro rural. Impacto direto em resseguro e na subscrição de riscos patrimoniais, especialmente no Sul e Centro-Oeste.",
+          "texto": "CNseg documenta <strong>R$ 60 bi/ano em perdas climáticas médias</strong>. PSR (subvenção rural) com orçamento incerto pressiona o seguro rural. CNseg defende fundo de estabilização. <strong>Seguro paramétrico climático</strong> emerge como resposta estrutural ao problema.",
           "fonte": "CNseg · Monitor Mercantil",
           "fonte_url": "https://monitormercantil.com.br/setor-de-seguros-vislumbra-crescimento-de-57-este-ano/",
           "fonte_label": "Monitor Mercantil",
           "data": "Mai/2026"
         }
       ],
-      "implicacao": "Elementares é onde a SU tem o maior oceano azul e a maior vantagem ainda inexplorada: <strong>6,6 milhões de segurados em saúde como base de cross-sell</strong>. RC Profissional Médica é o produto com maior apelo natural para a base cooperativa. O risco climático crescente reforça a oportunidade de paramétrico climático para produtores rurais ligados às cooperativas.",
-      "oportunidade": "<strong>RC Profissional Médica</strong> via cooperativas é o produto de Elementares com menor fricção de distribuição. <strong>Seguro Garantia Judicial</strong> para hospitais e cooperativas em litígios cresce com a judicialização da saúde. Dois produtos, mesma base — sem esforço de aquisição."
+      "implicacao": "A SU tem o ativo mais valioso em Elementares: <strong>6,6 milhões de segurados em saúde como base de cross-sell</strong>. RC Profissional Médica é o produto com maior apelo natural para a base cooperativa. A judicialização crescente da saúde cria demanda direta por Garantia Judicial para hospitais e cooperativas.",
+      "oportunidade": "<strong>RC Profissional Médica + Garantia Judicial</strong> via cooperativas: dois produtos, mesma base, sem fricção de canal. <strong>Seguro Paramétrico Climático</strong> para produtores rurais ligados às cooperativas fecha o triângulo de Elementares com maior potencial nos próximos 24 meses."
     }
   },
   "agenda": [
     {
-      "titulo": "Mobilizar posicionamento institucional na regulamentação da LC 213/2025 antes de agosto",
-      "texto": "A SUSEP está construindo as normas infralegais agora. <strong>O que não for influenciado nessa janela estará definido para os próximos 5 a 10 anos.</strong> A SU precisa ter posição clara sobre o que quer ampliar (escopo de atuação cooperativa) e o que quer proteger (modelo de governança distribuída). Isso exige uma articulação via CNseg e representação direta junto à SUSEP.",
+      "titulo": "Mobilizar posicionamento institucional na regulamentação da LC 213/2025 — janela fecha em 2026",
+      "texto": "A SUSEP está construindo as normas infralegais agora. <strong>O que não for influenciado nessa janela estará definido para os próximos 5 a 10 anos.</strong> A SU precisa ter posição clara sobre o que quer ampliar (escopo cooperativo) e o que quer proteger (modelo de governança). Articulação via CNseg e presença direta nos grupos de trabalho da SUSEP.",
       "tags": [{"label": "Urgente", "tipo": "urgente"}, {"label": "Regulação", "tipo": ""}, {"label": "LC 213", "tipo": ""}]
     },
     {
       "titulo": "Monitorar reestruturação da Hapvida — janela competitiva pode se fechar no 2S26",
-      "texto": "Hapvida em recuperação operacional com CEO focado em simplificação e revisão geográfica. <strong>Se o plano de recuperação avançar, o maior competidor em custo voltará ao modo ofensivo — especialmente em SP.</strong> A SU deve identificar os mercados onde a Hapvida está recuando e avançar comercialmente agora.",
+      "texto": "Hapvida entregou 1T26 acima das expectativas e CEO está em modo de simplificação ativa. <strong>Se o plano avançar, o maior concorrente em custo voltará ao modo ofensivo — especialmente em SP.</strong> A SU deve mapear os mercados onde a Hapvida está recuando e avançar comercialmente agora, enquanto a janela está aberta.",
       "tags": [{"label": "Urgente", "tipo": "urgente"}, {"label": "Competitivo", "tipo": ""}, {"label": "Saúde", "tipo": ""}]
     },
     {
-      "titulo": "Definir estratégia de Previdência para 2026–2027: focar no médico cooperado via PGBL",
-      "texto": "O mercado de VGBL está em modo defensivo. A SU não tem escala para competir na guerra de portabilidade com BrasilPrev ou Itaú. <strong>O canal diferenciado é o médico cooperado — alta renda, necessidade real de planejamento sucessório, acesso via rede própria.</strong> PGBL é o produto certo para esse perfil.",
-      "tags": [{"label": "Médio prazo", "tipo": "medio"}, {"label": "Previdência", "tipo": ""}, {"label": "Canal", "tipo": ""}]
-    },
-    {
-      "titulo": "Pautar decisão de Vida na próxima revisão estratégica: avançar com Universal Life ou não",
-      "texto": "Vida cresce mais que qualquer outro ramo pelo segundo trimestre consecutivo e a SU está na 14ª posição. <strong>Essa não é uma decisão que pode ficar na fila — o mercado está em expansão agora.</strong> O Vida Universal regulamentado pela SUSEP em 2026 pode ser o produto para mudar o posicionamento da SU no ramo.",
+      "titulo": "Definir postura estratégica em Vida: crescimento ativo ou manutenção de carteira?",
+      "texto": "Vida cresce +11,6% no 1T26 e a SU está na 14ª posição pelo segundo trimestre seguido. <strong>Este é o ramo com maior gap entre oportunidade e posição da companhia.</strong> A decisão sobre avançar com Universal Life precisa estar na agenda da diretoria no próximo ciclo de revisão.",
       "tags": [{"label": "Urgente", "tipo": "urgente"}, {"label": "Vida", "tipo": ""}, {"label": "Produto", "tipo": ""}]
     },
     {
-      "titulo": "Acelerar ativação das 205 cooperativas Unimed sem parceria em Odonto — meta de curto prazo",
-      "texto": "Com NPS nº 1 e produto validado, o único limitante do Odonto é a ativação cooperativa. <strong>Cada Unimed ativada é crescimento orgânico sem custo de aquisição de canal — o melhor ROI disponível no portfólio.</strong> Definir meta de ativação para 2026 com incentivo claro para as cooperativas.",
+      "titulo": "Acelerar parceria com as 205 Unimeds ainda não integradas ao Unimed Odonto",
+      "texto": "Com NPS nº 1 e CAGR de 18% ao ano, o Odonto é o produto mais validado do portfólio. <strong>Das 341 cooperativas, 205 ainda não distribuem — cada uma ativada é crescimento orgânico sem custo de aquisição de canal.</strong> Definir meta de ativação para 2026 com incentivo claro para as cooperativas parceiras.",
       "tags": [{"label": "Urgente", "tipo": "urgente"}, {"label": "Odonto", "tipo": ""}, {"label": "Crescimento", "tipo": ""}]
+    },
+    {
+      "titulo": "Posicionar Previdência para o médico cooperado via PGBL — canal exclusivo, sem guerra de portabilidade",
+      "texto": "Com VGBL comprimido e mercado em modo rouba-monte, a SU não tem escala para competir com BrasilPrev ou Itaú. <strong>O canal diferenciado é o médico cooperado — alta renda, necessidade real de planejamento sucessório, acesso exclusivo via rede Unimed.</strong> PGBL é o produto certo, o canal já existe.",
+      "tags": [{"label": "Médio prazo", "tipo": "medio"}, {"label": "Previdência", "tipo": ""}, {"label": "Canal", "tipo": ""}]
     }
+  ]
+}
   ]
 }
     {
