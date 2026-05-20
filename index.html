@@ -191,6 +191,137 @@ footer{border-top:1px solid var(--border);background:var(--white);padding:13px 4
 footer p{font-size:10px;color:var(--text3);font-family:'DM Mono',monospace}
 footer .su{color:var(--azul-med);font-weight:700}
 @media print{.header,.edition-bar,.section-grid{position:relative!important}.acc-panel{max-height:99999px!important}.modal-overlay{display:none!important}}
+
+/* BARRA DE BUSCA FIXA */
+.search-bar-fixed {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 40px;
+  position: sticky;
+  top: 131px;
+  z-index: 80;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.search-bar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search-bar-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-bar-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--text3);
+  fill: none;
+  stroke-width: 2;
+}
+.search-bar-input {
+  width: 100%;
+  padding: 8px 14px 8px 38px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--gray1);
+  color: var(--text);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.search-bar-input:focus {
+  border-color: var(--azul-med);
+  box-shadow: 0 0 0 3px rgba(0,94,184,.1);
+  background: var(--white);
+}
+.search-bar-input::placeholder { color: var(--text3); }
+.search-bar-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.search-bar-tags {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.search-bar-tag {
+  font-size: 9px;
+  font-family: 'DM Mono', monospace;
+  padding: 3px 9px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text2);
+  transition: all .15s;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.search-bar-tag:hover { border-color: var(--azul-med); color: var(--azul-med); }
+.search-bar-tag.active { background: var(--azul); color: #fff; border-color: var(--azul); }
+
+/* DROPDOWN DE RESULTADOS */
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,48,135,.12);
+  z-index: 300;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 8px;
+}
+.search-dropdown.open { display: block; }
+.search-drop-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .12s;
+  border: 1px solid transparent;
+  margin-bottom: 4px;
+}
+.search-drop-item:last-child { margin-bottom: 0; }
+.search-drop-item:hover { background: var(--azul-light); border-color: var(--azul-line); }
+.search-drop-edicao {
+  font-size: 9px;
+  font-family: 'DM Mono', monospace;
+  color: var(--azul-med);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.search-drop-titulo {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+.search-drop-meta {
+  font-size: 10px;
+  color: var(--text3);
+  font-family: 'DM Mono', monospace;
+}
+.search-drop-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--text3);
+  font-size: 12px;
+}
+
 </style>
 </head>
 <body>
@@ -210,7 +341,7 @@ footer .su{color:var(--azul-med);font-weight:700}
   </div>
   <div class="header-right">
     <span class="pill-live">● Atualizado</span>
-    <button class="btn-hdr btn-news" onclick="abrirNewsletter()">✉ Newsletter</button>
+    
     <button class="btn-hdr btn-ppt" onclick="gerarPPTX()">📑 PPTX</button>
     <button class="btn-hdr btn-pdf" onclick="window.print()">⬇ PDF</button>
   </div>
@@ -276,16 +407,42 @@ footer .su{color:var(--azul-med);font-weight:700}
     <div class="sec-arrow">▾</div>
   </div>
   <!-- Agenda -->
+  <!-- Corretores -->
+  <div class="sec-card" onclick="toggle('corretores')" id="card-corretores">
+    <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <div class="sec-label">Corretores</div>
+    <div class="sec-arrow">▾</div>
+  </div>
   <div class="sec-card" onclick="toggle('agenda')" id="card-agenda">
     <div class="sec-icon"><svg viewBox="0 0 24 24"><polyline points="9,11 12,14 22,4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
     <div class="sec-label">Agenda Estratégica</div>
     <div class="sec-arrow">▾</div>
   </div>
-  <!-- Busca -->
-  <div class="sec-card" onclick="toggle('busca')" id="card-busca">
-    <div class="sec-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-    <div class="sec-label">Pesquisa</div>
-    <div class="sec-arrow">▾</div>
+
+</div>
+
+<!-- BARRA DE BUSCA FIXA -->
+<div class="search-bar-fixed">
+  <div class="search-bar-inner">
+    <div class="search-bar-icon">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </div>
+    <input class="search-bar-input" id="search-input" type="text"
+           placeholder="Pesquisar em todas as edições... ex: IOF, Hapvida, LC 213"
+           oninput="buscar(this.value)"
+           onfocus="document.getElementById('search-dropdown').classList.add('open')"
+           onblur="setTimeout(()=>document.getElementById('search-dropdown').classList.remove('open'),200)">
+    <span class="search-bar-count" id="search-count"></span>
+    <div class="search-bar-tags">
+      <span class="search-bar-tag active" onclick="filtrarTag('')">Todos</span>
+      <span class="search-bar-tag" onclick="filtrarTag('URGENTE')">#URGENTE</span>
+      <span class="search-bar-tag" onclick="filtrarTag('REGULAÇÃO')">#REG</span>
+      <span class="search-bar-tag" onclick="filtrarTag('OPORTUNIDADE')">#OPP</span>
+      <span class="search-bar-tag" onclick="filtrarTag('DESTAQUE SU')">#SU</span>
+      <span class="search-bar-tag" onclick="filtrarTag('INSURTECH')">#TECH</span>
+      <span class="search-bar-tag" onclick="filtrarTag('LC 213')">#LC213</span>
+    </div>
+    <div class="search-dropdown" id="search-dropdown"></div>
   </div>
 </div>
 
@@ -370,6 +527,9 @@ footer .su{color:var(--azul-med);font-weight:700}
 <div class="panel-divider"></div>
 
 <!-- PAINEL BUSCA -->
+<div id="panel-corretores" class="acc-panel"><div class="acc-inner"><div class="loading">Carregando...</div></div></div>
+<div class="panel-divider"></div>
+
 <div id="panel-busca" class="acc-panel">
 <div class="acc-inner">
   <div class="sec-block">
@@ -473,7 +633,7 @@ function carregarEdicao(id) {
   document.getElementById('edition-info').textContent = `Semana de ${edicaoAtual.data}`;
   renderGeral(); renderSeg('saude'); renderSeg('odonto');
   renderSeg('vida'); renderSeg('previdencia'); renderSeg('elementares');
-  renderConcorrentes(); renderAgenda(); renderHistorico();
+  renderConcorrentes(); renderCorretores(); renderAgenda(); renderHistorico();
 }
 
 // ─── RENDERIZADORES ───────────────────────────────────────────────────────────
@@ -515,10 +675,10 @@ function renderGeral() {
       <div class="slabel">Termômetro da Semana</div>
       <div class="termometro">
         ${['regulatorio','competitivo','sentimento'].map(k=>`
-          <div class="termo-card">
+          <div class="termo-card" style="cursor:${t[k].url?'pointer':'default'}" onclick="${t[k].url?`window.open('`+t[k].url+`','_blank')`:''}">
             <div class="termo-indicator ${t[k].status}">${t[k].emoji}</div>
             <div><div class="termo-label ${t[k].status}">${labels[k]}</div>
-            <div class="termo-status">${t[k].titulo}</div>
+            <div class="termo-status">${t[k].titulo}${t[k].url?` <span style="color:var(--azul-med);font-size:10px">↗</span>`:''}</div>
             <div class="termo-reason">${t[k].texto}</div></div>
           </div>`).join('')}
       </div>
@@ -618,6 +778,209 @@ function renderConcorrentes() {
     </div>`);
 }
 
+
+function renderCorretores() {
+  set('panel-corretores', `
+    <div class="alert-bar bl"><span class="alert-ico">🤝</span>
+    <span>Monitoramento do <strong>canal de corretores</strong> — movimentos das grandes corretoras, o que o mercado oferece ao corretor e perguntas estratégicas para a alta direção. Cadência: <strong>quinzenal</strong>.</span></div>
+
+    <!-- TERMÔMETRO DO CANAL -->
+    <div class="sec-block">
+      <div class="slabel">Termômetro do Canal</div>
+      <div class="termometro">
+        <div class="termo-card">
+          <div class="termo-indicator att">🔥</div>
+          <div>
+            <div class="termo-label att">Atividade do Canal</div>
+            <div class="termo-status">Aquecido</div>
+            <div class="termo-reason">Enconseg 2026 reuniu corretores e seguradoras com casa cheia. Categoria investe em qualificação e diversificação de carteira. Forte movimento de networking entre entidades.</div>
+          </div>
+        </div>
+        <div class="termo-card">
+          <div class="termo-indicator bad">⚡</div>
+          <div>
+            <div class="termo-label bad">Disputa pelo Canal</div>
+            <div class="termo-status">Intensa</div>
+            <div class="termo-reason">Porto lança "Acelera Seguro Vida" com 35% de desconto. Bradesco cria "Com Você Corretor On". SulAmérica lança plataforma de e-commerce para corretores. Canal muito disputado.</div>
+          </div>
+        </div>
+        <div class="termo-card">
+          <div class="termo-indicator att">📱</div>
+          <div>
+            <div class="termo-label att">Digitalização do Canal</div>
+            <div class="termo-status">Em Aceleração</div>
+            <div class="termo-reason">IA, plataformas digitais e multicálculo dominam a agenda. ENS TechVillage leva inovação para corretores. Transformação digital é irreversível — corretor que não se adaptar perde espaço.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRANDES CORRETORAS -->
+    <div class="sec-block">
+      <div class="slabel">Grandes Corretoras & Brokers — Movimentos Estratégicos</div>
+
+      <div class="comp-block">
+        <div class="comp-header">
+          <span class="comp-rank" style="background:#1D4ED8">Global</span>
+          <span class="comp-name">Marsh Brasil</span>
+          <span class="comp-type">Marsh McLennan · Broker Global</span>
+        </div>
+        <div class="comp-body"><div class="nfeed">
+          <div class="ncard"><span class="ntag reg">POSIÇÃO</span><div class="ncontent">
+            <div class="nhead">Marsh mantém liderança em riscos corporativos complexos e resseguro no Brasil</div>
+            <div class="ntxt">Maior broker global com forte presença no segmento corporativo brasileiro. Foco em <strong>riscos complexos, D&O, cyber e resseguro</strong>. Clientes: grandes empresas, multinacionais e setor público. Canal com menor sobreposição direta ao portfólio de varejo da SU, mas relevante em Elementares e Garantia.</div>
+            <div class="nmeta"><span>Marsh McLennan</span><span class="nmeta-dot"></span><span>2026</span></div>
+          </div></div>
+        </div></div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-header">
+          <span class="comp-rank" style="background:#1D4ED8">Global</span>
+          <span class="comp-name">Aon Brasil</span>
+          <span class="comp-type">Aon PLC · Broker Global</span>
+        </div>
+        <div class="comp-body"><div class="nfeed">
+          <div class="ncard"><span class="ntag new">MOVIMENTO</span><div class="ncontent">
+            <div class="nhead"><a href="https://cqcs.com.br" target="_blank">Aon anuncia Fabio Martinez como novo Head of Health & Talent para o Brasil</a></div>
+            <div class="ntxt">Reforço na área de <strong>Saúde e Benefícios Corporativos</strong> com perfil atuarial. Sinaliza aposta da Aon no segmento de saúde empresarial — terreno onde a Seguros Unimed também compete. Aon e Redkik firmaram parceria em 2025 para seguros com tecnologia, ampliando capacidade digital no canal.</div>
+            <div class="nmeta"><span>Aon Brasil</span><span class="nmeta-dot"></span><a href="https://www.insurtech.com.br/seguros/mercado-em-movimento-marco-de-2026/" target="_blank">InsurTech BR</a><span class="nmeta-dot"></span><span>Mar/2026</span></div>
+          </div></div>
+        </div></div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-header">
+          <span class="comp-rank" style="background:#1D4ED8">Global</span>
+          <span class="comp-name">Willis Towers Watson</span>
+          <span class="comp-type">WTW · Broker Global</span>
+        </div>
+        <div class="comp-body"><div class="nfeed">
+          <div class="ncard"><span class="ntag opp">CONTEXTO</span><div class="ncontent">
+            <div class="nhead">WTW mantém foco em benefícios corporativos e gestão de riscos no Brasil</div>
+            <div class="ntxt">Forte em <strong>benefícios, previdência corporativa e riscos de pessoas</strong>. Relevante para a Seguros Unimed especialmente nos ramos de Vida e Previdência corporativa. Segmento onde a SU tem lacuna estratégica e o WTW atua como influenciador de compra para grandes empregadores.</div>
+            <div class="nmeta"><span>Willis Towers Watson</span><span class="nmeta-dot"></span><span>2026</span></div>
+          </div></div>
+        </div></div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-header">
+          <span class="comp-rank">Nacional</span>
+          <span class="comp-name">Wiz Co</span>
+          <span class="comp-type">B3: WIZC3 · Corretora Nacional</span>
+        </div>
+        <div class="comp-body"><div class="nfeed">
+          <div class="ncard"><span class="ntag wtf">MONITORAR</span><div class="ncontent">
+            <div class="nhead"><a href="https://cqcs.com.br" target="_blank">Wiz Co é a única corretora de seguros no ranking das 1000 maiores empresas do Brasil</a></div>
+            <div class="ntxt">Maior corretora nacional independente. Forte em bancassurance via parcerias (Banco Inter, ex-CEF). Presente em <strong>400 municípios</strong> do Brasil. Luis Capobianco assumiu como Superintendente de Crédito na Wiz Corporate em março/2026 — reforço em crédito sinaliza diversificação de atuação além do seguro tradicional.</div>
+            <div class="nmeta"><span>Wiz Co · CQCS</span><span class="nmeta-dot"></span><a href="https://www.insurtech.com.br/seguros/mercado-em-movimento-marco-de-2026/" target="_blank">InsurTech BR</a><span class="nmeta-dot"></span><span>Mar/2026</span></div>
+          </div></div>
+        </div></div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-header">
+          <span class="comp-rank">Nacional</span>
+          <span class="comp-name">Grupo Assure de Seguros</span>
+          <span class="comp-type">Corretora Nacional · Fenacor</span>
+        </div>
+        <div class="comp-body"><div class="nfeed">
+          <div class="ncard"><span class="ntag reg">VOZ</span><div class="ncontent">
+            <div class="nhead"><a href="https://cqcs.com.br/noticia/enconseg-2026-reune-corretores-e-seguradores-para-discutirem-o-futuro-do-mercado/" target="_blank">Henrique Brandão Junior (Assure) eleito Vice-Presidente de Relação com o Mercado da Fenacor</a></div>
+            <div class="ntxt">Liderança crescente na Fenacor sinaliza maior influência do Grupo Assure na pauta regulatória e de relacionamento com seguradoras. Brandão defendeu no Enconseg 2026 que <strong>"o corretor continuará sendo muito importante, mas precisa buscar aprimoramento constante"</strong>. Corretora com forte atuação no Rio de Janeiro.</div>
+            <div class="nmeta"><span>Fenacor · CQCS</span><span class="nmeta-dot"></span><a href="https://cqcs.com.br/noticia/enconseg-2026-reune-corretores-e-seguradores-para-discutirem-o-futuro-do-mercado/" target="_blank">CQCS</a><span class="nmeta-dot"></span><span>Mai/2026</span></div>
+          </div></div>
+        </div></div>
+      </div>
+
+    </div>
+
+    <!-- O QUE O MERCADO OFERECE AO CORRETOR -->
+    <div class="sec-block">
+      <div class="slabel">Benchmark — O que as Melhores Seguradoras fazem pelo Corretor</div>
+      <div class="nfeed">
+
+        <div class="ncard"><span class="ntag hot">BENCHMARK</span><div class="ncontent">
+          <div class="nhead"><a href="https://www.revistacobertura.com.br/noticias/instituicoes/no-ccs-sp-ceo-da-porto-seguro-fala-sobre-momento-de-expansao-e-do-compromisso-com-os-corretores/" target="_blank">Porto Seguro: campanha "Acelera Seguro Vida" com 35% de desconto + "A Voz do Corretor" como prática permanente</a></div>
+          <div class="ntxt">CEO Patricia Chacon declarou no CCS-SP: <em>"Para a Porto, corretor é para sempre."</em> A empresa criou internamente <strong>"A Voz do Corretor"</strong> — escuta ativa em campo, eventos e canais digitais, com registro em sistema online e acompanhamento de execução. Campanhas "Acelera Auto Day" e "Fecha com a Porto" geraram cross-sell: clientes com média de 2 produtos vs 1,4 em 2020.</div>
+          <div class="nmeta"><span>Porto Seguro · CCS-SP</span><span class="nmeta-dot"></span><a href="https://www.revistacobertura.com.br/noticias/instituicoes/no-ccs-sp-ceo-da-porto-seguro-fala-sobre-momento-de-expansao-e-do-compromisso-com-os-corretores/" target="_blank">Revista Cobertura</a><span class="nmeta-dot"></span><span>Mar/2026</span></div>
+        </div></div>
+
+        <div class="ncard"><span class="ntag hot">BENCHMARK</span><div class="ncontent">
+          <div class="nhead"><a href="https://revistaapolice.com.br/2026/02/bradesco-seguros-fortalece-presenca-digital-dos-corretores-em-novo-programa/" target="_blank">Bradesco Seguros lança "Com Você Corretor On" — programa para capacitar corretores nas redes sociais</a></div>
+          <div class="ntxt">Iniciativa piloto que capacita corretores para atuação digital e redes sociais — além do Portal de Negócios, app exclusivo e suporte por WhatsApp. <strong>Bradesco Seguros já tem portal, app, treinamentos e agora adiciona presença digital como diferencial de parceria</strong>. Pacote de relacionamento com o corretor mais completo do mercado.</div>
+          <div class="nmeta"><span>Bradesco Seguros</span><span class="nmeta-dot"></span><a href="https://revistaapolice.com.br/2026/02/bradesco-seguros-fortalece-presenca-digital-dos-corretores-em-novo-programa/" target="_blank">Revista Apólice</a><span class="nmeta-dot"></span><span>Fev/2026</span></div>
+        </div></div>
+
+        <div class="ncard"><span class="ntag hot">BENCHMARK</span><div class="ncontent">
+          <div class="nhead"><a href="https://www.insurtalks.com.br/posts/sulamerica-lanca-plataforma-para-corretores-criarem-seus-proprios-sites-de-vendas-de-seguro-de-vida" target="_blank">SulAmérica lança "Meu Contrata Fácil" — corretor cria seu próprio e-commerce de Seguro de Vida gratuitamente</a></div>
+          <div class="ntxt">Plataforma gratuita e personalizável onde o corretor cria sua loja online com marca própria, vende 24h, acompanha carrinhos abandonados e gera relatórios de vendas. <strong>Único no mercado</strong> — combina autonomia do corretor com estrutura da seguradora. Disponível via Portal do Corretor SulAmérica.</div>
+          <div class="nmeta"><span>SulAmérica</span><span class="nmeta-dot"></span><a href="https://www.insurtalks.com.br/posts/sulamerica-lanca-plataforma-para-corretores-criarem-seus-proprios-sites-de-vendas-de-seguro-de-vida" target="_blank">InsurTalks</a></div>
+        </div></div>
+
+        <div class="ncard"><span class="ntag new">TENDÊNCIA</span><div class="ncontent">
+          <div class="nhead"><a href="https://cqcs.com.br/noticia/corretores-de-seguros-na-era-dos-algoritmos-os-tres-anos-que-testarao-a-permanencia-no-mercado/" target="_blank">Corretores na era dos algoritmos: os 3 anos que definirão quem permanece no mercado</a></div>
+          <div class="ntxt">Fenacor e Sincor-SP investem em capacitação digital e IA para preparar corretores para a transformação irreversível do setor. <strong>ENS TechVillage</strong> levou experiência imersiva de inovação para corretores no ConsegNNE. Seguradoras que oferecerem suporte tecnológico ao corretor terão vantagem competitiva no canal.</div>
+          <div class="nmeta"><span>Fenacor · Sincor-SP · CQCS</span><span class="nmeta-dot"></span><a href="https://cqcs.com.br/noticia/corretores-de-seguros-na-era-dos-algoritmos-os-tres-anos-que-testarao-a-permanencia-no-mercado/" target="_blank">CQCS</a><span class="nmeta-dot"></span><span>Fev/2026</span></div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <!-- VOZ DO CORRETOR -->
+    <div class="sec-block">
+      <div class="slabel">Voz do Corretor — O que o Canal espera das Seguradoras</div>
+      <div class="vozes">
+
+        <div class="voz-card">
+          <div class="voz-quote">Hoje, o consumidor já nasce com um celular na mão. Quer tudo rápido e transparente. Mas, na hora de um sinistro, não abre mão da empatia e do atendimento humano que só o Corretor pode oferecer.</div>
+          <div class="voz-meta">
+            <div class="voz-avatar">AV</div>
+            <div><div class="voz-name">Armando Vergilio</div><div class="voz-role">Presidente · Fenacor</div></div>
+            <div class="voz-ctx">Enconseg 2026 · Mai/2026</div>
+          </div>
+        </div>
+
+        <div class="voz-card">
+          <div class="voz-quote">O Corretor precisa estar sempre junto do segurado para oferecer múltiplos produtos e soluções de acordo com as necessidades do cliente. É indispensável ficar alerta às mudanças regulatórias.</div>
+          <div class="voz-meta">
+            <div class="voz-avatar">BB</div>
+            <div><div class="voz-name">Boris Ber</div><div class="voz-role">Presidente · Sincor-SP</div></div>
+            <div class="voz-ctx">Enconseg 2026 · Mai/2026</div>
+          </div>
+        </div>
+
+        <div class="voz-card">
+          <div class="voz-quote">O corretor não opera o algoritmo, mas traduz o que ele produz em termos que o cliente compreende e pode contestar. Esse é o papel estratégico da intermediação qualificada.</div>
+          <div class="voz-meta">
+            <div class="voz-avatar">MM</div>
+            <div><div class="voz-name">Manuel Matos</div><div class="voz-role">Delegado Sincor-SP · Fenacor</div></div>
+            <div class="voz-ctx">ConsegNNE · Mar/2026</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- OPORTUNIDADE DE PAUTA -->
+    <div class="impl-box">
+      <div class="impl-title">🎯 Perguntas para Levar à Alta Direção</div>
+      <div class="impl-txt">
+        <strong>1. Proposta de valor para o corretor:</strong> Porto lançou "A Voz do Corretor", Bradesco criou "Com Você Corretor On" e SulAmérica lançou e-commerce gratuito para o canal. Qual é a proposta de valor estruturada da Seguros Unimed para o corretor parceiro?<br><br>
+        <strong>2. Programa de fidelização:</strong> Temos um programa de incentivo e relacionamento com corretores comparável ao das concorrentes? Se não, qual seria o MVP mais viável para lançar nos próximos 90 dias?<br><br>
+        <strong>3. Suporte digital ao canal:</strong> O corretor que vende Unimed Odonto ou Seguro Vida tem acesso a plataforma digital, materiais e treinamento comparável ao que Bradesco e Porto oferecem? Qual é o gap e o custo de fechar?<br><br>
+        <strong>4. Corretor como advogado da marca:</strong> Em que ramos a SU é a primeira escolha do corretor — e em quais ela é preterida por concorrentes? Temos essa leitura sistematizada?
+      </div>
+    </div>
+
+    <div class="opp-card" style="margin-top:12px">
+      <div class="opp-label">🚀 Oportunidade Estratégica</div>
+      <div class="opp-txt">A Seguros Unimed tem um diferencial único para o canal: <strong>o médico cooperado como aliado natural do corretor</strong> — nenhuma concorrente tem esse ativo. Um programa de parceria corretor-médico Unimed para indicação e venda conjunta de Vida, Odonto e Saúde seria inédito no mercado e de baixo custo de implementação.</div>
+    </div>
+  `);
+}
+
 function renderAgenda() {
   const ed = edicaoAtual;
   set('panel-agenda', `
@@ -670,19 +1033,20 @@ function buscar(termo) {
 
 function filtrarTag(tag) {
   tagAtiva = tag;
-  document.querySelectorAll('.filter-tag').forEach(el => {
-    el.classList.toggle('active', el.textContent.replace('#','') === tag || (tag==='' && el.textContent==='Todos'));
+  document.querySelectorAll('.search-bar-tag').forEach(el => {
+    el.classList.toggle('active', (el.textContent.replace('#','') === tag.replace('#','')) || (tag==='' && el.textContent==='Todos'));
   });
   renderBusca();
 }
 
 function renderBusca() {
   const todas = coletarTodasNoticias();
-  const container = document.getElementById('search-results');
+  const dropdown = document.getElementById('search-dropdown');
   const countEl = document.getElementById('search-count');
 
   if (!termoBusca && !tagAtiva) {
-    container.innerHTML = '<div class="search-empty"><span>🔍</span>Digite algo para pesquisar em todas as edições do histórico</div>';
+    dropdown.innerHTML = '';
+    dropdown.classList.remove('open');
     countEl.textContent = '';
     return;
   }
@@ -700,25 +1064,33 @@ function renderBusca() {
   countEl.textContent = resultados.length ? `${resultados.length} resultado${resultados.length>1?'s':''}` : '';
 
   if (!resultados.length) {
-    container.innerHTML = '<div class="search-empty"><span>😔</span>Nenhum resultado encontrado. Tente outro termo.</div>';
+    dropdown.innerHTML = '<div class="search-drop-empty">😔 Nenhum resultado encontrado. Tente outro termo.</div>';
+    dropdown.classList.add('open');
     return;
   }
 
-  container.innerHTML = resultados.map(noticia => `
-    <div class="ncard">
-      <span class="ntag ${noticia.tag}">${noticia.tag_label}</span>
-      <div class="ncontent">
-        <div class="result-edicao">${noticia._edicao}</div>
-        <div class="nhead">${noticia.url ? `<a href="${noticia.url}" target="_blank">${highlight(noticia.titulo, termoBusca)}</a>` : highlight(noticia.titulo, termoBusca)}</div>
-        <div class="ntxt">${highlight(noticia.texto, termoBusca)}</div>
-        <div class="nmeta">
-          <span>${noticia.fonte}</span>
-          ${noticia.data ? `<span class="nmeta-dot"></span><span>${noticia.data}</span>` : ''}
-          <span class="nmeta-dot"></span>
-          <span style="cursor:pointer;color:var(--azul-med);font-weight:500" onclick="irParaEdicao('${noticia._edicaoId}')">Ver edição →</span>
-        </div>
-      </div>
+  dropdown.innerHTML = resultados.slice(0, 12).map(noticia => `
+    <div class="search-drop-item" onclick="irParaEdicao('${noticia._edicaoId}')">
+      <div class="search-drop-edicao">${noticia._edicao} · ${noticia.tag_label}</div>
+      <div class="search-drop-titulo">${highlight(noticia.titulo.replace(/<[^>]*>/g,''), termoBusca)}</div>
+      <div class="search-drop-meta">${noticia.fonte}${noticia.data ? ' · ' + noticia.data : ''}</div>
     </div>`).join('');
+
+  if (resultados.length > 12) {
+    dropdown.innerHTML += `<div class="search-drop-empty" style="padding:10px;font-size:10px">+${resultados.length - 12} resultados. Refine a busca para ver mais.</div>`;
+  }
+
+  dropdown.classList.add('open');
+}
+
+function abrirDropdown() {
+  if (termoBusca || tagAtiva) {
+    document.getElementById('search-dropdown').classList.add('open');
+  }
+}
+
+function fecharDropdown() {
+  document.getElementById('search-dropdown').classList.remove('open');
 }
 
 // ─── NEWSLETTER ───────────────────────────────────────────────────────────────

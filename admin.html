@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Newsletter · Radar Estratégico</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#003087;--azul-med:#005EB8;--azul-light:#E8F0FB;--azul-line:#C8D8F0;--verde:#00843D;--verde-light:#E6F4EC;--bg:#F4F6FA;--white:#fff;--border:#E2E8F0;--text:#0F172A;--text2:#475569;--text3:#94A3B8;--gray2:#EEF2F7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);font-family:'Inter',sans-serif;min-height:100vh;display:flex;flex-direction:column}
+.header{background:var(--azul);padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{background:var(--white);border-radius:8px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px}
+.brand-logo img{width:100%;height:100%;object-fit:contain}
+.brand-text strong{color:#fff;font-size:14px;font-weight:700;display:block}
+.brand-text span{color:rgba(255,255,255,.6);font-size:10px;font-family:'DM Mono',monospace}
+.badge-admin{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:20px}
+main{flex:1;max-width:760px;margin:40px auto;padding:0 24px;width:100%}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;margin-bottom:20px}
+.card-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.card-sub{font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;margin-bottom:22px}
+.slabel{font-size:10px;font-weight:700;color:var(--azul-med);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+.preview-box{background:var(--azul-light);border:1px solid var(--azul-line);border-radius:10px;padding:16px;font-size:12px;color:var(--text2);line-height:1.8;margin-bottom:20px}
+.preview-box strong{color:var(--azul)}
+.dest-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.dest-item{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:9px 14px;font-size:12px;font-family:'DM Mono',monospace;color:var(--text2)}
+.dest-remove{background:none;border:none;color:var(--text3);cursor:pointer;font-size:14px;padding:0 4px}
+.dest-remove:hover{color:#DC2626}
+.add-dest{display:flex;gap:8px;margin-bottom:20px}
+.input-dest{flex:1;padding:9px 13px;font-family:'Inter',sans-serif;font-size:13px;border:1px solid var(--border);border-radius:8px;color:var(--text);outline:none;background:var(--white)}
+.input-dest:focus{border-color:var(--azul-med);box-shadow:0 0 0 3px rgba(0,94,184,.1)}
+.btn{padding:9px 18px;border-radius:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border:none;transition:opacity .15s}
+.btn:hover{opacity:.88}
+.btn-add{background:var(--azul-light);color:var(--azul-med);border:1px solid var(--azul-line)}
+.btn-gmail{background:#EA4335;color:#fff}
+.btn-outlook{background:var(--azul);color:#fff}
+.btn-row{display:flex;gap:10px}
+.alert-success{background:var(--verde-light);border:1px solid #86EFAC;border-radius:8px;padding:10px 14px;font-size:12px;color:#166534;display:none;margin-bottom:14px}
+.link-back{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--azul-med);text-decoration:none;font-weight:600;margin-bottom:24px}
+.link-back:hover{text-decoration:underline}
+footer{border-top:1px solid var(--border);background:var(--white);padding:12px 40px;text-align:center;font-size:10px;color:var(--text3);font-family:'DM Mono',monospace}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="brand">
+    <div class="brand-logo">
+      <img src="https://www.segurosunimed.com.br/themes/custom/unimed_seguros/logo.svg"
+           onerror="this.onerror=null;this.src='https://www.segurosunimed.com.br/favicon.ico'" alt="SU">
+    </div>
+    <div class="brand-text">
+      <strong>Radar Estratégico · Admin</strong>
+      <span>ENVIO DE NEWSLETTER · USO RESTRITO</span>
+    </div>
+  </div>
+  <span class="badge-admin">🔒 Área Administrativa</span>
+</div>
+
+<main>
+  <a href="index.html" class="link-back">← Voltar para o Radar</a>
+
+  <!-- PREVIEW DO EMAIL -->
+  <div class="card">
+    <div class="card-title">✉ Newsletter desta Edição</div>
+    <div class="card-sub">Pré-visualização do e-mail que será enviado</div>
+    <div class="slabel">Preview</div>
+    <div class="preview-box" id="preview-box">Carregando dados da edição atual...</div>
+  </div>
+
+  <!-- LISTA DE DESTINATÁRIOS -->
+  <div class="card">
+    <div class="card-title">👥 Lista de Destinatários</div>
+    <div class="card-sub">Adicione ou remova e-mails da lista de envio</div>
+    <div class="slabel">Destinatários ativos</div>
+    <div class="dest-list" id="dest-list"></div>
+    <div class="add-dest">
+      <input class="input-dest" id="novo-email" type="email" placeholder="novo@email.com.br" onkeydown="if(event.key==='Enter')adicionarEmail()">
+      <button class="btn btn-add" onclick="adicionarEmail()">+ Adicionar</button>
+    </div>
+    <div class="alert-success" id="alert-success">✓ E-mail adicionado com sucesso</div>
+    <div class="slabel">Enviar agora</div>
+    <div class="btn-row">
+      <button class="btn btn-gmail" onclick="enviarGmail()">📧 Abrir no Gmail</button>
+      <button class="btn btn-outlook" onclick="enviarOutlook()">📧 Abrir no Outlook</button>
+    </div>
+  </div>
+
+</main>
+
+<footer>Radar Estratégico · Seguros Unimed · Área administrativa restrita · Não compartilhar este link</footer>
+
+<script>
+// ─── LISTA DE DESTINATÁRIOS ───────────────────────────────────────────────────
+// Edite esta lista para adicionar ou remover destinatários permanentes
+let DESTINATARIOS = [
+  "diretoria@segurosunimed.com.br",
+  "superintendencia.estrategia@segurosunimed.com.br"
+];
+
+// ─── DADOS DA EDIÇÃO ──────────────────────────────────────────────────────────
+let edicaoAtual = null;
+
+async function init() {
+  try {
+    const r = await fetch('noticias.json');
+    if (!r.ok) throw new Error();
+    const dados = await r.json();
+    edicaoAtual = dados.edicoes[0];
+  } catch {
+    edicaoAtual = {
+      titulo: 'Edição atual',
+      data: 'desta semana',
+      secoes: { geral: { noticias: [
+        { titulo: 'Notícia 1 da semana', tag_label: 'URGENTE' },
+        { titulo: 'Notícia 2 da semana', tag_label: 'REGULAÇÃO' },
+        { titulo: 'Notícia 3 da semana', tag_label: 'DESTAQUE SU' }
+      ]}}
+    };
+  }
+  renderPreview();
+  renderDestinatarios();
+}
+
+function renderPreview() {
+  const ed = edicaoAtual;
+  const top3 = ed.secoes.geral.noticias.slice(0,3);
+  document.getElementById('preview-box').innerHTML = `
+    <strong>Assunto:</strong> 📡 Radar Estratégico · ${ed.titulo}<br><br>
+    <strong>Prezados,</strong><br><br>
+    A edição desta semana do Radar Estratégico está disponível com as principais notícias e movimentos estratégicos do mercado segurador.<br><br>
+    <strong>Destaques da semana de ${ed.data}:</strong><br>
+    ${top3.map(n=>`• ${n.titulo.replace(/<[^>]*>/g,'')}`).join('<br>')}<br><br>
+    🔗 <strong>Acesse o radar completo:</strong><br>
+    https://segurosunimed.github.io/radar_da_estrategia<br><br>
+    Bom fim de semana,<br>
+    <strong>Gerência de Estratégia Corporativa · Seguros Unimed</strong>`;
+}
+
+function renderDestinatarios() {
+  const list = document.getElementById('dest-list');
+  if (DESTINATARIOS.length === 0) {
+    list.innerHTML = '<div style="font-size:12px;color:var(--text3);padding:8px 0">Nenhum destinatário cadastrado</div>';
+    return;
+  }
+  list.innerHTML = DESTINATARIOS.map((email, i) => `
+    <div class="dest-item">
+      <span>📧 ${email}</span>
+      <button class="dest-remove" onclick="removerEmail(${i})" title="Remover">✕</button>
+    </div>`).join('');
+}
+
+function adicionarEmail() {
+  const input = document.getElementById('novo-email');
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) return;
+  if (DESTINATARIOS.includes(email)) { input.value = ''; return; }
+  DESTINATARIOS.push(email);
+  input.value = '';
+  renderDestinatarios();
+  const alert = document.getElementById('alert-success');
+  alert.style.display = 'block';
+  setTimeout(() => alert.style.display = 'none', 2500);
+}
+
+function removerEmail(i) {
+  DESTINATARIOS.splice(i, 1);
+  renderDestinatarios();
+}
+
+function montarParams() {
+  const ed = edicaoAtual;
+  const assunto = encodeURIComponent(`📡 Radar Estratégico · ${ed.titulo}`);
+  const corpo = encodeURIComponent(
+`Prezados,
+
+A edição desta semana do Radar Estratégico está disponível com as principais notícias e movimentos estratégicos do mercado segurador.
+
+Destaques da semana de ${ed.data}:
+${ed.secoes.geral.noticias.slice(0,3).map(n=>`• ${n.titulo.replace(/<[^>]*>/g,'')}`).join('\n')}
+
+Acesse o radar completo com análises por segmento, corretores, concorrentes e agenda estratégica:
+https://segurosunimed.github.io/radar_da_estrategia
+
+Bom fim de semana,
+Gerência de Estratégia Corporativa · Seguros Unimed`);
+  return { assunto, corpo };
+}
+
+function enviarGmail() {
+  const { assunto, corpo } = montarParams();
+  window.open(`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(DESTINATARIOS.join(','))}&su=${assunto}&body=${corpo}`, '_blank');
+}
+
+function enviarOutlook() {
+  const { assunto, corpo } = montarParams();
+  window.location.href = `mailto:${encodeURIComponent(DESTINATARIOS.join(';'))}?subject=${assunto}&body=${corpo}`;
+}
+
+init();
+</script>
+</body>
+</html>
