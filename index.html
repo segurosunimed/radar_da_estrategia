@@ -322,6 +322,178 @@ footer .su{color:var(--azul-med);font-weight:700}
   font-size: 12px;
 }
 
+
+/* ── RESPONSIVIDADE ─────────────────────────────────────────────────────── */
+
+/* ESCALA BASE — telas grandes (1400px+) fontes maiores */
+@media (min-width: 1400px) {
+  body { font-size: 15px; }
+  .nhead { font-size: 14px; }
+  .ntxt  { font-size: 13px; }
+  .nmeta { font-size: 11px; }
+  .sec-label { font-size: 10px; }
+  .acc-inner { padding: 32px 60px; }
+  .header, .edition-bar, .search-bar-fixed { padding-left: 60px; padding-right: 60px; }
+  .slabel { font-size: 11px; }
+  .impl-txt, .opp-txt { font-size: 13px; }
+  .agenda-txt, .voz-quote { font-size: 13px; }
+  .termo-status { font-size: 15px; }
+  .termo-reason { font-size: 12px; }
+}
+
+/* NOTEBOOK (900px–1199px) — compactar nav e ajustar espaçamento */
+@media (max-width: 1199px) {
+  .section-grid { grid-template-columns: repeat(5, 1fr); }
+  .sec-card:nth-child(n+6) { border-top: 1px solid var(--border); }
+  .sec-label { font-size: 8px; }
+  .sec-icon  { width: 26px; height: 26px; font-size: 13px; }
+  .acc-inner { padding: 24px 28px; }
+  .header    { padding: 14px 28px; }
+  .edition-bar, .search-bar-fixed { padding-left: 28px; padding-right: 28px; }
+  .termometro { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .historico-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* TABLET (600px–899px) */
+@media (max-width: 899px) {
+  body { font-size: 14px; }
+  .header { padding: 12px 20px; flex-wrap: wrap; gap: 8px; }
+  .brand-text strong { font-size: 14px; }
+  .brand-text span   { font-size: 9px; }
+  .header-right { gap: 6px; }
+  .btn-hdr { padding: 5px 10px; font-size: 10px; }
+  .pill-live { display: none; }
+
+  .edition-bar { padding: 6px 20px; font-size: 11px; }
+
+  .section-grid { grid-template-columns: repeat(5, 1fr); top: 105px; }
+  .sec-label { font-size: 7.5px; }
+  .sec-icon  { width: 24px; height: 24px; font-size: 12px; }
+
+  .search-bar-fixed { padding: 6px 20px; top: 155px; }
+  .search-bar-input { font-size: 12px; padding: 7px 12px 7px 34px; }
+  .search-bar-tags  { display: none; }
+
+  .acc-inner { padding: 20px; }
+  .termometro { grid-template-columns: 1fr; gap: 8px; }
+  .termo-card { padding: 12px 14px; }
+
+  .historico-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .comp-header { flex-wrap: wrap; gap: 6px; }
+  .comp-type   { display: none; }
+
+  footer { flex-direction: column; gap: 4px; text-align: center; padding: 12px 20px; }
+}
+
+/* CELULAR (até 599px) — layout mobile completo */
+@media (max-width: 599px) {
+  body { font-size: 14px; }
+
+  /* Header mobile */
+  .header {
+    padding: 10px 16px;
+    flex-wrap: nowrap;
+    position: sticky; top: 0;
+  }
+  .brand-text span { display: none; }
+  .brand-text strong { font-size: 13px; }
+  .btn-ppt { display: none; }
+  .btn-pdf { padding: 5px 10px; font-size: 10px; }
+  .btn-news { display: none; }
+  .pill-live { display: none; }
+
+  /* Edition bar mobile */
+  .edition-bar {
+    padding: 6px 16px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  #edition-info { display: none; }
+
+  /* Nav grid mobile — scroll horizontal */
+  .section-grid {
+    grid-template-columns: repeat(10, minmax(64px, 1fr));
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    top: 88px;
+    position: sticky;
+  }
+  .section-grid::-webkit-scrollbar { display: none; }
+  .sec-card {
+    padding: 10px 6px;
+    min-width: 64px;
+    border-right: 1px solid var(--border);
+  }
+  .sec-icon  { width: 26px; height: 26px; font-size: 13px; }
+  .sec-label { font-size: 7px; letter-spacing: 0; }
+  .sec-arrow { font-size: 8px; }
+
+  /* Busca mobile */
+  .search-bar-fixed {
+    padding: 6px 16px;
+    top: 148px;
+    position: sticky;
+  }
+  .search-bar-input { font-size: 13px; padding: 9px 12px 9px 36px; }
+  .search-bar-tags  { display: none; }
+  .search-bar-count { display: none; }
+
+  /* Conteúdo mobile */
+  .acc-inner { padding: 16px; }
+
+  .termometro {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .termo-card { padding: 12px; gap: 10px; }
+  .termo-indicator { width: 38px; height: 38px; font-size: 18px; }
+  .termo-status { font-size: 13px; }
+  .termo-reason { font-size: 11px; }
+
+  .ncard { padding: 12px; gap: 10px; }
+  .nhead { font-size: 13px; }
+  .ntxt  { font-size: 12px; }
+  .nmeta { font-size: 10px; flex-wrap: wrap; gap: 5px; }
+
+  .vozes { gap: 8px; }
+  .voz-card { padding: 12px; }
+  .voz-quote { font-size: 12px; }
+  .voz-ctx { display: none; }
+
+  .impl-box { padding: 12px 14px; }
+  .impl-txt { font-size: 12px; }
+  .opp-card { padding: 10px 14px; }
+  .opp-txt  { font-size: 12px; }
+
+  .comp-header { padding: 10px 12px; }
+  .comp-name   { font-size: 12px; }
+  .comp-type   { display: none; }
+  .comp-body   { padding: 10px 12px; }
+
+  .agenda-item { padding: 12px; gap: 10px; }
+  .agenda-num  { width: 24px; height: 24px; font-size: 11px; }
+  .agenda-title { font-size: 12px; }
+  .agenda-txt   { font-size: 11px; }
+
+  .historico-grid { grid-template-columns: 1fr; gap: 10px; }
+  .hist-card { padding: 14px; }
+
+  .slabel { font-size: 9px; letter-spacing: 1px; margin-bottom: 12px; }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 16px;
+    gap: 4px;
+  }
+  footer p:first-child { display: none; }
+}
+
 </style>
 </head>
 <body>
