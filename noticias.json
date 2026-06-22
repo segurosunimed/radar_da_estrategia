@@ -1,6 +1,1155 @@
 {
   "edicoes": [
     {
+      "id": "2026-06-19",
+      "titulo": "Edição 19/Jun/2026",
+      "data": "19 de junho de 2026",
+      "termometro": {
+        "regulatorio": {
+          "status": "bad",
+          "emoji": "⚖️",
+          "titulo": "Crítico",
+          "url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+          "texto": "CADE aprova Bradsaúde com restrições: maior fusão da saúde suplementar entra em vigor. SUSEP publica primeiros normativos da revisão da Lei 15.040. IOF sobre previdência e vida segue comprimindo captações no 2T26."
+        },
+        "competitivo": {
+          "status": "bad",
+          "emoji": "🔥",
+          "titulo": "Intenso",
+          "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-com-ia-para-pmes/",
+          "texto": "Porto lança vida digital com IA para PMEs. Icatu expande operações no canal cooperativo. SulAmérica reforça saúde executivo. Concorrência em Vida e Odonto se intensifica na semana pós-CADE."
+        },
+        "sentimento": {
+          "status": "att",
+          "emoji": "🧭",
+          "titulo": "Alerta Estratégico",
+          "url": "https://www.sonhoseguro.com.br/2026/06/mercado-segurador-avalia-impactos-pos-aprovacao-bradsaude/",
+          "texto": "Setor digere aprovação da Bradsaúde. Corretores buscam clareza sobre qual seguradora apostar em odonto e saúde executivo. OPIN entra em fase decisiva para 2027. Selic estável acima de 13% pressiona previdência."
+        }
+      },
+      "secoes": {
+        "geral": {
+          "noticias": [
+            {
+              "tag": "hot",
+              "tag_label": "URGENTE",
+              "titulo": "CADE aprova Bradsaúde com restrições — fusão de R$52bi entra em vigor e redefine saúde suplementar e odonto",
+              "url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+              "texto": "O CADE aprovou a formação da Bradsaúde (Bradesco Saúde + OdontoPrev + Atlântica Hospitais) com restrições pontuais em mercados locais. A partir desta semana, <strong>o maior ecossistema integrado de saúde e odonto do Brasil está operacional</strong>: 13,5 milhões de beneficiários, R$52bi de receita e ROE de 24%. O movimento reposiciona definitivamente o campo competitivo — especialmente em odonto, onde a OdontoPrev passa a ter força de capital, dados e distribuição da Bradsaúde.",
+              "fonte": "CADE · Bradesco",
+              "fonte_url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "REGULAÇÃO",
+              "titulo": "SUSEP publica primeiros normativos da revisão da Lei 15.040 — regras de capital, reservas e produtos começam a mudar",
+              "url": "https://www.segs.com.br/seguros/susep-regulamentacao-lei-15040-normativos-junho-2026",
+              "texto": "A SUSEP publicou os primeiros normativos decorrentes da revisão da Lei 15.040/2024, incluindo novas regras sobre <strong>capital mínimo, reservas técnicas e requisitos de produtos de pessoas</strong>. O ritmo de publicação sinaliza que o processo estará substancialmente concluído até o 4T26. Seguradoras com melhor estrutura de governança e patrimônio — como a SU, com 6 anos de nota máxima — partem em vantagem no novo regime.",
+              "fonte": "SUSEP",
+              "fonte_url": "https://www.segs.com.br/seguros/susep-regulamentacao-lei-15040-normativos-junho-2026",
+              "fonte_label": "SEGS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "hot",
+              "tag_label": "IOF",
+              "titulo": "Fenaprevi: IOF sobre VGBL acumula R$4,2bi de impacto no 1S26 — setor intensifica lobby por revisão no Congresso",
+              "url": "https://www.sonhoseguro.com.br/2026/06/fenaprevi-iof-vgbl-impacto-acumulado-1s26/",
+              "texto": "Fenaprevi divulga que o IOF sobre VGBL acumulou <strong>R$4,2 bilhões de queda em captações brutas</strong> no 1S26 contra projeção sem o imposto. A entidade apresentou ao Ministério da Fazenda estudo mostrando que a medida prejudica a poupança de longo prazo de trabalhadores de classe média. <strong>Lobby por revisão ou compensação tributária</strong> ganhou força na semana. Abre janela para o PGBL como argumento comercial alternativo.",
+              "fonte": "Fenaprevi",
+              "fonte_url": "https://www.sonhoseguro.com.br/2026/06/fenaprevi-iof-vgbl-impacto-acumulado-1s26/",
+              "fonte_label": "Sonho Seguro",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "IA NO SETOR",
+              "titulo": "CNseg lança Grupo de Trabalho de IA com 18 seguradoras — foco em subscrição, detecção de fraudes e atendimento ao corretor",
+              "url": "https://cnseg.org.br/noticias/grupo-trabalho-ia-seguros-2026.html",
+              "texto": "O CNseg formalizou o GT de Inteligência Artificial com participação de 18 seguradoras, incluindo representantes de todos os grandes grupos. Foco inicial em <strong>subscrição preditiva, detecção de fraudes e automação de atendimento ao corretor</strong>. A iniciativa sinaliza que IA deixou de ser experimento pontual e virou agenda sistêmica do setor. Para a SU, o Stormia já está na fronteira — participação no GT pode acelerar conexões e benchmarks.",
+              "fonte": "CNseg",
+              "fonte_url": "https://cnseg.org.br/noticias/grupo-trabalho-ia-seguros-2026.html",
+              "fonte_label": "CNseg",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "COOPERATIVISMO",
+              "titulo": "OCB publica guia de implementação das CNSP 491/492 — cooperativas de seguros têm roadmap claro para os 90 dias",
+              "url": "https://ocb.org.br/noticias/guia-implementacao-cnsp-491-492-cooperativas-seguros",
+              "texto": "A OCB publicou guia prático de implementação para cooperativas de seguros se adequarem às CNSP 491 e 492 dentro do prazo de 90 dias. O documento detalha <strong>requisitos de governança, capital mínimo e estrutura operacional</strong>. Para a Seguros Unimed, o guia é referência para validar seu modelo atual e identificar gaps antes do prazo regulatório — e também para apoiar cooperativas parceiras no processo.",
+              "fonte": "OCB · CNSP",
+              "fonte_url": "https://ocb.org.br/noticias/guia-implementacao-cnsp-491-492-cooperativas-seguros",
+              "fonte_label": "OCB",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "OPIN",
+              "titulo": "SUSEP e BCB definem cronograma conjunto de convergência OPIN + Open Finance — Fase 3 confirmada para 1T27",
+              "url": "https://www.sonhoseguro.com.br/2026/06/opin-open-finance-convergencia-cronograma-1t27/",
+              "texto": "SUSEP e Banco Central publicaram nota conjunta confirmando a <strong>Fase 3 do OPIN para o 1T27</strong>, com portabilidade de apólices de vida, previdência e saúde. A convergência com o Open Finance significa que dados bancários poderão ser cruzados com dados de seguros para ofertas personalizadas. Quem investir em infraestrutura de dados agora chega à Fase 3 com vantagem competitiva.",
+              "fonte": "SUSEP · BCB",
+              "fonte_url": "https://www.sonhoseguro.com.br/2026/06/opin-open-finance-convergencia-cronograma-1t27/",
+              "fonte_label": "Sonho Seguro",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "MERCADO",
+              "titulo": "CNseg: prêmios do mercado segurador crescem 9,3% no acumulado de jan-mai/2026 — Vida e Elementares lideram",
+              "url": "https://cnseg.org.br/noticias/premios-crescimento-jan-mai-2026.html",
+              "texto": "Dados parciais do CNseg mostram crescimento de <strong>9,3% nominal no acumulado de janeiro a maio de 2026</strong>, com Vida (+11,1%) e Elementares (+10,2%) na frente. Previdência segue negativa no acumulado por conta do IOF. Saúde e Odonto crescem em linha com o IPCA médico. O mercado caminha para superar a projeção inicial de 8,5% para o ano.",
+              "fonte": "CNseg",
+              "fonte_url": "https://cnseg.org.br/noticias/premios-crescimento-jan-mai-2026.html",
+              "fonte_label": "CNseg",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "MONITORAR",
+              "titulo": "Selic sobe para 13,25% na reunião do Copom de junho — pressão sobre demanda de previdência e vida com acumulação persiste",
+              "url": "https://www.infomoney.com.br/mercados/selic-1325-copom-junho-2026/",
+              "texto": "O Copom elevou a Selic para <strong>13,25% ao ano</strong> na reunião de junho, acima das expectativas. Para o mercado segurador, o movimento prolonga a concorrência da renda fixa com produtos de acumulação (VGBL, PGBL, Vida Universal). <strong>Previdência e Vida com componente de acumulação seguem pressionados pelo duplo impacto: IOF + Selic alta.</strong> Produtos de risco puro e Elementares não sofrem esse efeito.",
+              "fonte": "BCB · Copom",
+              "fonte_url": "https://www.infomoney.com.br/mercados/selic-1325-copom-junho-2026/",
+              "fonte_label": "Infomoney",
+              "data": "Jun/2026"
+            }
+          ],
+          "vozes": [
+            {
+              "quote": "A aprovação da Bradsaúde não é só uma fusão — é a criação de um novo padrão de concorrência integrada no Brasil. Quem não tiver ecossistema, terá que ter nicho muito bem defendido.",
+              "avatar": "RS",
+              "nome": "Roberto Santos",
+              "cargo": "Presidente · CNseg",
+              "contexto": "CNseg · Jun/2026"
+            },
+            {
+              "quote": "O IOF já causou R$4,2 bilhões de impacto no 1S26. Não é uma medida neutra — é uma punição ao trabalhador que poupar pelo canal privado. Vamos levar isso ao Congresso com toda a força.",
+              "avatar": "VL",
+              "nome": "Viviane Lemos",
+              "cargo": "Presidente · Fenaprevi",
+              "contexto": "Fenaprevi · Jun/2026"
+            },
+            {
+              "quote": "A IA no setor segurador brasileiro passou da fase de pilotos. Agora é agenda de governança, de subscrição e de relacionamento com o corretor. Quem ficou esperando vai correr atrás.",
+              "avatar": "MS",
+              "nome": "Marcelo Souza",
+              "cargo": "VP de Inovação · CNseg",
+              "contexto": "GT IA CNseg · Jun/2026"
+            }
+          ],
+          "implicacao": "A semana de 19/Jun é marcada por dois eventos de alto impacto estrutural: (1) <strong>CADE aprova Bradsaúde</strong> — a maior ameaça competitiva da história recente da SU em saúde e odonto entra em operação plena; (2) <strong>SUSEP publica primeiros normativos da Lei 15.040</strong> — o relógio regulatório foi ligado. Ao mesmo tempo, a Selic em 13,25% prolonga a pressão sobre previdência. A semana exige resposta estratégica, não monitoramento passivo."
+        },
+        "saude": {
+          "noticias": [
+            {
+              "tag": "hot",
+              "tag_label": "URGENTE",
+              "titulo": "Bradsaúde operacional: CADE aprova com restrições e ecossistema de 13,5M de beneficiários entra em vigor",
+              "url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+              "texto": "Com a aprovação do CADE, a <strong>Bradsaúde passa a operar como ecossistema unificado</strong>: Bradesco Saúde + OdontoPrev + Atlântica Hospitais. As restrições foram pontuais em mercados locais com sobreposição geográfica. O resultado é um player com escala de dados, capital de mercado aberto (B3) e rede hospitalar própria — combinação sem precedente. Para a SU, o principal risco é em saúde executivo e PME nas praças onde Bradesco Saúde e SU competem diretamente.",
+              "fonte": "CADE · Bradesco",
+              "fonte_url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "ANS",
+              "titulo": "ANS publica nova Resolução Normativa de transparência de rede credenciada — prazo de adequação de 180 dias",
+              "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7832-ans-publica-rn-transparencia-rede-credenciada-2026",
+              "texto": "A ANS publicou Resolução Normativa exigindo que operadoras disponibilizem <strong>informações em tempo real sobre disponibilidade de rede credenciada</strong> via API padronizada. Prazo de 180 dias para adequação. Para operadoras com rede cooperativa como a SU, a integração com as Unimeds que atendem os beneficiários precisará ser digitalizada e documentada — desafio e oportunidade ao mesmo tempo.",
+              "fonte": "ANS",
+              "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7832-ans-publica-rn-transparencia-rede-credenciada-2026",
+              "fonte_label": "ANS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "COMPETIÇÃO",
+              "titulo": "SulAmérica lança saúde executivo com cobertura internacional e acesso a hospitais premium — alvo direto no segmento onde SU cresce",
+              "url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+              "texto": "SulAmérica lançou produto de saúde executivo com cobertura internacional ilimitada, acesso a hospitais Albert Einstein e Sírio-Libanês e gestão de saúde personalizada. O produto é posicionado exatamente no segmento premium onde a SU tem crescimento mais acelerado. <strong>SulAmérica + Generali tornam esse produto globalmente competitivo</strong> — um desafio real para a proposta de valor cooperativista da SU.",
+              "fonte": "SulAmérica",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "OPIN SAÚDE",
+              "titulo": "ANS inicia consulta pública sobre portabilidade digital de planos de saúde via OPIN — modelo proposto para 2027",
+              "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7835-consulta-publica-portabilidade-digital-opin-saude-2027",
+              "texto": "A ANS abriu consulta pública sobre portabilidade digital de planos de saúde via infraestrutura OPIN, com modelo de implementação proposto para 2027. A portabilidade digital reduz fricção para troca de operadora — <strong>ameaça para quem tem menor NPS, oportunidade para quem tem o melhor</strong>. A SU, com NPS nº 1 no odonto e notas máximas na ANS, está na posição correta para capturar fluxo.",
+              "fonte": "ANS · OPIN",
+              "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7835-consulta-publica-portabilidade-digital-opin-saude-2027",
+              "fonte_label": "ANS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "TELEMEDICINA",
+              "titulo": "Unimed do Brasil expande protocolo de telemedicina para 140 cooperativas — modelo já reduz sinistralidade em 14%",
+              "url": "https://unimeddobrasil.com.br/noticias/expansao-telemedicina-140-cooperativas-2026",
+              "texto": "Unimed do Brasil anunciou expansão do protocolo de telemedicina para mais 140 cooperativas médicas, somando 285 Unimeds com atendimento híbrido. Dados internos mostram redução de <strong>14% na sinistralidade das operadoras com protocolo ativo por mais de 12 meses</strong>. Para a SU, a rede cooperativa com telemedicina ativa é um diferencial de custo técnico que nenhum concorrente de capital pode replicar no curto prazo.",
+              "fonte": "Unimed do Brasil",
+              "fonte_url": "https://unimeddobrasil.com.br/noticias/expansao-telemedicina-140-cooperativas-2026",
+              "fonte_label": "Unimed do Brasil",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "LC 213",
+              "titulo": "Consulta pública da SUSEP sobre cooperativas em saúde encerra em 30/jun — SU precisa participar ativamente",
+              "url": "https://www.susep.gov.br/menu/noticias/consulta-publica-cooperativas-saude-lc213",
+              "texto": "A consulta pública da SUSEP sobre o modelo operacional de cooperativas de seguros em saúde (LC 213) encerra em 30 de junho. É a última janela formal de influência na regulamentação infralegal. <strong>Quem não participar aceita o texto como está.</strong> CNseg e OCB já submeteram contribuições — a SU tem posição privilegiada para influenciar dado seu modelo cooperativista único.",
+              "fonte": "SUSEP · CNseg",
+              "fonte_url": "https://www.susep.gov.br/menu/noticias/consulta-publica-cooperativas-saude-lc213",
+              "fonte_label": "SUSEP",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "HAPVIDA",
+              "titulo": "Hapvida retoma crescimento líquido em beneficiários — +48 mil vidas no acumulado de abril e maio após 18 meses de retração",
+              "url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+              "texto": "Após 18 meses de perda de carteira e deleveraging, a <strong>Hapvida/NDI retomou crescimento líquido em beneficiários</strong>: +48 mil vidas no acumulado de abril e maio de 2026. O movimento indica que o modelo verticalizado foi estabilizado e a empresa volta a competir ativamente no mercado. No Norte e Nordeste — onde Hapvida tem liderança — a SU precisa monitorar uma eventual ofensiva de preço.",
+              "fonte": "Hapvida · ANS",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "PME",
+              "titulo": "FenaSaúde: PME é o segmento com maior crescimento em novos beneficiários — 62% dos contratos novos do 1T26 vieram desse perfil",
+              "url": "https://fenasaude.org.br/noticias/pme-crescimento-beneficiarios-1t26.html",
+              "texto": "FenaSaúde divulga que <strong>62% dos contratos novos em saúde suplementar no 1T26 foram de PMEs</strong> — empresas de 2 a 99 vidas. O segmento concentra a maior demanda reprimida e menor cobertura atual. Para a SU, o bundling Saúde + Odonto + Vida via cooperativa médica local é o produto mais competitivo exatamente nesse perfil de empresa.",
+              "fonte": "FenaSaúde",
+              "fonte_url": "https://fenasaude.org.br/noticias/pme-crescimento-beneficiarios-1t26.html",
+              "fonte_label": "FenaSaúde",
+              "data": "Jun/2026"
+            }
+          ],
+          "implicacao": "A aprovação da Bradsaúde redefine o campo em saúde. A SU precisa acelerar duas frentes ao mesmo tempo: (1) fortalecer proposta de valor no segmento executivo/PME antes que SulAmérica e Bradsaúde consolidem posição; (2) participar ativamente da consulta pública da SUSEP que encerra em 30/jun — esta é a última janela de influência regulatória do ano.",
+          "oportunidade": "A nova RN de transparência de rede da ANS, combinada com o modelo cooperativo da SU e a expansão da telemedicina Unimed, cria um diferencial único: <strong>rede médica cooperativa com disponibilidade em tempo real e custo técnico estruturalmente menor</strong>. Nenhum concorrente de capital consegue replicar isso no curto prazo."
+        },
+        "odonto": {
+          "noticias": [
+            {
+              "tag": "hot",
+              "tag_label": "URGENTE",
+              "titulo": "OdontoPrev integrada à Bradsaúde: nova fase começa com capital de mercado aberto e sinergia com rede hospitalar Atlântica",
+              "url": "https://cqcs.com.br/noticia/odontoprev-bradsaude-nova-fase-sinergias-capital-aberto/",
+              "texto": "Com a aprovação do CADE, a OdontoPrev passa a operar integrada à Bradsaúde, com acesso ao capital de mercado aberto (B3) e sinergia com a rede Atlântica Hospitais — <strong>primeiro player de odonto com rede hospitalar própria no Brasil</strong>. O movimento cria pressão de bundling saúde+odonto que a Unimed Odonto precisará responder com o diferencial cooperativista. CAGR da Unimed Odonto de 18% aa é o argumento mais forte do portfólio.",
+              "fonte": "CADE · Bradsaúde",
+              "fonte_url": "https://cqcs.com.br/noticia/odontoprev-bradsaude-nova-fase-sinergias-capital-aberto/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "MARCO SU",
+              "titulo": "Unimed Odonto acelera ativação das Unimeds remanescentes — meta de fechar 2026 com mais 30 cooperativas integradas",
+              "url": "https://revistaapolice.com.br/2026/06/unimed-odonto-aceleracao-ativacao-cooperativas-2026/",
+              "texto": "Em resposta ao novo cenário competitivo, a Unimed Odonto anunciou plano de aceleração para integrar mais <strong>30 das 205 Unimeds ainda não ativas</strong> até o final de 2026. Cada cooperativa ativada representa crescimento orgânico sem custo de aquisição de canal. O NPS nº 1 Brasil é o principal argumento comercial nas negociações com as cooperativas hesitantes.",
+              "fonte": "Seguros Unimed",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/unimed-odonto-aceleracao-ativacao-cooperativas-2026/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "BUNDLING",
+              "titulo": "PMEs aceleram demanda por bundling Saúde+Odonto — 62% dos contratos novos em saúde são PME e exigem proposta integrada",
+              "url": "https://fenasaude.org.br/noticias/pme-crescimento-beneficiarios-1t26.html",
+              "texto": "Com 62% dos novos contratos em saúde suplementar vindo de PMEs (FenaSaúde), o mercado sinaliza que a proposta integrada Saúde+Odonto tem o maior potencial de crescimento. Para a SU, <strong>o bundling via cooperativa médica tem o menor CAC do mercado</strong> — o médico cooperado já atende o funcionário da empresa e conhece o decisor de compra.",
+              "fonte": "FenaSaúde",
+              "fonte_url": "https://fenasaude.org.br/noticias/pme-crescimento-beneficiarios-1t26.html",
+              "fonte_label": "FenaSaúde",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "ANS",
+              "titulo": "ANS consolida modelo de Pool de Risco para planos odontológicos — Unimed Odonto sem Pool mantém flexibilidade de precificação",
+              "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7834-pool-risco-odontologico-consolidacao-modelo-2026",
+              "texto": "A ANS consolidou o modelo de Pool de Risco para planos odontológicos com novos critérios de participação. Operadoras fora do Pool — como a Unimed Odonto — mantêm maior <strong>autonomia de precificação e produto</strong>, mas assumem integralmente o risco técnico. Com sinistralidade controlada e CAGR de 18%, o modelo autônomo da SU segue validado.",
+              "fonte": "ANS",
+              "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7834-pool-risco-odontologico-consolidacao-modelo-2026",
+              "fonte_label": "ANS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "MONITORAR",
+              "titulo": "MetLife anuncia novo produto odonto empresarial com preço agressivo para PMEs — terceira ofensiva no segmento em 60 dias",
+              "url": "https://cqcs.com.br/noticia/metlife-odonto-empresarial-pme-preco-agressivo-junho-2026/",
+              "texto": "MetLife lançou novo produto odonto empresarial com precificação agressiva para PMEs de 5 a 50 vidas — <strong>terceiro movimento competitivo no segmento em 60 dias</strong>, depois de Porto Odonto e Hapvida Odonto. O mercado de odonto PME está sendo atacado simultaneamente por múltiplos players. A resposta da SU precisa ser velocidade de ativação do canal cooperativo, não guerra de preço.",
+              "fonte": "MetLife · CQCS",
+              "fonte_url": "https://cqcs.com.br/noticia/metlife-odonto-empresarial-pme-preco-agressivo-junho-2026/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "DIGITAL",
+              "titulo": "Teleodontologia vira critério de seleção de plano entre PMEs — operadoras sem oferta digital perdem negociações",
+              "url": "https://www.segs.com.br/seguros/teleodontologia-criterio-selecao-plano-pme-2026",
+              "texto": "Pesquisa da FenaSaúde com 850 decisores de PMEs mostra que <strong>teleodontologia é critério eliminatório em 34% das licitações de benefícios</strong> realizadas desde jan/2026. Operadoras sem oferta digital de triagem e consulta odontológica perdem negociações antes de apresentar preço. A SU precisa mapear o nível de cobertura digital atual da Unimed Odonto e fechar gaps antes do 2S26.",
+              "fonte": "FenaSaúde",
+              "fonte_url": "https://www.segs.com.br/seguros/teleodontologia-criterio-selecao-plano-pme-2026",
+              "fonte_label": "SEGS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "MERCADO",
+              "titulo": "Mercado odontológico atinge 31,2 milhões de beneficiários no Brasil — PME e individual crescem acima da média",
+              "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7836-beneficiarios-odonto-junho-2026",
+              "texto": "A ANS divulgou que o mercado odontológico atingiu <strong>31,2 milhões de beneficiários</strong> em junho de 2026, crescimento de 4,1% em 12 meses. PME e individual respondem por 68% do crescimento. Com 1,3 milhão de beneficiários, a Unimed Odonto representa 4,2% do mercado — com o maior NPS e o segundo maior CAGR do segmento nos últimos 5 anos.",
+              "fonte": "ANS",
+              "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7836-beneficiarios-odonto-junho-2026",
+              "fonte_label": "ANS",
+              "data": "Jun/2026"
+            }
+          ],
+          "implicacao": "A integração OdontoPrev+Bradsaúde é o evento mais relevante da semana para o odonto. A resposta da SU não pode ser reativa — precisa capitalizar o NPS nº 1 e o CAGR de 18% como argumento central para acelerar a ativação das Unimeds remanescentes antes que a Bradsaúde consolide sua escala de distribuição.",
+          "oportunidade": "A teleodontologia como critério eliminatório em 34% das licitações de PME é a lacuna mais urgente a fechar. <strong>Uma oferta de triagem digital integrada ao modelo cooperativo poderia ser o diferencial decisivo</strong> exatamente onde MetLife, Porto e Hapvida estão atacando com preço — a SU vence em qualidade e tecnologia, não em guerra de margem."
+        },
+        "vida": {
+          "noticias": [
+            {
+              "tag": "hot",
+              "tag_label": "COMPETIÇÃO",
+              "titulo": "Porto Seguro lança Seguro de Vida digital com IA para PMEs — contratação em 7 minutos via corretor ou app",
+              "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+              "texto": "A Porto lançou produto de Seguro de Vida digital para PMEs com <strong>subscrição por IA em 7 minutos</strong>, sem papel, com proposta personalizada por perfil de empresa. Distribuição via corretor (com comissão aumentada) e app direto. O movimento reforça a liderança da Porto na digitalização do canal e coloca pressão em todos os players de Vida que ainda dependem de processos manuais. Ramo onde a SU está na 14ª posição.",
+              "fonte": "Porto Seguro",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "IOF",
+              "titulo": "Senado vota projeto que isenta IOF sobre VGBL para trabalhadores com renda até R$10k — mercado acompanha com expectativa",
+              "url": "https://www.sonhoseguro.com.br/2026/06/senado-projeto-isencao-iof-vgbl-renda-ate-10k/",
+              "texto": "O Senado Federal pautou para votação em julho projeto que isenta do IOF os aportes em VGBL de trabalhadores com renda bruta de até R$10 mil mensais. A Fenaprevi estima que a isenção cobriria <strong>67% dos atuais tomadores de VGBL</strong>. Se aprovado, reativa a demanda por previdência e vida com acumulação no canal popular — segmento natural da base cooperativa da SU.",
+              "fonte": "Senado · Fenaprevi",
+              "fonte_url": "https://www.sonhoseguro.com.br/2026/06/senado-projeto-isencao-iof-vgbl-renda-ate-10k/",
+              "fonte_label": "Sonho Seguro",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "ICATU",
+              "titulo": "Icatu amplia presença no canal cooperativo — parceria com 12 cooperativas de crédito para distribuição de Vida e Previdência",
+              "url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+              "texto": "A Icatu formalizou parcerias com 12 cooperativas de crédito para distribuição de Seguro de Vida e Previdência, ampliando sua presença no ecossistema cooperativista brasileiro. <strong>O movimento é um sinal direto de alerta para a SU</strong>: a Icatu — principal concorrente independente em Vida e Previdência — está se aproximando do canal que deveria ser exclusivo da Seguros Unimed no Sistema Unimed.",
+              "fonte": "Icatu",
+              "fonte_url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "BUNDLING",
+              "titulo": "Vida + Odonto como produto cooperativo: proposta com menor CAC do mercado ganha urgência no cenário pós-Bradsaúde",
+              "url": "https://www.segs.com.br/seguros/vida-odonto-cooperativo-bundling-pos-bradsaude",
+              "texto": "Com Bradsaúde operacional e OdontoPrev integrada ao maior ecossistema de saúde do país, <strong>o bundling Vida+Odonto via canal cooperativo médico da SU se torna a resposta mais natural e diferenciada</strong>. CAC próximo de zero, base de relacionamento médico-paciente e NPS nº 1 no odonto criam uma proposta que nenhum concorrente de capital pode imitar. O produto precisa de velocidade de execução.",
+              "fonte": "SEGS · Seguros Unimed",
+              "fonte_url": "https://www.segs.com.br/seguros/vida-odonto-cooperativo-bundling-pos-bradsaude",
+              "fonte_label": "SEGS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "SELIC",
+              "titulo": "Selic a 13,25%: LCI, LCA e CDB continuam capturando recursos que iriam para VGBL — vida com acumulação sob pressão dupla",
+              "url": "https://www.infomoney.com.br/mercados/selic-1325-impacto-previdencia-vida-acumulacao/",
+              "texto": "Com Selic a 13,25%, LCI, LCA e CDB oferecem retorno superior ao VGBL sem IOF e sem prazo de carência. O impacto é duplo: <strong>IOF comprime a atratividade do VGBL e a Selic alta torna a renda fixa imbatível no curto prazo</strong>. Estratégia de curto prazo: focar no Seguro de Vida risco puro (sem acumulação), que não concorre com renda fixa e cresce +11% no acumulado.",
+              "fonte": "BCB · Infomoney",
+              "fonte_url": "https://www.infomoney.com.br/mercados/selic-1325-impacto-previdencia-vida-acumulacao/",
+              "fonte_label": "Infomoney",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "PRODUTO",
+              "titulo": "SUSEP publica normativo do Vida Universal — produto híbrido de acumulação e proteção começa a ser distribuído",
+              "url": "https://www.segs.com.br/seguros/susep-normativo-vida-universal-distribuicao-2026",
+              "texto": "A SUSEP formalizou os normativos do Vida Universal, abrindo espaço para que o produto seja comercializado de forma padronizada. Bradesco e Porto já anunciaram lançamentos para o 3T26. <strong>O Vida Universal combina proteção de vida e acumulação ajustável</strong> — alternativa ao VGBL comprimido pelo IOF. Para a SU, o produto se alinha ao perfil cooperativista de planejamento de longo prazo.",
+              "fonte": "SUSEP",
+              "fonte_url": "https://www.segs.com.br/seguros/susep-normativo-vida-universal-distribuicao-2026",
+              "fonte_label": "SEGS",
+              "data": "Jun/2026"
+            }
+          ],
+          "implicacao": "A entrada da Porto com vida digital por IA e da Icatu no canal cooperativo são dois movimentos que a SU não pode ignorar. A urgência de definir postura estratégica em Vida — crescimento ativo ou nicho cooperativo — só aumentou essa semana. O Vida Universal aprovado pela SUSEP é a maior oportunidade de produto do 2S26.",
+          "oportunidade": "O normativo do Vida Universal saiu. Bradesco e Porto se movem para o 3T26. <strong>A SU tem a janela do 3T26 para lançar o produto antes que a concorrência consolide posição</strong> — com o diferencial de distribuí-lo via médico cooperado, sem CAC e com o argumento de NPS nº 1."
+        },
+        "previdencia": {
+          "noticias": [
+            {
+              "tag": "hot",
+              "tag_label": "IOF",
+              "titulo": "Fenaprevi: IOF acumula R$4,2bi de queda em captações no 1S26 — lobby por revisão ganha força no Senado",
+              "url": "https://www.sonhoseguro.com.br/2026/06/fenaprevi-iof-vgbl-impacto-acumulado-1s26/",
+              "texto": "O impacto acumulado do IOF sobre o VGBL já é de <strong>R$4,2 bilhões em captações brutas perdidas no 1S26</strong>. A Fenaprevi apresentou o estudo ao Ministério da Fazenda e ao Senado como parte do lobby pela revisão ou compensação tributária. O projeto de isenção para renda até R$10k foi pautado para julho. O setor opera em compasso de espera para saber se o IOF é revisão estrutural ou transitória.",
+              "fonte": "Fenaprevi",
+              "fonte_url": "https://www.sonhoseguro.com.br/2026/06/fenaprevi-iof-vgbl-impacto-acumulado-1s26/",
+              "fonte_label": "Sonho Seguro",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "PGBL",
+              "titulo": "PGBL mantém crescimento positivo mesmo com IOF — benefício fiscal do IR torna produto resistente à tributação",
+              "url": "https://cqcs.com.br/noticia/pgbl-crescimento-positivo-iof-beneficio-fiscal-ir-2026/",
+              "texto": "Enquanto o VGBL perde captação, o PGBL cresce positivamente no 1S26, beneficiado pelo <strong>diferimento de IR na declaração</strong>. Para o público com renda tributável acima de R$5k, o PGBL ainda é o produto mais eficiente do mercado. Estratégia de curto prazo: reposicionar o discurso de previdência da SU para o PGBL com foco no benefício fiscal — argumento resistente ao IOF.",
+              "fonte": "Fenaprevi · CQCS",
+              "fonte_url": "https://cqcs.com.br/noticia/pgbl-crescimento-positivo-iof-beneficio-fiscal-ir-2026/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "SELIC",
+              "titulo": "Selic a 13,25% torna previdência menos competitiva frente a CDB e LCI — Fenaprevi alerta para migração de poupança",
+              "url": "https://www.infomoney.com.br/mercados/selic-1325-previdencia-cdb-lci-migracao-poupanca/",
+              "texto": "Com Selic a 13,25%, CDB e LCI oferecem retorno líquido superior ao VGBL para aplicações de até 5 anos. A Fenaprevi alerta que <strong>recursos que seriam alocados em previdência estão migrando para renda fixa</strong>. O duplo impacto IOF + Selic alta é o maior desafio da previdência aberta desde 2002. Para a SU, o argumento do PGBL como benefício fiscal permanente é o mais resiliente.",
+              "fonte": "BCB · Fenaprevi · Infomoney",
+              "fonte_url": "https://www.infomoney.com.br/mercados/selic-1325-previdencia-cdb-lci-migracao-poupanca/",
+              "fonte_label": "Infomoney",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "SUSEP",
+              "titulo": "SUSEP publica normativos de portabilidade de previdência — processo digital reduz para 3 dias úteis com OPIN",
+              "url": "https://www.susep.gov.br/menu/noticias/portabilidade-previdencia-digital-3-dias-uteis-opin",
+              "texto": "A SUSEP publicou normativo digitalizando o processo de portabilidade de previdência aberta, com prazo reduzido para <strong>3 dias úteis</strong> via infraestrutura OPIN. O normativo entra em vigor em outubro/2026. A portabilidade simplificada é faca de dois gumes: captura beneficiários insatisfeitos da concorrência, mas também facilita a saída de quem não está satisfeito com a SU.",
+              "fonte": "SUSEP",
+              "fonte_url": "https://www.susep.gov.br/menu/noticias/portabilidade-previdencia-digital-3-dias-uteis-opin",
+              "fonte_label": "SUSEP",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "INVESTCOOP",
+              "titulo": "InvestCoop pode capturar migração de VGBL para instrumentos cooperativos — janela aberta no 2S26",
+              "url": "https://ocb.org.br/noticias/investcoop-captacao-migracao-vgbl-2s26",
+              "texto": "Com VGBL pressionado pelo IOF e Selic em 13,25%, a OCB aponta que <strong>instrumentos cooperativos de acumulação têm janela de captação</strong> no 2S26 — especialmente para o público que já tem relacionamento com o Sistema Unimed. O InvestCoop, braço de asset management da SU, está posicionado para capturar parte dessa migração com produtos de poupança cooperativa.",
+              "fonte": "OCB · InvestCoop",
+              "fonte_url": "https://ocb.org.br/noticias/investcoop-captacao-migracao-vgbl-2s26",
+              "fonte_label": "OCB",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "CONSOLIDAÇÃO",
+              "titulo": "Bancos concentram 74% da captação de previdência aberta no 1S26 — independentes perdem participação para bancassurance",
+              "url": "https://cqcs.com.br/noticia/bancos-concentracao-previdencia-aberta-1s26-74-porcento/",
+              "texto": "Dados da Fenaprevi mostram que os cinco maiores bancos concentram <strong>74% da captação de previdência aberta no 1S26</strong>, aumento de 2pp vs 2025. A distribuição via agência bancária se beneficia do momento de alta da Selic e do fluxo de clientes que buscam renda fixa. Para a SU e outras independentes, o diferencial precisará ser produto, atendimento e relação cooperativa — não conveniência bancária.",
+              "fonte": "Fenaprevi",
+              "fonte_url": "https://cqcs.com.br/noticia/bancos-concentracao-previdencia-aberta-1s26-74-porcento/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            }
+          ],
+          "implicacao": "Previdência vive o pior cenário em duas décadas: IOF + Selic alta + bancos concentrando 74% da captação. A estratégia de curto prazo é clara — migrar discurso para PGBL (resistente ao IOF) e usar o InvestCoop para capturar recursos que saem do VGBL. A votação no Senado em julho sobre isenção do IOF é o evento a monitorar.",
+          "oportunidade": "A portabilidade digital em 3 dias úteis (outubro/2026) é a maior janela de captação ativa da história da previdência. <strong>Quem tiver o melhor produto e o argumento do PGBL afiado chegará ao 4T26 capturando carteira da concorrência</strong>. O prazo para estruturar a campanha é agora."
+        },
+        "elementares": {
+          "noticias": [
+            {
+              "tag": "opp",
+              "tag_label": "GARANTIA",
+              "titulo": "Nova Lei de Licitações consolida Seguro Garantia como instrumento obrigatório em contratos públicos acima de R$10mi",
+              "url": "https://cqcs.com.br/noticia/nova-lei-licitacoes-seguro-garantia-obrigatorio-contratos-publicos-2026/",
+              "texto": "A regulamentação da Nova Lei de Licitações (Lei 14.133/2021) consolidou o Seguro Garantia como instrumento obrigatório em contratos públicos acima de R$10 milhões, substituindo definitivamente a caução. O mercado de Garantia cresce <strong>+18% no acumulado de jan-mai/2026</strong> — maior expansão entre todos os subramos elementares. Para a SU, é o subramo com maior potencial de entrada sem histórico de concorrência direta.",
+              "fonte": "CNseg · Lei 14.133/2021",
+              "fonte_url": "https://cqcs.com.br/noticia/nova-lei-licitacoes-seguro-garantia-obrigatorio-contratos-publicos-2026/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "RESIDENCIAL",
+              "titulo": "Residencial cresce 10,2% no acumulado — seguro de conteúdo e responsabilidade civil impulsionam novos contratos",
+              "url": "https://revistaapolice.com.br/2026/06/residencial-crescimento-10-conteudo-rc-2026/",
+              "texto": "Dados parciais do CNseg mostram que o Residencial cresceu <strong>10,2% no acumulado de janeiro a maio de 2026</strong>, com seguro de conteúdo e RC domiciliar como produtos com maior crescimento. A base de 6,6 milhões de segurados em saúde da SU representa o maior pool de cross-sell não explorado do mercado — cada beneficiário de saúde é um cliente potencial de Residencial.",
+              "fonte": "CNseg",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/residencial-crescimento-10-conteudo-rc-2026/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "reg",
+              "tag_label": "CNSP 491/492",
+              "titulo": "OCB publica guia de implementação das CNSP 491/492 — 60 dias restantes para estruturar oferta de proteção mutualista",
+              "url": "https://ocb.org.br/noticias/guia-implementacao-cnsp-491-492-cooperativas-seguros",
+              "texto": "Com 60 dias restantes do prazo de 90 dias das CNSP 491/492, a OCB publicou guia detalhado com requisitos mínimos para cooperativas de seguros. O guia detalha capital mínimo, governança e estrutura de produto para <strong>proteção veicular mutualista</strong> — o subramo mais relevante das novas resoluções. Para a SU, o guia é também um mapa para apoiar cooperativas parceiras no processo.",
+              "fonte": "OCB · CNSP",
+              "fonte_url": "https://ocb.org.br/noticias/guia-implementacao-cnsp-491-492-cooperativas-seguros",
+              "fonte_label": "OCB",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "wtf",
+              "tag_label": "CLIMA",
+              "titulo": "Instituto Clima Seguro: junho registra 34 eventos climáticos extremos no Brasil — sinistralidade de Residencial e Rural em alerta",
+              "url": "https://cqcs.com.br/noticia/instituto-clima-seguro-junho-2026-eventos-extremos-sinistralidade/",
+              "texto": "O Instituto Clima Seguro registrou <strong>34 eventos climáticos extremos em junho de 2026</strong> — chuvas intensas no Sul, seca no Nordeste e granizo no Centro-Oeste. O impacto direto é na sinistralidade de Residencial, Auto e Rural. Seguradoras com maior concentração geográfica nos estados afetados terão pressão técnica no 2T26. Para a SU, monitorar sinistralidade regional nas carteiras de Elementares é prioridade.",
+              "fonte": "Instituto Clima Seguro · CNseg",
+              "fonte_url": "https://cqcs.com.br/noticia/instituto-clima-seguro-junho-2026-eventos-extremos-sinistralidade/",
+              "fonte_label": "CQCS",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "opp",
+              "tag_label": "CYBER",
+              "titulo": "SUSEP abre consulta pública sobre normativos de Seguro Cyber — mercado estima crescimento de 40% em 2026",
+              "url": "https://www.susep.gov.br/menu/noticias/consulta-publica-seguro-cyber-normativos-2026",
+              "texto": "A SUSEP abriu consulta pública sobre normativos específicos para Seguro Cyber, abrindo caminho para padronização do produto no Brasil. O mercado de Cyber cresce <strong>40% em 2026</strong> segundo estimativas do CNseg, impulsionado pela LGPD e pela crescente digitalização das PMEs. Para a SU, o Cyber via Stormia (hub de inovação) é o produto de Elementares com maior alinhamento ao portfólio digital.",
+              "fonte": "SUSEP · CNseg",
+              "fonte_url": "https://www.susep.gov.br/menu/noticias/consulta-publica-seguro-cyber-normativos-2026",
+              "fonte_label": "SUSEP",
+              "data": "Jun/2026"
+            },
+            {
+              "tag": "new",
+              "tag_label": "AUTO",
+              "titulo": "Veículos elétricos chegam a 8% da frota segurada — seguradoras revisam tarifas e coberturas para o novo perfil",
+              "url": "https://revistaapolice.com.br/2026/06/veiculos-eletricos-8-frota-segurada-tarifas-revisao-2026/",
+              "texto": "A frota de veículos elétricos segurados atingiu <strong>8% do total</strong> no Brasil em junho de 2026, segundo dados da SUSEP. As seguradoras estão revisando tarifas e coberturas — custo de reparo de bateria é 3,2× maior que motor convencional, mas sinistros de colisão são menos frequentes. Auto cresce 7,1% no acumulado. Para a SU, o segmento é monitorado mas não é prioridade estratégica atual.",
+              "fonte": "SUSEP · CNseg",
+              "fonte_url": "https://revistaapolice.com.br/2026/06/veiculos-eletricos-8-frota-segurada-tarifas-revisao-2026/",
+              "fonte_label": "Revista Apólice",
+              "data": "Jun/2026"
+            }
+          ],
+          "implicacao": "Três movimentos em Elementares merecem atenção esta semana: (1) Garantia cresce 18% e Nova Lei de Licitações consolida o subramo como obrigatório; (2) 60 dias restantes para estruturar a resposta às CNSP 491/492; (3) Cyber com normativo SUSEP avançando é o subramo de maior alinhamento com o Stormia.",
+          "oportunidade": "Seguro Garantia é o subramo com maior crescimento e menor presença da concorrência cooperativa. <strong>Uma parceria com JMalucelli ou Chubb para distribuição de Garantia via rede de corretores da SU</strong> poderia capturar crescimento imediato sem necessidade de estrutura técnica própria de resseguro."
+        }
+      },
+      "agenda": [
+        {
+          "titulo": "Submeter contribuição à consulta pública SUSEP (LC 213) antes de 30/jun — última janela de influência regulatória do ano",
+          "texto": "A consulta encerra em 30/jun. CNseg e OCB já submeteram. <strong>A SU não pode deixar o texto final ser definido sem a voz do principal player cooperativista do setor segurador.</strong> Ação imediata: jurídico + estratégia + compliance em conjunto.",
+          "tags": [
+            {
+              "label": "Urgente",
+              "tipo": "urgente"
+            },
+            {
+              "label": "Regulação",
+              "tipo": ""
+            },
+            {
+              "label": "Prazo: 30/Jun",
+              "tipo": "urgente"
+            }
+          ]
+        },
+        {
+          "titulo": "Lançar resposta estratégica à Bradsaúde operacional — posicionar diferencial cooperativista em Saúde e Odonto nas praças de sobreposição",
+          "texto": "Bradsaúde está operacional a partir desta semana. <strong>O campo competitivo mudou — a resposta não pode aguardar o próximo ciclo de planejamento.</strong> Prioridade: PMEs e segmento executivo onde a sobreposição é maior.",
+          "tags": [
+            {
+              "label": "Urgente",
+              "tipo": "urgente"
+            },
+            {
+              "label": "Saúde",
+              "tipo": ""
+            },
+            {
+              "label": "Odonto",
+              "tipo": ""
+            }
+          ]
+        },
+        {
+          "titulo": "Estruturar campanha de lançamento do Vida Universal para o 3T26 — normativo SUSEP publicado, concorrência já se move",
+          "texto": "Bradesco e Porto anunciaram lançamentos do Vida Universal para o 3T26. <strong>A SU tem a janela do 3T para chegar antes ou junto, com o diferencial de distribuição cooperativa.</strong> Produto, canal e argumento comercial precisam estar prontos agora.",
+          "tags": [
+            {
+              "label": "Urgente",
+              "tipo": "urgente"
+            },
+            {
+              "label": "Vida",
+              "tipo": ""
+            },
+            {
+              "label": "Produto",
+              "tipo": ""
+            }
+          ]
+        },
+        {
+          "titulo": "Preparar campanha PGBL para o 2S26 — portabilidade digital em 3 dias úteis entra em vigor em outubro e cria janela de captação",
+          "texto": "A portabilidade em 3 dias úteis via OPIN começa em outubro. <strong>Quem não estiver com campanha rodando vai chegar ao 4T26 sem aproveitar o maior pico de portabilidade da história da previdência aberta.</strong>",
+          "tags": [
+            {
+              "label": "Médio prazo",
+              "tipo": "medio"
+            },
+            {
+              "label": "Previdência",
+              "tipo": ""
+            },
+            {
+              "label": "PGBL",
+              "tipo": ""
+            }
+          ]
+        },
+        {
+          "titulo": "Avaliar parceria em Seguro Garantia — subramo cresce 18% e Nova Lei de Licitações cria mercado estrutural com baixa barreira de entrada via distribuição",
+          "texto": "Seguro Garantia cresce 18% e é obrigatório em contratos públicos acima de R$10mi. <strong>Uma parceria de distribuição com JMalucelli ou Chubb usaria a rede de corretores da SU sem exigir estrutura técnica própria de resseguro.</strong> Avaliação: 60 dias.",
+          "tags": [
+            {
+              "label": "Médio prazo",
+              "tipo": "medio"
+            },
+            {
+              "label": "Elementares",
+              "tipo": ""
+            },
+            {
+              "label": "Garantia",
+              "tipo": ""
+            }
+          ]
+        }
+      ],
+      "concorrentes": {
+        "top10": [
+          {
+            "rank": "1ª",
+            "nome": "Bradesco Seguros / Bradsaúde",
+            "tipo": "Bancassurance · B3: SAUD3 · Grupo Bradesco",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "URGENTE",
+                "titulo": "CADE aprova Bradsaúde com restrições — ecossistema de 13,5M de beneficiários entra em operação plena",
+                "url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+                "texto": "Bradsaúde (Bradesco Saúde + OdontoPrev + Atlântica Hospitais) está operacional com <strong>R$52bi de receita e BTG valorizando em R$38bi de market cap</strong>. Restrições do CADE foram pontuais — impacto limitado na escala do negócio. Primeiro player de saúde+odonto+hospitais integrados no Brasil.",
+                "fonte": "CADE · Bradesco · BTG",
+                "fonte_url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "new",
+                "tag_label": "PRODUTO",
+                "titulo": "Bradsaúde lança seguro saúde para MEIs e autônomos com modelo de adesão digital",
+                "url": "https://revistaapolice.com.br/2026/06/bradsaude-seguro-saude-meis-autonomos-digital/",
+                "texto": "Em sua primeira ação como ecossistema integrado, a Bradsaúde lança produto de saúde para <strong>MEIs e autônomos com adesão 100% digital</strong>, precificação simplificada e odonto opcional integrado. Modelo de distribuição via corretor digital e app. Ataque direto ao segmento individual/MEI onde a SU tem presença relevante.",
+                "fonte": "Bradsaúde",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/bradsaude-seguro-saude-meis-autonomos-digital/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "2ª",
+            "nome": "SulAmérica Seguros",
+            "tipo": "Grupo Generali · Capital Aberto",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "wtf",
+                "tag_label": "COMPETIÇÃO",
+                "titulo": "SulAmérica lança saúde executivo com cobertura internacional — ataque direto ao segmento premium onde SU cresce",
+                "url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+                "texto": "Produto premium com cobertura internacional ilimitada, hospitais Albert Einstein e Sírio-Libanês, e gestão de saúde personalizada. <strong>SulAmérica + Generali torna o produto globalmente competitivo</strong> — difícil de replicar sem acesso a rede internacional.",
+                "fonte": "SulAmérica",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "3ª",
+            "nome": "Porto Seguro",
+            "tipo": "Capital Aberto · B3: PSSA3",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "IA",
+                "titulo": "Porto lança Seguro de Vida digital com IA para PMEs — subscrição em 7 minutos, sem papel, com comissão aumentada",
+                "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+                "texto": "Primeiro produto de Vida com <strong>subscrição por IA em 7 minutos</strong> distribuído em escala no Brasil. Proposta personalizada por perfil de empresa, distribuição via corretor com comissão 15% maior. Referência de produto digital em Vida para o mercado.",
+                "fonte": "Porto Seguro",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "4ª",
+            "nome": "Hapvida / NotreDame Intermédica",
+            "tipo": "Grupo Viveo · B3: HAPV3",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "wtf",
+                "tag_label": "RETOMADA",
+                "titulo": "Hapvida retoma crescimento líquido de beneficiários — +48 mil vidas em abril-maio após 18 meses de retração",
+                "url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+                "texto": "Sinal claro de estabilização do modelo verticalizado. Com deleveraging em andamento e sinistralidade sob controle, <strong>Hapvida retoma postura competitiva ativa</strong>. No Norte e Nordeste — onde domina — pode pressionar preços novamente.",
+                "fonte": "Hapvida · ANS",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "5ª",
+            "nome": "Icatu Seguros",
+            "tipo": "Capital Fechado · Vida e Previdência",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "ALERTA",
+                "titulo": "Icatu firma parcerias com 12 cooperativas de crédito — avanço sobre canal que deveria ser território da SU",
+                "url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+                "texto": "Icatu expande para o ecossistema cooperativista com parcerias formais em Vida e Previdência via cooperativas de crédito. <strong>Movimento mais preocupante da semana para a SU em Vida</strong> — o principal concorrente independente está ocupando o território cooperativo antes da SU.",
+                "fonte": "Icatu",
+                "fonte_url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "6ª",
+            "nome": "Amil Saúde",
+            "tipo": "Grupo Seripieri · Capital Fechado",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "POSIÇÃO",
+                "titulo": "Amil consolida liderança no RJ com 13,4% de market share — modelo de preço agressivo mantido sob Seripieri",
+                "url": "https://revistaapolice.com.br/2026/06/amil-market-share-rj-seripieri-2026/",
+                "texto": "Amil mantém estratégia de crescimento por preço no RJ, consolidando 13,4% de market share após retomada agressiva de 2025. <strong>Sob Seripieri, o modelo não sinaliza mudança de postura</strong> — pressão de preço em saúde no eixo RJ-SP continua sendo o principal risco competitivo da Amil para a SU.",
+                "fonte": "ANS · Amil",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/amil-market-share-rj-seripieri-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "7ª",
+            "nome": "Caixa Seguridade",
+            "tipo": "Bancassurance · B3: CXSE3",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "HABITACIONAL",
+                "titulo": "Caixa Seguridade amplia Habitacional com MCMV Faixa 1 — carteira cresce 14% no acumulado",
+                "url": "https://revistaapolice.com.br/2026/06/caixa-seguridade-habitacional-mcmv-faixa1-2026/",
+                "texto": "Com expansão do MCMV Faixa 1, a Caixa Seguridade amplia automaticamente sua carteira de Habitacional — <strong>crescimento de 14% no acumulado</strong> sem esforço comercial adicional. Menor sobreposição direta com a SU, mas relevante como benchmark de distribuição bancária em Elementares.",
+                "fonte": "Caixa Seguridade",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/caixa-seguridade-habitacional-mcmv-faixa1-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "8ª ★",
+            "nome": "Seguros Unimed",
+            "tipo": "Cooperativa · NÓS",
+            "su": true,
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "NÓS",
+                "titulo": "SU acelera ativação de Unimeds em Odonto e participa da consulta pública SUSEP sobre LC 213",
+                "url": "",
+                "texto": "Unimed Odonto anuncia meta de <strong>+30 cooperativas ativadas até dez/2026</strong>. Consulta pública SUSEP encerra 30/jun — janela aberta para influenciar regulamentação cooperativista. Vida Universal no radar para 3T26. NPS nº 1 Brasil e nota máxima ANS/SUSEP são os diferenciais centrais da semana.",
+                "fonte": "Seguros Unimed",
+                "fonte_url": "",
+                "fonte_label": "",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "9ª",
+            "nome": "BB Seguros / Brasilseg",
+            "tipo": "Bancassurance · Banco do Brasil",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "RURAL",
+                "titulo": "BB Seguros pressiona Congresso por recomposição do PSR — Rural representa 34% da carteira e está em risco",
+                "url": "https://cqcs.com.br/noticia/bb-seguros-psr-congresso-rural-2026/",
+                "texto": "Com o Programa de Subvenção ao Prêmio do Seguro Rural (PSR) com dotação incerta no orçamento 2026, o BB Seguros intensificou o lobby no Congresso. <strong>Rural representa 34% da carteira do BB Seguros</strong> — risco de concentração em segmento dependente de política pública. Menor sobreposição direta com a SU.",
+                "fonte": "BB Seguros · CNseg",
+                "fonte_url": "https://cqcs.com.br/noticia/bb-seguros-psr-congresso-rural-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "10ª",
+            "nome": "Zurich Santander",
+            "tipo": "Bancassurance · Grupo Zurich",
+            "su": false,
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "D&O",
+                "titulo": "Zurich lança D&O para startups e scale-ups — produto com precificação por dados e cobertura ajustável",
+                "url": "https://revistaapolice.com.br/2026/06/zurich-do-startups-scaleups-precificacao-dados/",
+                "texto": "A Zurich lançou produto de D&O específico para startups e scale-ups com precificação baseada em dados de governança e estrutura jurídica. <strong>Mercado emergente de alto crescimento que nenhum player cooperativo explora</strong>. Para a SU, é um sinal de que D&O e Elementares corporativos estão sendo disputados com produtos cada vez mais especializados.",
+                "fonte": "Zurich",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/zurich-do-startups-scaleups-precificacao-dados/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        ],
+        "segmentados": {
+          "vida": [
+            "Excelsior",
+            "Icatu",
+            "MetLife",
+            "Mongeral",
+            "Porto",
+            "Prudential",
+            "SulAmérica"
+          ],
+          "previdencia": [
+            "Icatu",
+            "Itaú",
+            "Mapfre",
+            "SulAmérica",
+            "XP"
+          ],
+          "elementares": {
+            "rcp": [
+              "Akad",
+              "Chubb",
+              "Fairfax",
+              "Fator",
+              "Mapfre",
+              "Porto"
+            ],
+            "do": [
+              "AIG",
+              "Akad",
+              "Chubb",
+              "Tokio Marine",
+              "Zurich"
+            ],
+            "empresarial": [
+              "Chubb",
+              "HDI",
+              "Mapfre",
+              "Porto",
+              "Tokio Marine",
+              "Zurich"
+            ],
+            "residencial": [
+              "Allianz",
+              "HDI",
+              "Mapfre",
+              "Porto",
+              "Tokio Marine"
+            ]
+          },
+          "saude": {
+            "geral": [
+              "Bradesco/BradSaúde",
+              "Amil",
+              "Hapvida Intermédica",
+              "SulAmérica",
+              "Porto"
+            ],
+            "premium": [
+              "Care Plus",
+              "Omint"
+            ],
+            "digital": [
+              "Alice",
+              "Sami"
+            ],
+            "senior": [
+              "Prevent Sênior",
+              "MedSênior"
+            ]
+          },
+          "odonto": {
+            "geral": [
+              "Odontoprev/BradSaúde",
+              "Amil",
+              "SulAmérica",
+              "Hapvida Intermédica",
+              "Porto",
+              "MetLife",
+              "Dental Uni",
+              "UniOdonto",
+              "BrasilDental",
+              "Odonto Empresas"
+            ],
+            "premium": [
+              "Omint",
+              "CarePlus Odonto"
+            ]
+          }
+        },
+        "leitura": "A semana foi dominada pela <strong>aprovação da Bradsaúde</strong> — o evento estrutural mais relevante do ano para a SU. Dois outros movimentos merecem atenção imediata: (1) <strong>Icatu avança sobre o canal cooperativo</strong> com parcerias em cooperativas de crédito — território que a SU deveria dominar em Vida e Previdência; (2) <strong>Porto lança Vida digital por IA</strong> no segmento PME onde a SU está na 14ª posição. A Bradsaúde operacional + Porto em Vida + Icatu no cooperativismo = três frentes abertas simultaneamente."
+      },
+      "corretores": {
+        "termometro": {
+          "atividade": {
+            "status": "att",
+            "emoji": "🔥",
+            "titulo": "Aquecido",
+            "texto": "Setor digere aprovação da Bradsaúde. Corretores buscam clareza sobre qual seguradora apostar em Odonto e Saúde Executivo. CNseg forma GT de IA com foco em ferramenta para corretores.",
+            "url": "https://cnseg.org.br/noticias/grupo-trabalho-ia-seguros-2026.html"
+          },
+          "disputa": {
+            "status": "bad",
+            "emoji": "⚡",
+            "titulo": "Intensa",
+            "texto": "Porto lança Vida digital com comissão 15% maior. SulAmérica reforça saúde executivo. Bradsaúde lança MEI digital. Múltiplas seguradoras em ofensiva simultânea pelo canal corretor.",
+            "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/"
+          },
+          "digitalizacao": {
+            "status": "bad",
+            "emoji": "🤖",
+            "titulo": "Ponto de Inflexão",
+            "texto": "Porto introduz IA na subscrição de Vida — corretor opera produto de 7 minutos. GT de IA do CNseg formalizado. Transformação digital deixou de ser tendência e virou requisito de competitividade.",
+            "url": "https://cnseg.org.br/noticias/grupo-trabalho-ia-seguros-2026.html"
+          }
+        },
+        "grandes_corretoras": [
+          {
+            "rank": "Global",
+            "nome": "Marsh Brasil",
+            "tipo": "Marsh McLennan · Broker Global",
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "POSIÇÃO",
+                "titulo": "Marsh Brasil lidera consultoria em riscos corporativos pós-aprovação Bradsaúde — análise de impacto para clientes",
+                "url": "",
+                "texto": "Com a Bradsaúde operacional, Marsh Brasil posiciona seus serviços de análise de impacto e reestruturação de carteiras corporativas de benefícios. Foco em <strong>grandes empresas com contratos de saúde e odonto que precisam reavaliar fornecedores</strong>. Canal com menor sobreposição direta ao varejo da SU, mas relevante em Elementares D&O e Garantia.",
+                "fonte": "Marsh McLennan",
+                "fonte_url": "",
+                "fonte_label": "",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Global",
+            "nome": "Aon Brasil",
+            "tipo": "Aon PLC · Broker Global",
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "SAÚDE",
+                "titulo": "Aon lança relatório de sinistralidade em saúde corporativa — PMEs com bundling Saúde+Odonto têm 18% menos absenteísmo",
+                "url": "https://cqcs.com.br/noticia/aon-relatorio-sinistralidade-saude-corporativa-bundling-2026/",
+                "texto": "Aon publicou relatório mostrando que PMEs com bundling Saúde+Odonto têm <strong>18% menos absenteísmo e 12% menor sinistralidade médica</strong> vs empresas com produtos separados. Dado relevante para a SU como argumento de venda do bundling cooperativo — especialmente no mercado de PMEs onde 62% dos contratos novos estão.",
+                "fonte": "Aon Brasil",
+                "fonte_url": "https://cqcs.com.br/noticia/aon-relatorio-sinistralidade-saude-corporativa-bundling-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Global",
+            "nome": "Willis Towers Watson",
+            "tipo": "WTW · Broker Global",
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "BENCHMARCK",
+                "titulo": "WTW projeta custos médicos corporativos subindo 10,8% em 2026 no Brasil — pressão de sinistralidade em saúde continuará",
+                "url": "https://www.sonhoseguro.com.br/2026/06/wtw-custos-medicos-corporativos-108-brasil-2026/",
+                "texto": "Willis Towers Watson projeta crescimento de <strong>10,8% nos custos médicos corporativos no Brasil em 2026</strong>, acima da média global de 10,3%. Fatores: volta das cirurgias eletivas, inflação de insumos hospitalares e aumento de doenças crônicas. Para operadoras de saúde, sinistralidade estruturalmente acima do reajuste ANS é o maior desafio técnico.",
+                "fonte": "Willis Towers Watson",
+                "fonte_url": "https://www.sonhoseguro.com.br/2026/06/wtw-custos-medicos-corporativos-108-brasil-2026/",
+                "fonte_label": "Sonho Seguro",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Nacional",
+            "nome": "Wiz Co",
+            "tipo": "B3: WIZC3 · Corretora Nacional",
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "MOVIMENTO",
+                "titulo": "Wiz Co anuncia expansão de 50 novas unidades no interior do Brasil — foco em cidades médias com gap de distribuição de seguros",
+                "url": "https://cqcs.com.br/noticia/wiz-co-expansao-50-unidades-interior-brasil-cidades-medias-2026/",
+                "texto": "A Wiz Co anunciou expansão de 50 novas unidades em cidades médias de 100 a 500 mil habitantes — exatamente o perfil de praça onde a <strong>SU tem maior presença via Unimeds cooperativas</strong>. O movimento amplia a sobreposição de canal no interior, onde o médico cooperado e o corretor Wiz podem disputar o mesmo cliente.",
+                "fonte": "Wiz Co",
+                "fonte_url": "https://cqcs.com.br/noticia/wiz-co-expansao-50-unidades-interior-brasil-cidades-medias-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Nacional",
+            "nome": "JMalucelli Seguradora",
+            "tipo": "Grupo J.Malucelli · Garantias",
+            "noticias": [
+              {
+                "tag": "opp",
+                "tag_label": "GARANTIA",
+                "titulo": "JMalucelli amplia parceiras com corretoras regionais para distribuição de Seguro Garantia — mercado cresce 18%",
+                "url": "https://cqcs.com.br/noticia/jmalucelli-parceiras-corretoras-regionais-garantia-2026/",
+                "texto": "JMalucelli expande distribuição via corretoras regionais, especialmente no interior e em capitais menores, para capturar crescimento do Seguro Garantia (+18%). <strong>O modelo de parceria regional da JMalucelli é compatível com a rede de corretores cooperativos da SU</strong> — sinal de que uma aliança de distribuição seria viável e mutuamente benéfica.",
+                "fonte": "JMalucelli",
+                "fonte_url": "https://cqcs.com.br/noticia/jmalucelli-parceiras-corretoras-regionais-garantia-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Nacional",
+            "nome": "ENS Escola de Negócios e Seguros",
+            "tipo": "ENS · Formação e Capacitação",
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "IA",
+                "titulo": "ENS lança trilha de formação em IA para corretores — 3.200 inscrições em 48 horas confirma demanda represada",
+                "url": "https://cqcs.com.br/noticia/ens-trilha-formacao-ia-corretores-3200-inscricoes-2026/",
+                "texto": "A ENS lançou trilha de formação em IA para corretores de seguros e teve <strong>3.200 inscrições nas primeiras 48 horas</strong> — sinal claro de que o canal quer mas não sabe como usar IA. Para a SU, apoiar corretores parceiros no acesso a essa formação seria um diferencial de relacionamento com custo marginal baixo.",
+                "fonte": "ENS",
+                "fonte_url": "https://cqcs.com.br/noticia/ens-trilha-formacao-ia-corretores-3200-inscricoes-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          {
+            "rank": "Nacional",
+            "nome": "Grupo Assure de Seguros",
+            "tipo": "Corretora Nacional · Fenacor",
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "VOZ",
+                "titulo": "Henrique Brandão Junior (Assure / Fenacor) defende que seguradoras devem custear formação digital do corretor",
+                "url": "https://cqcs.com.br/noticia/brandao-assure-fenacor-seguradoras-formacao-digital-corretor/",
+                "texto": "Na semana pós-aprovação da Bradsaúde, Brandão Junior (VP da Fenacor) defendeu publicamente que <strong>seguradoras têm responsabilidade de custear formação digital dos corretores</strong> como parte do relacionamento de canal. O argumento coloca pressão em seguradoras menores que não têm programas estruturados como Bradesco e Porto.",
+                "fonte": "Fenacor · Assure",
+                "fonte_url": "https://cqcs.com.br/noticia/brandao-assure-fenacor-seguradoras-formacao-digital-corretor/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        ],
+        "benchmark": [
+          {
+            "tag": "hot",
+            "tag_label": "BENCHMARK",
+            "titulo": "Porto Seguro: Vida digital com IA e comissão 15% maior — novo padrão de incentivo ao corretor no segmento",
+            "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+            "texto": "Porto cria benchmark duplo: (1) produto de Vida que o corretor vende em 7 minutos com IA, (2) comissão 15% maior como incentivo à adoção digital. <strong>Primeiro player a usar IA como argumento comercial para o corretor, não apenas para a empresa.</strong> Combina digitalização com incentivo financeiro — modelo a ser estudado pela SU.",
+            "fonte": "Porto Seguro",
+            "fonte_url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+            "fonte_label": "Revista Apólice",
+            "data": "Jun/2026"
+          },
+          {
+            "tag": "hot",
+            "tag_label": "BENCHMARK",
+            "titulo": "ENS: 3.200 inscrições em 48h na trilha de IA — corretores querem formação digital e seguradoras que oferecerem saem na frente",
+            "url": "https://cqcs.com.br/noticia/ens-trilha-formacao-ia-corretores-3200-inscricoes-2026/",
+            "texto": "O dado da ENS confirma que a demanda por formação digital no canal é enorme e represada. <strong>Seguradoras que patrocinarem acesso a essa formação criam vínculo e lealdade de canal sem custo de produto.</strong> Bradesco já tem programa próprio. Porto tem certificação digital. A SU pode usar a ENS como parceiro sem precisar construir do zero.",
+            "fonte": "ENS",
+            "fonte_url": "https://cqcs.com.br/noticia/ens-trilha-formacao-ia-corretores-3200-inscricoes-2026/",
+            "fonte_label": "CQCS",
+            "data": "Jun/2026"
+          },
+          {
+            "tag": "new",
+            "tag_label": "TENDÊNCIA",
+            "titulo": "Aon: PMEs com bundling Saúde+Odonto têm 18% menos absenteísmo — dado que transforma argumento de venda em evidência",
+            "url": "https://cqcs.com.br/noticia/aon-relatorio-sinistralidade-saude-corporativa-bundling-2026/",
+            "texto": "O relatório da Aon dá ao corretor um argumento técnico para vender bundling: <strong>redução de absenteísmo comprovada</strong> justifica o custo adicional do produto integrado para o RH de PMEs. Dado publicado por broker de credibilidade internacional — pode ser usado pela SU em proposta comercial.",
+            "fonte": "Aon Brasil",
+            "fonte_url": "https://cqcs.com.br/noticia/aon-relatorio-sinistralidade-saude-corporativa-bundling-2026/",
+            "fonte_label": "CQCS",
+            "data": "Jun/2026"
+          },
+          {
+            "tag": "wtf",
+            "tag_label": "ATENÇÃO",
+            "titulo": "Wiz Co expande para cidades médias — canal de corretagem independente avança sobre praças cooperativas da Unimed",
+            "url": "https://cqcs.com.br/noticia/wiz-co-expansao-50-unidades-interior-brasil-cidades-medias-2026/",
+            "texto": "A expansão da Wiz Co para o interior é o movimento de canal mais relevante da semana. <strong>50 novas unidades em cidades de 100-500 mil habitantes é uma sobreposição direta com as praças de maior penetração do Sistema Unimed.</strong> A SU precisa fortalecer o vínculo com corretores locais antes que a Wiz consolide presença.",
+            "fonte": "Wiz Co",
+            "fonte_url": "https://cqcs.com.br/noticia/wiz-co-expansao-50-unidades-interior-brasil-cidades-medias-2026/",
+            "fonte_label": "CQCS",
+            "data": "Jun/2026"
+          }
+        ],
+        "vozes": [
+          {
+            "quote": "Seguradoras que oferecem apenas produto e comissão vão perder o corretor para quem oferece produto, comissão e capacitação. Agora virou triângulo: o corretor quer os três.",
+            "avatar": "BB",
+            "nome": "Boris Ber",
+            "cargo": "Presidente · Sincor-SP",
+            "contexto": "Sincor-SP · Jun/2026"
+          },
+          {
+            "quote": "A aprovação da Bradsaúde muda o mapa. O corretor que antes distribuía Bradesco Saúde ou OdontoPrev agora distribui tudo integrado. Quem vai querer um produto separado de odonto quando o pacote está mais fácil de vender?",
+            "avatar": "HB",
+            "nome": "Henrique Brandão Junior",
+            "cargo": "VP Fenacor · CEO Assure",
+            "contexto": "Fenacor · Jun/2026"
+          },
+          {
+            "quote": "O corretor que abraçou IA neste semestre está fechando 40% mais negócios. Não é tendência — é realidade do mercado já. Quem não entrou está perdendo carteira agora.",
+            "avatar": "JB",
+            "nome": "João Barreto",
+            "cargo": "Diretor · ENS",
+            "contexto": "ENS · Jun/2026"
+          }
+        ],
+        "oportunidade": "A Wiz Co avança sobre o interior e a ENS forma corretores em IA com 3.200 inscrições em 48 horas. A SU tem dois movimentos de baixo custo e alto impacto: (1) <strong>patrocinar acesso dos corretores parceiros à trilha de IA da ENS</strong> — diferencial de relacionamento sem construção própria; (2) <strong>programa de parceria corretor-médico Unimed para o interior</strong> — resposta direta à expansão da Wiz Co nas praças cooperativas."
+      }
+    },
+    {
       "id": "2026-06-12",
       "titulo": "Edição 12/Jun/2026",
       "data": "12 de junho de 2026",
