@@ -1147,6 +1147,411 @@
           }
         ],
         "oportunidade": "A Wiz Co avança sobre o interior e a ENS forma corretores em IA com 3.200 inscrições em 48 horas. A SU tem dois movimentos de baixo custo e alto impacto: (1) <strong>patrocinar acesso dos corretores parceiros à trilha de IA da ENS</strong> — diferencial de relacionamento sem construção própria; (2) <strong>programa de parceria corretor-médico Unimed para o interior</strong> — resposta direta à expansão da Wiz Co nas praças cooperativas."
+      },
+      "concorrentes_segmento": {
+        "saude": {
+          "geral": {
+            "players": [
+              "Bradesco/BradSaúde",
+              "Amil",
+              "Hapvida Intermédica",
+              "SulAmérica",
+              "Porto"
+            ],
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "BRADSAÚDE",
+                "titulo": "Bradsaúde operacional: ecossistema integrado de saúde+odonto+hospitais muda o campo competitivo no segmento geral",
+                "url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+                "texto": "CADE aprovou com restrições pontuais. Bradsaúde une Bradesco Saúde + OdontoPrev + Atlântica Hospitais com 13,5M de beneficiários e R$52bi de receita. Primeira ação: produto de saúde para MEIs com adesão digital.",
+                "fonte": "CADE · Bradsaúde",
+                "fonte_url": "https://cqcs.com.br/noticia/cade-aprova-bradsaude-e-cria-maior-ecossistema-integrado-de-saude-do-brasil/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "wtf",
+                "tag_label": "HAPVIDA",
+                "titulo": "Hapvida retoma crescimento líquido de beneficiários — +48 mil vidas em abril-maio após 18 meses de retração",
+                "url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+                "texto": "Sinal de estabilização do modelo verticalizado. Com deleveraging em curso e sinistralidade controlada, Hapvida volta a competir ativamente — risco de ofensiva de preço no Norte e Nordeste.",
+                "fonte": "Hapvida · ANS",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/hapvida-retoma-crescimento-beneficiarios-abril-maio-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "premium": {
+            "players": [
+              "Care Plus",
+              "Omint"
+            ],
+            "noticias": [
+              {
+                "tag": "wtf",
+                "tag_label": "SULAMERICA",
+                "titulo": "SulAmérica lança saúde executivo com cobertura internacional ilimitada — ataque direto ao premium onde SU cresce",
+                "url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+                "texto": "Hospitais Albert Einstein e Sírio-Libanês + gestão de saúde personalizada. SulAmérica+Generali torna o produto globalmente competitivo. Pressão direta no segmento executivo.",
+                "fonte": "SulAmérica",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/sulamerica-saude-executivo-cobertura-internacional-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "reg",
+                "tag_label": "ANS",
+                "titulo": "ANS inicia consulta pública sobre portabilidade digital — operação simplificada favorece players com NPS mais alto",
+                "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7835-consulta-publica-portabilidade-digital-opin-saude-2027",
+                "texto": "Portabilidade digital via OPIN para 2027 reduz fricção de troca de operadora. Players premium com NPS alto — como a SU — estão do lado certo desta mudança.",
+                "fonte": "ANS",
+                "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7835-consulta-publica-portabilidade-digital-opin-saude-2027",
+                "fonte_label": "ANS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "digital": {
+            "players": [
+              "Alice",
+              "Sami"
+            ],
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "ALICE",
+                "titulo": "Alice anuncia expansão para planos empresariais acima de 200 vidas — sai do nicho PME para empresas médias",
+                "url": "https://cqcs.com.br/noticia/alice-expansao-planos-empresariais-200-vidas-2026/",
+                "texto": "Alice, referência em saúde digital, amplia faixa de atuação e passa a competir com operadoras tradicionais em empresas médias. Modelo digital com atendimento 24h e IA clínica como diferenciais.",
+                "fonte": "Alice · CQCS",
+                "fonte_url": "https://cqcs.com.br/noticia/alice-expansao-planos-empresariais-200-vidas-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "new",
+                "tag_label": "SAMI",
+                "titulo": "Sami lança produto de saúde para MEIs com preço fixo e cobertura nacional via telemedicina",
+                "url": "https://www.segs.com.br/seguros/sami-produto-saude-meis-preco-fixo-telemedicina-2026",
+                "texto": "Sami entra no segmento MEI/autônomo com produto 100% digital, preço fixo e cobertura nacional por telemedicina. Mesmo território do novo produto da Bradsaúde — convergência de modelos no segmento.",
+                "fonte": "Sami · SEGS",
+                "fonte_url": "https://www.segs.com.br/seguros/sami-produto-saude-meis-preco-fixo-telemedicina-2026",
+                "fonte_label": "SEGS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "senior": {
+            "players": [
+              "Prevent Sênior",
+              "MedSênior"
+            ],
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "ANS",
+                "titulo": "ANS publica normativo de reajuste para planos sênior — teto diferenciado reconhece custo médico da faixa etária",
+                "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7837-normativo-reajuste-planos-senior-2026",
+                "texto": "ANS reconhece custo estruturalmente maior para beneficiários acima de 60 anos com teto de reajuste diferenciado. Prevent Sênior e MedSênior, especializados no segmento, são os mais impactados positivamente.",
+                "fonte": "ANS",
+                "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7837-normativo-reajuste-planos-senior-2026",
+                "fonte_label": "ANS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "opp",
+                "tag_label": "MERCADO",
+                "titulo": "Segmento sênior cresce 6,2% em beneficiários no 1S26 — maior expansão entre todos os perfis de planos",
+                "url": "https://fenasaude.org.br/noticias/senior-crescimento-beneficiarios-1s26.html",
+                "texto": "FenaSaúde aponta crescimento de 6,2% no segmento sênior no 1S26 — envelhecimento populacional cria demanda estrutural. Oportunidade para SU via rede cooperativa em cidades médias onde Prevent e MedSênior têm menor presença.",
+                "fonte": "FenaSaúde",
+                "fonte_url": "https://fenasaude.org.br/noticias/senior-crescimento-beneficiarios-1s26.html",
+                "fonte_label": "FenaSaúde",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        },
+        "odonto": {
+          "geral": {
+            "players": [
+              "Odontoprev/BradSaúde",
+              "Amil",
+              "SulAmérica",
+              "Hapvida Intermédica",
+              "Porto",
+              "MetLife",
+              "Dental Uni",
+              "UniOdonto",
+              "BrasilDental",
+              "Odonto Empresas"
+            ],
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "ODONTOPREV",
+                "titulo": "OdontoPrev integrada à Bradsaúde cria primeiro player odonto com rede hospitalar própria no Brasil",
+                "url": "https://cqcs.com.br/noticia/odontoprev-bradsaude-nova-fase-sinergias-capital-aberto/",
+                "texto": "Com aprovação CADE, OdontoPrev opera integrada à Bradsaúde — acesso a capital de mercado aberto e sinergia com Atlântica Hospitais. Bundling saúde+odonto mais poderoso do mercado passa a competir diretamente com a proposta cooperativa da SU.",
+                "fonte": "CADE · Bradsaúde",
+                "fonte_url": "https://cqcs.com.br/noticia/odontoprev-bradsaude-nova-fase-sinergias-capital-aberto/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "wtf",
+                "tag_label": "METLIFE",
+                "titulo": "MetLife lança odonto empresarial com preço agressivo para PMEs — terceira ofensiva no segmento em 60 dias",
+                "url": "https://cqcs.com.br/noticia/metlife-odonto-empresarial-pme-preco-agressivo-junho-2026/",
+                "texto": "MetLife entra no segmento PME de 5 a 50 vidas com precificação competitiva — terceiro player em 60 dias, depois de Porto e Hapvida. Mercado PME de odonto está sendo atacado simultaneamente por múltiplos concorrentes.",
+                "fonte": "MetLife · CQCS",
+                "fonte_url": "https://cqcs.com.br/noticia/metlife-odonto-empresarial-pme-preco-agressivo-junho-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "premium": {
+            "players": [
+              "Omint",
+              "CarePlus Odonto"
+            ],
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "OMINT",
+                "titulo": "Omint lança odonto premium com implantes e procedimentos estéticos incluídos — posicionamento de luxo no segmento",
+                "url": "https://revistaapolice.com.br/2026/06/omint-odonto-premium-implantes-esteticos-2026/",
+                "texto": "Omint reforça o segmento premium com cobertura de implantes e procedimentos estéticos incluídos no plano básico — diferencial que nenhum outro player oferece em escala. Pressão no segmento onde a SU tem menor presença.",
+                "fonte": "Omint",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/omint-odonto-premium-implantes-esteticos-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "opp",
+                "tag_label": "MERCADO",
+                "titulo": "Mercado odonto premium cresce 8,4% — beneficiários migram para planos com maior cobertura pós-pandemia",
+                "url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7836-beneficiarios-odonto-junho-2026",
+                "texto": "ANS registra crescimento de 8,4% no segmento premium de odonto — acima da média do mercado (4,1%). Movimento estrutural de upgrade de cobertura pós-pandemia. Oportunidade para SU com NPS nº 1 e modelo cooperativo.",
+                "fonte": "ANS",
+                "fonte_url": "https://www.ans.gov.br/index.php/noticias-ans/noticias/7836-beneficiarios-odonto-junho-2026",
+                "fonte_label": "ANS",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        },
+        "vida": {
+          "geral": {
+            "players": [
+              "Excelsior",
+              "Icatu",
+              "MetLife",
+              "Mongeral",
+              "Porto",
+              "Prudential",
+              "SulAmérica"
+            ],
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "PORTO",
+                "titulo": "Porto lança Vida digital com IA para PMEs — subscrição em 7 minutos e comissão 15% maior para o corretor",
+                "url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+                "texto": "Primeiro produto de Vida com subscrição por IA em 7 minutos distribuído em escala no Brasil. Comissão aumentada como incentivo de adoção digital. Novo padrão de produto e canal no segmento.",
+                "fonte": "Porto Seguro",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/porto-seguro-lanca-seguro-vida-digital-ia-pmes/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "hot",
+                "tag_label": "ICATU",
+                "titulo": "Icatu firma parcerias com 12 cooperativas de crédito — avanço sobre território cooperativista que deveria ser da SU",
+                "url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+                "texto": "Icatu expande via cooperativas de crédito em Vida e Previdência — o principal concorrente independente do segmento avança sobre o ecossistema cooperativista antes da SU consolidar posição.",
+                "fonte": "Icatu",
+                "fonte_url": "https://cqcs.com.br/noticia/icatu-parceria-cooperativas-credito-vida-previdencia-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        },
+        "previdencia": {
+          "geral": {
+            "players": [
+              "Icatu",
+              "Itaú",
+              "Mapfre",
+              "SulAmérica",
+              "XP"
+            ],
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "IOF",
+                "titulo": "Bancos concentram 74% da captação de previdência aberta no 1S26 — Itaú e Bradesco lideram com rede de agências",
+                "url": "https://cqcs.com.br/noticia/bancos-concentracao-previdencia-aberta-1s26-74-porcento/",
+                "texto": "Fenaprevi confirma que bancassurance domina captação em cenário de Selic alta. Itaú lidera entre os bancos. Para independentes como Icatu e SU, o diferencial precisa ser produto e argumento PGBL — não conveniência de canal.",
+                "fonte": "Fenaprevi · CQCS",
+                "fonte_url": "https://cqcs.com.br/noticia/bancos-concentracao-previdencia-aberta-1s26-74-porcento/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "opp",
+                "tag_label": "XP",
+                "titulo": "XP lança PGBL com taxa zero de administração para aportes acima de R$5k — pressão nas taxas do mercado inteiro",
+                "url": "https://www.infomoney.com.br/mercados/xp-pgbl-taxa-zero-administracao-aportes-acima-5k-2026/",
+                "texto": "XP usa modelo de corretagem para oferecer PGBL sem taxa de administração — move que pressiona toda a indústria. Para a SU, o argumento cooperativista e a ausência de conflito de interesse são os diferenciais que a XP não pode replicar.",
+                "fonte": "XP · Infomoney",
+                "fonte_url": "https://www.infomoney.com.br/mercados/xp-pgbl-taxa-zero-administracao-aportes-acima-5k-2026/",
+                "fonte_label": "Infomoney",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        },
+        "elementares": {
+          "rcp": {
+            "players": [
+              "Akad",
+              "Chubb",
+              "Fairfax",
+              "Fator",
+              "Mapfre",
+              "Porto"
+            ],
+            "noticias": [
+              {
+                "tag": "reg",
+                "tag_label": "REGULAÇÃO",
+                "titulo": "SUSEP publica nova circular de RCP — amplia coberturas obrigatórias e eleva capital mínimo para players do segmento",
+                "url": "https://www.susep.gov.br/menu/noticias/circular-rcp-cobertura-capital-minimo-2026",
+                "texto": "Nova circular SUSEP exige ampliação de coberturas e eleva capital mínimo para Responsabilidade Civil Profissional. Movimento que pode consolidar o segmento em menos players com maior capacidade técnica.",
+                "fonte": "SUSEP",
+                "fonte_url": "https://www.susep.gov.br/menu/noticias/circular-rcp-cobertura-capital-minimo-2026",
+                "fonte_label": "SUSEP",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "new",
+                "tag_label": "AKAD",
+                "titulo": "Akad Seguros lança RCP para profissionais de saúde com plataforma digital — primeiro produto 100% online do segmento",
+                "url": "https://cqcs.com.br/noticia/akad-rcp-profissionais-saude-plataforma-digital-2026/",
+                "texto": "Akad lança RCP digital para médicos, dentistas e psicólogos — contratação online em minutos. Produto com sinergia direta ao universo médico cooperativo da SU: oportunidade de parceria de distribuição via médicos Unimed.",
+                "fonte": "Akad · CQCS",
+                "fonte_url": "https://cqcs.com.br/noticia/akad-rcp-profissionais-saude-plataforma-digital-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "do": {
+            "players": [
+              "AIG",
+              "Akad",
+              "Chubb",
+              "Tokio Marine",
+              "Zurich"
+            ],
+            "noticias": [
+              {
+                "tag": "new",
+                "tag_label": "ZURICH",
+                "titulo": "Zurich lança D&O para startups e scale-ups com precificação por dados de governança",
+                "url": "https://revistaapolice.com.br/2026/06/zurich-do-startups-scaleups-precificacao-dados/",
+                "texto": "Primeiro produto D&O com precificação dinâmica baseada em dados de governança corporativa. Mercado emergente de alto crescimento — nenhum player cooperativo explora ainda. Oportunidade para SU via Stormia.",
+                "fonte": "Zurich",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/zurich-do-startups-scaleups-precificacao-dados/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "reg",
+                "tag_label": "CADE",
+                "titulo": "CADE intensifica investigações de cartel em D&O — mercado em alerta com aumento de fiscalização antitruste",
+                "url": "https://cqcs.com.br/noticia/cade-investigacoes-cartel-do-mercado-seguros-2026/",
+                "texto": "CADE amplia escopo de investigações antitruste no segmento D&O após denúncias de coordenação de preços entre players globais. Ambiente regulatório mais rígido tende a beneficiar players locais como a SU que não participam de pools internacionais.",
+                "fonte": "CADE · CQCS",
+                "fonte_url": "https://cqcs.com.br/noticia/cade-investigacoes-cartel-do-mercado-seguros-2026/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "empresarial": {
+            "players": [
+              "Chubb",
+              "HDI",
+              "Mapfre",
+              "Porto",
+              "Tokio Marine",
+              "Zurich"
+            ],
+            "noticias": [
+              {
+                "tag": "opp",
+                "tag_label": "MERCADO",
+                "titulo": "Seguro Empresarial cresce 10,8% no acumulado — PMEs com digitalização impulsionam novos contratos",
+                "url": "https://cnseg.org.br/noticias/empresarial-crescimento-pme-digitalizacao-2026.html",
+                "texto": "CNseg confirma crescimento expressivo no Empresarial com PMEs digitalizadas como principal motor. Chubb e Porto lideram em novas tecnologias de subscrição automatizada para este perfil de cliente.",
+                "fonte": "CNseg",
+                "fonte_url": "https://cnseg.org.br/noticias/empresarial-crescimento-pme-digitalizacao-2026.html",
+                "fonte_label": "CNseg",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "new",
+                "tag_label": "HDI",
+                "titulo": "HDI lança Empresarial com cobertura de interrupção por incidente de IA — primeiro no mercado brasileiro",
+                "url": "https://revistaapolice.com.br/2026/06/hdi-empresarial-cobertura-interrupcao-ia-2026/",
+                "texto": "HDI é o primeiro a cobrir interrupção de negócios causada por falhas ou ataques a sistemas de IA. Produto antecipa demanda das PMEs que já operam com IA no core do negócio — tendência irreversível para 2027-2028.",
+                "fonte": "HDI",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/hdi-empresarial-cobertura-interrupcao-ia-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          },
+          "residencial": {
+            "players": [
+              "Allianz",
+              "HDI",
+              "Mapfre",
+              "Porto",
+              "Tokio Marine"
+            ],
+            "noticias": [
+              {
+                "tag": "hot",
+                "tag_label": "CLIMA",
+                "titulo": "34 eventos climáticos extremos em junho elevam sinistralidade de Residencial — Porto e Allianz ativam protocolos de emergência",
+                "url": "https://cqcs.com.br/noticia/instituto-clima-seguro-junho-2026-eventos-extremos-sinistralidade/",
+                "texto": "Porto e Allianz lideram ativação de protocolos de emergência com vistoria digital e pagamento acelerado de sinistros. Players com maior agilidade operacional saem fortalecidos em imagem junto ao corretor e ao segurado.",
+                "fonte": "Instituto Clima Seguro",
+                "fonte_url": "https://cqcs.com.br/noticia/instituto-clima-seguro-junho-2026-eventos-extremos-sinistralidade/",
+                "fonte_label": "CQCS",
+                "data": "Jun/2026"
+              },
+              {
+                "tag": "new",
+                "tag_label": "TOKIO MARINE",
+                "titulo": "Tokio Marine lança Residencial com cobertura paramétrica climática — indenização automática por CEP sem vistoria",
+                "url": "https://revistaapolice.com.br/2026/06/tokio-marine-residencial-cobertura-parametrica-climatica-2026/",
+                "texto": "Tokio Marine inova com cobertura paramétrica: indenização automática baseada em dados meteorológicos por CEP, sem necessidade de vistoria. Modelo que pode remodelar o produto Residencial no Brasil — referência de inovação para a SU no segmento.",
+                "fonte": "Tokio Marine",
+                "fonte_url": "https://revistaapolice.com.br/2026/06/tokio-marine-residencial-cobertura-parametrica-climatica-2026/",
+                "fonte_label": "Revista Apólice",
+                "data": "Jun/2026"
+              }
+            ]
+          }
+        }
       }
     },
     {

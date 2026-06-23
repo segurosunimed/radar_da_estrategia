@@ -85,6 +85,16 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .impl-txt{font-size:12px;color:var(--text2);line-height:1.65}
 .impl-txt strong{color:var(--azul);font-weight:600}
 .opp-card{background:var(--verde-light);border:1px solid #86EFAC;border-left:4px solid var(--verde);border-radius:0 10px 10px 0;padding:12px 16px;margin-top:10px}
+.cseg-block{margin-top:28px;border-top:2px dashed var(--border);padding-top:20px}
+.cseg-disclaimer{background:var(--azul-light);border:1px solid var(--azul-line);border-left:4px solid var(--azul-med);border-radius:0 8px 8px 0;padding:9px 14px;margin-bottom:18px;font-size:11px;color:var(--azul);line-height:1.5}
+.cseg-sub{margin-bottom:20px}
+.cseg-sub-title{font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.cseg-sub-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.cseg-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.cseg-links-label{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;font-family:'DM Mono',monospace;margin-right:2px}
+.cseg-chip{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-family:'DM Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--gray2);border:1px solid var(--border);color:var(--text2);text-decoration:none;transition:background .15s,border-color .15s,color .15s}
+.cseg-chip:hover{background:var(--azul-light);border-color:var(--azul-line);color:var(--azul-med)}
+.cseg-chip svg{width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
 .opp-label{font-size:10px;font-weight:700;color:var(--verde);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
 .opp-txt{font-size:12px;color:#166534;line-height:1.6}
 
@@ -878,9 +888,125 @@ function renderGeral() {
     </div>`);
 }
 
+// ─── LINKS INSTITUCIONAIS DOS PLAYERS MONITORADOS ────────────────────────────
+const PLAYER_LINKS = {
+  // Saúde
+  'Bradesco/BradSaúde':      'https://www.bradescosaude.com.br',
+  'Amil':                    'https://www.amil.com.br',
+  'Hapvida Intermédica':     'https://www.hapvida.com.br',
+  'SulAmérica':              'https://www.sulamerica.com.br',
+  'Porto':                   'https://www.portoseguro.com.br',
+  'Care Plus':               'https://www.careplus.com.br',
+  'Omint':                   'https://www.omint.com.br',
+  'Alice':                   'https://www.alice.com.br',
+  'Sami':                    'https://www.samisaude.com.br',
+  'Prevent Sênior':          'https://www.preventsaude.com.br',
+  'MedSênior':               'https://www.medseniorsaude.com.br',
+  // Odonto
+  'Odontoprev/BradSaúde':    'https://www.odontoprev.com.br',
+  'MetLife':                 'https://www.metlife.com.br',
+  'Dental Uni':              'https://www.dentaluni.com.br',
+  'UniOdonto':               'https://www.uniodonto.com.br',
+  'BrasilDental':            'https://www.brasildental.com.br',
+  'Odonto Empresas':         'https://www.odontoempresas.com.br',
+  'CarePlus Odonto':         'https://www.careplus.com.br',
+  // Vida
+  'Excelsior':               'https://www.excelsior.com.br',
+  'Icatu':                   'https://www.icatuseguros.com.br',
+  'Mongeral':                'https://www.mongeral.com.br',
+  'Prudential':              'https://www.prudential.com.br',
+  // Previdência
+  'Itaú':                    'https://www.itau.com.br/seguros/previdencia',
+  'Mapfre':                  'https://www.mapfre.com.br',
+  'XP':                      'https://www.xpi.com.br/previdencia',
+  // Elementares
+  'Akad':                    'https://www.akadseguros.com.br',
+  'Chubb':                   'https://www.chubb.com/br-pt',
+  'Fairfax':                 'https://www.fairfax.com.br',
+  'Fator':                   'https://www.fatorseguros.com.br',
+  'AIG':                     'https://www.aig.com.br',
+  'Tokio Marine':            'https://www.tokiomarine.com.br',
+  'Zurich':                  'https://www.zurich.com.br',
+  'HDI':                     'https://www.hdi.com.br',
+  'Allianz':                 'https://www.allianz.com.br',
+};
+
+const ICON_LINK = `<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
+function chipLink(nome) {
+  const url = PLAYER_LINKS[nome];
+  if (url) return `<a class="cseg-chip" href="${url}" target="_blank" rel="noopener">${nome} ${ICON_LINK}</a>`;
+  return `<span class="cseg-chip">${nome}</span>`;
+}
+
+function renderConcSegmento(id, segmentados) {
+  if (!segmentados) return '';
+
+  // Mapa de subgrupos por segmento
+  const config = {
+    saude: [
+      {key:'geral',    label:'Saúde · Geral'},
+      {key:'premium',  label:'Saúde · Premium'},
+      {key:'digital',  label:'Saúde · Digital'},
+      {key:'senior',   label:'Saúde · Sênior'},
+    ],
+    odonto: [
+      {key:'geral',    label:'Odonto · Geral'},
+      {key:'premium',  label:'Odonto · Premium'},
+    ],
+    vida: [
+      {key:'geral',    label:'Vida'},
+    ],
+    previdencia: [
+      {key:'geral',    label:'Previdência Aberta'},
+    ],
+    elementares: [
+      {key:'rcp',        label:'Ramos Elementares · RCP'},
+      {key:'do',         label:'Ramos Elementares · D&O'},
+      {key:'empresarial',label:'Ramos Elementares · Empresarial'},
+      {key:'residencial',label:'Ramos Elementares · Residencial'},
+    ],
+  };
+
+  const grupos = config[id] || [];
+  if (!grupos.length) return '';
+
+  const blocos = grupos.map(g => {
+    const dados = segmentados[g.key] || segmentados['do' === g.key ? 'do' : g.key] || [];
+    const noticias = (dados.noticias || []).slice(0,2);
+    const players  = dados.players || dados || [];
+    const playerArr = Array.isArray(players) ? players : [];
+
+    const feedHtml = noticias.length
+      ? `<div class="nfeed" style="margin-bottom:8px">${noticias.map(x=>n(x)).join('')}</div>`
+      : `<div style="font-size:11px;color:var(--text3);font-style:italic;margin-bottom:8px;padding:6px 0">Sem movimentos registrados nesta semana.</div>`;
+
+    const linksHtml = playerArr.length
+      ? `<div class="cseg-links"><span class="cseg-links-label">Acompanhe:</span>${playerArr.map(p=>chipLink(p)).join('')}</div>`
+      : '';
+
+    return `<div class="cseg-sub">
+      <div class="cseg-sub-title">${g.label}</div>
+      ${feedHtml}
+      ${linksHtml}
+    </div>`;
+  }).join('');
+
+  return `<div class="cseg-block">
+    <div class="slabel">⚔️ Movimentos dos Concorrentes no Segmento</div>
+    <div class="cseg-disclaimer">
+      Este bloco monitora os <strong>principais movimentos competitivos por tipo de produto</strong>,
+      cruzando o portfólio da Seguros Unimed com o mercado. Para a visão corporativa geral dos
+      10 maiores concorrentes, acesse a aba <strong>⚔️ Concorrentes</strong>.
+    </div>
+    ${blocos}
+  </div>`;
+}
+
 function renderSeg(id) {
   const nomes = {saude:'Saúde Suplementar',odonto:'Odontologia',vida:'Seguro de Vida',previdencia:'Previdência Privada Aberta',elementares:'Ramos Elementares'};
   const s = edicaoAtual.secoes[id];
+  const concSeg = edicaoAtual.concorrentes_segmento?.[id] || null;
   set(`panel-${id}`, `
     <div class="sec-block">
       <div class="slabel">Notícias Estratégicas · ${nomes[id]}</div>
@@ -893,7 +1019,8 @@ function renderSeg(id) {
     <div class="opp-card">
       <div class="opp-label">🚀 Oportunidade Estratégica</div>
       <div class="opp-txt">${s.oportunidade}</div>
-    </div>`);
+    </div>
+    ${renderConcSegmento(id, concSeg)}`);
 }
 
 function cb(rank,nome,tipo,noticias,su=false) {
@@ -972,59 +1099,15 @@ function renderConcorrentes() {
   // Usa dados do JSON se existirem; senão usa fallback hardcoded
   const dados = ed.concorrentes || CONCORRENTES_FALLBACK;
   const top10 = dados.top10 || [];
-  const seg = dados.segmentados || CONCORRENTES_FALLBACK.segmentados;
   const leitura = dados.leitura || CONCORRENTES_FALLBACK.leitura;
-
-  // Renderiza mapa segmentado de concorrentes SUSEP/ANS
-  function listaPlayers(arr) {
-    return arr.map(p=>`<span style="display:inline-block;font-size:10px;font-family:'DM Mono',monospace;padding:2px 9px;border-radius:20px;background:var(--gray2);border:1px solid var(--border);margin:2px">${p}</span>`).join('');
-  }
-  function subgrupo(titulo, arr) {
-    return `<div style="margin-bottom:10px"><div style="font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px">${titulo}</div><div style="display:flex;flex-wrap:wrap;gap:4px">${listaPlayers(arr)}</div></div>`;
-  }
-
-  const mapaSeg = `
-    <div class="sec-block">
-      <div class="slabel">Mapa Competitivo por Segmento · SUSEP & ANS</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div class="comp-block" style="padding:14px 16px">
-          <div style="font-size:11px;font-weight:700;color:var(--azul);margin-bottom:10px">💚 Vida</div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px">${listaPlayers(seg.vida||[])}</div>
-        </div>
-        <div class="comp-block" style="padding:14px 16px">
-          <div style="font-size:11px;font-weight:700;color:var(--azul);margin-bottom:10px">🏦 Previdência Aberta</div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px">${listaPlayers(seg.previdencia||[])}</div>
-        </div>
-        <div class="comp-block" style="padding:14px 16px">
-          <div style="font-size:11px;font-weight:700;color:var(--azul);margin-bottom:12px">🏗️ Ramos Elementares</div>
-          ${subgrupo('RCP',seg.elementares?.rcp||[])}
-          ${subgrupo('D&O',seg.elementares?.['do']||[])}
-          ${subgrupo('Empresarial',seg.elementares?.empresarial||[])}
-          ${subgrupo('Residencial',seg.elementares?.residencial||[])}
-        </div>
-        <div class="comp-block" style="padding:14px 16px">
-          <div style="font-size:11px;font-weight:700;color:var(--azul);margin-bottom:12px">🏥 Saúde · ANS</div>
-          ${subgrupo('Geral',seg.saude?.geral||[])}
-          ${subgrupo('Premium',seg.saude?.premium||[])}
-          ${subgrupo('Digital',seg.saude?.digital||[])}
-          ${subgrupo('Sênior',seg.saude?.senior||[])}
-        </div>
-        <div class="comp-block" style="padding:14px 16px;grid-column:1/-1">
-          <div style="font-size:11px;font-weight:700;color:var(--azul);margin-bottom:12px">🦷 Odonto · ANS</div>
-          ${subgrupo('Geral',seg.odonto?.geral||[])}
-          ${subgrupo('Premium',seg.odonto?.premium||[])}
-        </div>
-      </div>
-    </div>`;
 
   set('panel-concorrentes', `
     <div class="alert-bar bl"><span class="alert-ico">🔭</span>
-    <span>Monitoramento das <strong>10 principais seguradoras</strong> e mapa competitivo por segmento SUSEP/ANS. Seguros Unimed na <strong>8ª posição</strong>.</span></div>
+    <span>Monitoramento das <strong>principais movimentações estratégicas</strong> dos 10 maiores competidores, <strong>independente de segmento ou produto</strong>. Para a visão por tipo de produto e links dos players, acesse cada aba de segmento.</span></div>
     <div class="sec-block">
       <div class="slabel">Top 10 · Movimentos Estratégicos da Semana</div>
       ${top10.map(c=>cb(c.rank,c.nome,c.tipo,c.noticias,c.su)).join('')}
     </div>
-    ${mapaSeg}
     <div class="impl-box" style="margin-top:16px">
       <div class="impl-title">⚡ Leitura Competitiva da Semana</div>
       <div class="impl-txt">${leitura}</div>
